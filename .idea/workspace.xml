@@ -3,6 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/acceuilAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/acceuilAdmin.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/enfantBundle/enfantBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/enfantBundle.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -65,7 +68,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1XTNxenmg9cansf6ChZIYslYWTn" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -88,7 +93,6 @@
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
-      <command value="s generate:bundle" />
       <command value="php composer.phar friendsofsymfony/user-bundle &quot;~2.0&quot; " />
       <command value=" php composer.phar update friendsofsymfony/user-bundle" />
       <command value="c require friendsofsymfony/user-bundle &quot;~2.0&quot;" />
@@ -102,12 +106,14 @@
       <command value="php c friendsofsymfony/user-bundle &quot;~2.0&quot;" />
       <command value="composer friendsofsymfony/user-bundle &quot;~2.0&quot;" />
       <command value="php composer.phar friendsofsymfony/user-bundle &quot;~2.0&quot;" />
-      <command value="c dump-autoload" />
       <command value="s doctrine:database:create" />
       <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:schema:create" />
       <command value="s cache:clear" />
       <command value="s debug:router" />
+      <command value="s generate:bundle" />
+      <command value="c dump-autoload" />
+
     </option>
   </component>
   <component name="RunDashboard">
@@ -141,7 +147,8 @@
       <workItem from="1581163867040" duration="22646000" />
       <workItem from="1581231303338" duration="7047000" />
       <workItem from="1581254532772" duration="38067000" />
-      <workItem from="1581358541667" duration="1184000" />
+      <workItem from="1581359236971" duration="2560000" />
+
     </task>
     <servers />
   </component>
