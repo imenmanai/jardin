@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/acceuilAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/acceuilAdmin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enfantBundle/enfantBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/enfantBundle.php" afterDir="false" />
-    </list>
+    <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,7 +107,6 @@
       <command value="s debug:router" />
       <command value="s generate:bundle" />
       <command value="c dump-autoload" />
-
     </option>
   </component>
   <component name="RunDashboard">
@@ -148,7 +141,6 @@
       <workItem from="1581231303338" duration="7047000" />
       <workItem from="1581254532772" duration="38067000" />
       <workItem from="1581359236971" duration="2560000" />
-
     </task>
     <servers />
   </component>
@@ -160,7 +152,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
