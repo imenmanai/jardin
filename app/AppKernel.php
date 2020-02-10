@@ -20,6 +20,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new mainBundle\mainBundle(),
             new coursBundle\coursBundle(),
+            new evenementBundle\evenementBundle(),
             new platBundle\platBundle(),
             new enfantBundle\enfantBundle(),
         ];

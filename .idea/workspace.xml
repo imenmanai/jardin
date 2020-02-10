@@ -73,6 +73,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -112,6 +113,7 @@
       <command value="s cache:clear" />
       <command value="s debug:router" />
       <command value="s generate:bundle" />
+
       <command value="c dump-autoload" />
     </option>
   </component>
@@ -147,6 +149,8 @@
       <workItem from="1581231303338" duration="7047000" />
       <workItem from="1581254532772" duration="38067000" />
       <workItem from="1581359236971" duration="2560000" />
+      <workItem from="1581358081046" duration="1147000" />
+
     </task>
     <servers />
   </component>
