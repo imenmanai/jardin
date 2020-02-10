@@ -1,0 +1,18 @@
+{% trans_default_domain 'FOSUserBundle' %}
+<h1 style="margin-bottom: 20px;margin-left:40%;margin-top: 0px;"> <img src="{{ asset('login1/jardin.png') }}" style="width: 350px;height: 300px;"></h1>
+<div class="login-wrap">
+    <div class="login-html">
+        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
+        <div class="login-form">
+
+            <div class="sign-up-htm">
+{{ form_start(form, { 'action': path('fos_user_profile_edit'), 'attr': { 'class': 'fos_user_profile_edit' } }) }}
+    {{ form_widget(form) }}
+    <div>
+        <input type="submit" value="{{ 'profile.edit.submit'|trans }}" />
+    </div>
+{{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+</div>

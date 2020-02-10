@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{% block title %}Coccinelle!{% endblock %}</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {% block stylesheets %}
+
+
+        {% endblock %}
+        <link rel="shortcut icon" href="{{ asset('images/favicon.ico') }}">
+        <link rel="apple-touch-icon" href="{{ asset('images/icon.png') }}">
+        <!-- Google font (font-family: 'Dosis', Roboto;) -->
+        <link href="{{ asset('https://fonts.googleapis.com/css?family=Dosis:400,500,600,700') }}" rel="stylesheet">
+        <link href="{{ asset('https://fonts.googleapis.com/css?family=Roboto:400,500,700') }}" rel="stylesheet">
+
+
+        <!-- Stylesheets -->
+        <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/plugins.css') }}">
+        <link rel="stylesheet" href="{{ asset('style.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
+        <script src="{{asset('js/vendor/modernizr-3.5.0.min.js')  }}"></script>
+
+    </head>
+    <body>
+
+        <header id="header" class="jnr__header header--one clearfix">
+            <!-- Start Header Top Area -->
+            <div class="junior__header__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-lg-6 col-sm-12">
+                            <div class="jun__header__top__left">
+                                <ul class="top__address d-flex justify-content-start align-items-center flex-wrap flex-lg-nowrap flex-md-nowrap">
+                                    <li><i class="fa fa-envelope"></i><a href="#">coccinelle@gmail.com</a></li>
+                                    <li><i class="fa fa-phone"></i><span>Contacter:</span><a href="#">+21696.854.796</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-5 col-lg-6 col-sm-12">
+                            <div class="jun__header__top__right">
+                                {% if is_granted("IS_AUTHENTICATED_FULLY") %}
+                                    <ul class="accounting d-flex justify-content-lg-end justify-content-md-end justify-content-start align-items-center">
+
+                                    <li><p> Bienvenue <b>{{ app.user.username }}</b></p></li>
+                                        <li><a class="r" href="{{ logout_path('main') }}">Se deconnecter</a></li>
+
+                                    </ul>
+
+{% else %}
+                                <ul class="accounting d-flex justify-content-lg-end justify-content-md-end justify-content-start align-items-center">
+                                    <li><a class="r" href="{{ logout_path('main') }}">Se deconnecter</a></li>
+                                    <li><a class="r" href="{{ logout_path('main') }}">connecter</a></li>
+
+                                </ul>
+                                {%endif%}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Header Top Area -->
+            <!-- Start Mainmenu Area -->
+            <div class="mainmenu__wrapper bg__cat--1 poss-relative header_top_line sticky__header">
+                <div class="container">
+                    <div class="row d-none d-lg-flex">
+                        <div class="col-sm-4 col-md-6 col-lg-2 order-1 order-lg-1">
+                            <div class="logo">
+                                <a href="{{ asset('index.html.twig') }}">
+                                    <img src="{{ asset('images/logo/img.png') }} " width="100" height="100" alt="logo images">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-sm-4 col-md-2 col-lg-9 order-3 order-lg-2">
+                            <div class="mainmenu__wrap">
+                                <nav class="mainmenu__nav">
+                                    <ul class="mainmenu">
+                                        <li class="drop"><a href="{{ path('index') }}">Accueil</a>
+                                            <ul class="dropdown__menu">
+                                                <li><a href="{{ path('index') }}">Accueil</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="drop"><a href="{{ path('class') }}">Classe</a>
+                                            <ul class="dropdown__menu">
+                                                <li><a href="{{ path('class') }}">liste des classes</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="drop"><a href="{{ path('event') }}">évenement</a>
+                                            <ul class="dropdown__menu">
+                                                <li><a href="{{ path('event') }}">événement passé</a></li>
+                                                <li><a href="{{ path('eventdetail') }}">Prochain Evenement</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="drop"><a href="#">Enfant</a>
+                                            <ul class="dropdown__menu">
+                                                <li><a href="{{ path('enfant') }}">Inscription</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="drop"><a href="{{ path('transport') }}">Ligne de transport</a>
+                                            <ul class="dropdown__menu">
+                                                <li><a href="{{ path('transport') }}"> Détails</a></li>
+                                                <li><a href="{{ path('inscritransport') }}">S'inscrire</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="drop"><a href="{{ path('repas') }}">Cantine</a>
+                                            <ul class="dropdown__menu">
+                                                <li><a href="{{ path('repas') }}">Repas</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="drop"><a href="{{ path('personnel') }}">Personnels</a>
+                                            <ul class="dropdown__menu">
+                                                <li><a href="{{ path('personnel') }}">Liste personnels</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="drop"><a href="{{ path('reclamation') }}">Reclamation</a>
+                                            <ul class="dropdown__menu">
+                                                <li><a href="{{ path('reclamation') }}">ajouter Reclamation</a></li>
+                                                <li><a href="{{ path('histreclamation') }}">Historique</a></li>
+
+                                            </ul>
+                                        </li>
+                                        <li class="drop"><a href="{{ path('reclamation') }}">Profile</a>
+                                            <ul class="dropdown__menu">
+                                                <li><a href="{{ path('reclamation') }}">Afficher information</a></li>
+                                                <li><a href="{{ path('histreclamation') }}">modifier information</a></li>
+                                                <li><a href="{{ path('histreclamation') }}">modifier mot de passe</a></li>
+
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu d-block d-lg-none">
+                        <div class="logo">
+                            <a href="index.html"><img src="{{ asset('images/logo/img.png') }}" alt="logo"></a>
+                        </div>
+                        <a class="minicart-trigger" href="#">
+                            <i class="fa fa-shopping-basket"></i>
+                        </a>
+                    </div>
+                    <!-- Mobile Menu -->
+                </div>
+            </div>
+            <!-- End Mainmenu Area -->
+        </header>
+        {% block body %}{% endblock %}
+            <section class="bcare__subscribe subscribe--1">
+                <div class="container bg__cat--3">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-lg-12">
+                            <div class="subscribe__inner">
+                                <h2>Newsletter</h2>
+                                <div class="newsletter__form">
+                                    <div class="input__box">
+                                        <div id="mc_embed_signup">
+                                            <form action="{{ asset('http://devitems.us11.list-manage.com/subscribe/post?u=6bbb9b6f5827bd842d9640c82&amp;id=05d85f18ef') }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+                                                <div id="mc_embed_signup_scroll" class="htc__news__inner">
+                                                    <div class="news__input">
+                                                        <input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="Entrer votre mail" required>
+                                                    </div>
+                                                    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                                                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6bbb9b6f5827bd842d9640c82_05d85f18ef" tabindex="-1" value=""></div>
+                                                    <div class="clearfix subscribe__btn"><input class="bst__btn btn--white__color" type="submit" value="Envoyer" name="subscribe" id="mc-embedded-subscribe">
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- End Subscribe Area -->
+            <!-- Footer Area -->
+            <footer id="footer" class="footer-area footer--2">
+                <div class="footer__wrapper bg-image--10 section-padding--lg">
+                    <div class="container">
+                        <div class="row">
+                            <!-- Start Single Widget -->
+                            <div class="col-lg-3 col-md-6 col-sm-12">
+                                <div class="footer__widget">
+                                    <div class="ft__logo">
+                                        <a href="{{ asset('index.html') }}">
+                                            <img  style="width: 150px;"src="{{ asset('images/logo/img.png') }}" alt="logo images">
+                                        </a>
+                                    </div>
+                                    <div class="ftr__details">
+                                        <p>Cette institution vise à éduquer les enfants selon
+                                            une approche globale et équilibrée dans un
+                                            environnement sain et en étroite collaboration
+                                            avec la famille selon les exigences des orientations
+                                            pédagogiques scientifiques pour qu’ils se
+                                            développent en intériorisant les valeurs humaines,
+                                            de modération, de tolérance, d‘appartenance
+                                            identitaire et l’ouverture sur les autres cultures
+                                            et civilisations. </p>
+                                    </div>
+                                    <div class="ftr__address__inner">
+                                        <div class="footer__social__icon">
+                                            <ul class="dacre__social__link--2 d-flex justify-content-start">
+                                                <li class="facebook"><a href="{{ asset('https://www.facebook.com/') }}"><i class="fa fa-facebook"></i></a></li>
+                                                <li class="twitter"><a href="{{ asset('https://twitter.com/') }}"><i class="fa fa-twitter"></i></a></li>
+                                                <li class="vimeo"><a href="{{ asset('https://vimeo.com/') }}"><i class="fa fa-vimeo"></i></a></li>
+                                                <li class="pinterest"><a href="{{ asset('https://www.pinterest.com/') }}"><i class="fa fa-pinterest-p"></i></a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="ft__btm__title">
+                                            <h4>About Us</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Widget -->
+                            <!-- Start Single Widget -->
+                            <div class="col-lg-4 col-md-6 col-sm-12 sm-mt-40">
+                                <div class="footer__widget">
+                                    <h4>Les derniers evenements</h4>
+                                    <div class="footer__innner">
+                                        <div class="ftr__latest__post">
+                                            <!-- Start Single -->
+                                            <div class="single__ftr__post d-flex">
+                                                <div class="ftr__post__thumb">
+                                                    <a href="{{ asset('blog-details.html') }}">
+                                                        <img src="{{ asset('images/blog/post-img/2.jpg') }}" alt="post images">
+                                                    </a>
+                                                </div>
+                                                <div class="ftr__post__details">
+                                                    <h6><a href="{{ asset('blog-details.html') }}">Sports Day is near! so lets get ready soon</a></h6>
+                                                    <span><i class="fa fa-calendar"></i>30th Dec, 2017</span>
+                                                </div>
+                                            </div>
+                                            <!-- End Single -->
+                                            <!-- Start Single -->
+                                            <div class="single__ftr__post d-flex">
+                                                <div class="ftr__post__thumb">
+                                                    <a href="{{ asset('blog-details.html') }}">
+                                                        <img src="{{ asset('images/blog/post-img/3.jpg') }}" alt="post images">
+                                                    </a>
+                                                </div>
+                                                <div class="ftr__post__details">
+                                                    <h6><a href="{{ asset('blog-details.html') }}">Sports Day Celebration</a></h6>
+                                                    <span><i class="fa fa-calendar"></i>21th Dec, 2017</span>
+                                                </div>
+                                            </div>
+                                            <!-- End Single -->
+                                            <!-- Start Single -->
+                                            <div class="single__ftr__post d-flex">
+                                                <div class="ftr__post__thumb">
+                                                    <a href="{{ asset('blog-details.html') }}">
+                                                        <img src="{{ asset('images/blog/post-img/4.jpg') }}" alt="post images">
+                                                    </a>
+                                                </div>
+                                                <div class="ftr__post__details">
+                                                    <h6><a href="{{ asset('blog-details.html') }}">Sports Day Celebration</a></h6>
+                                                    <span><i class="fa fa-calendar"></i>10th Dec, 2017</span>
+                                                </div>
+                                            </div>
+                                            <!-- End Single -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Widget -->
+                            <!-- Start Single Wedget -->
+                            <div class="col-lg-2 col-md-6 col-sm-12 md-mt-40 sm-mt-40">
+                                <div class="footer__widget">
+                                    <h4>Categories</h4>
+                                    <div class="footer__innner">
+                                        <div class="ftr__latest__post">
+                                            <ul class="ftr__catrgory">
+                                                <li><a href="#">Dessin</a></li>
+                                                <li><a href="#">Français</a></li>
+                                                <li><a href="#">Arabe</a></li>
+                                                <li><a href="#">Swimming</a></li>
+                                                <li><a href="#">Sports et Jouets</a></li>
+                                                <li><a href="#">Mathematique</a></li>
+                                                <li><a href="#">Anglais</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Wedget -->
+                            <!-- Start Single Widget -->
+                            <div class="col-lg-3 col-md-6 col-sm-12 md-mt-40 sm-mt-40">
+                                <div class="footer__widget">
+                                    <h4>Social media</h4>
+                                    <div class="footer__innner">
+                                        <div class="dcare__twit__wrap">
+                                            <!-- Start Single -->
+                                            <div class="dcare__twit d-flex">
+                                                <div class="dcare__twit__icon">
+                                                    <i class="fa fa-twitter"></i>
+                                                </div>
+                                                <div class="dcare__twit__details">
+                                                    <p>Facebook  <a href="#">Coccinelle</a></p>
+
+                                                </div>
+                                            </div>
+                                            <!-- End Single -->
+                                            <!-- Start Single -->
+                                            <div class="dcare__twit d-flex">
+                                                <div class="dcare__twit__icon">
+                                                    <i class="fa fa-twitter"></i>
+                                                </div>
+                                                <div class="dcare__twit__details">
+                                                    <p>Instagram<a href="#">Coccinelle</a></p>
+                                                    <span><i class="fa fa-clock-o"></i>30th Dec, 2017</span>
+                                                    <span><i class="fa fa-calendar"></i>30th Dec, 2017</span>
+                                                </div>
+                                            </div>
+                                            <!-- End Single -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- End Single Widget -->
+                        </div>
+                    </div>
+                    <div class="ft__bottom__images--1 wow flipInX" data-wow-delay="0.6s">
+                        <img src="{{ asset('images/banner/mid-img/ft.png') }}" alt="footer images">
+                    </div>
+                    <div class="ft__bottom__images--2 wow fadeInRight" data-wow-delay="0.6s">
+                        <img src="{{ asset('images/banner/mid-img/ft-2.png') }}" alt="footer images">
+                    </div>
+                </div>
+                <!-- .Start Footer Contact Area -->
+                <div class="footer__contact__area bg__cat--2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="footer__contact__wrapper d-flex flex-wrap justify-content-between">
+                                    <div class="single__footer__address">
+                                        <div class="ft__contact__icon">
+                                            <i class="fa fa-home"></i>
+                                        </div>
+                                        <div class="ft__contact__details">
+                                            <p>Ariana </p>
+                                            <p>Rue </p>
+                                        </div>
+                                    </div>
+                                    <div class="single__footer__address">
+                                        <div class="ft__contact__icon">
+                                            <i class="fa fa-phone"></i>
+                                        </div>
+                                        <div class="ft__contact__details">
+                                            <p><a href="#">+216 58857039</a></p>
+                                            <p><a href="#">+216 98275202</a></p>
+                                        </div>
+                                    </div>
+                                    <div class="single__footer__address">
+                                        <div class="ft__contact__icon">
+                                            <i class="fa fa-envelope"></i>
+                                        </div>
+                                        <div class="ft__contact__details">
+                                            <p><a href="#">Coccinelle@gmail.com</a></p>
+                                            <p><a href="#">Coccinelle.@yahoo.com</a></p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- .End Footer Contact Area -->
+                <div class="copyright  bg--theme">
+                    <div class="container">
+                        <div class="row align-items-center copyright__wrapper justify-content-center">
+                            <div class="col-lg-12 col-sm-12 col-md-12">
+                                <div class="coppy__right__inner text-center">
+                                    <p><i class="fa fa-copyright"></i>All Right Reserved.<a href="#"> Devitems</a></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <!-- //Footer Area -->
+            <!-- Cartbox -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="{{ asset('js/vendor/jquery-3.2.1.min.js') }}"></script>
+    <script src="{{ asset('js/popper.min.js') }}"></script>
+    <script src="{{ asset('js/bootstrap.min.js') }}"></script>
+    <script src="{{ asset('js/plugins.js') }}"></script>
+    <script src="{{ asset('js/active.js') }}"></script>
+        {% block javascripts %}
+
+
+        {% endblock %}
+    </body>
+</html>

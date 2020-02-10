@@ -1,0 +1,152 @@
+main_homepage:
+    path:     /index
+    defaults: { _controller: mainBundle:main:index }
+class:
+    path:     /class
+    defaults: { _controller: mainBundle:main:class }
+event:
+    path:     /event
+    defaults: { _controller: mainBundle:main:event}
+eventdetail:
+    path:     /eventdetail
+    defaults: { _controller: mainBundle:main:eventdetail }
+enfant:
+    path:     /enfant
+    defaults: { _controller: mainBundle:main:enfant }
+transport:
+    path:     /transport
+    defaults: { _controller: mainBundle:main:transport }
+inscritransport:
+    path:     /inscritransport
+    defaults: { _controller: mainBundle:main:inscritransport }
+reclamation:
+    path:     /reclamation
+    defaults: { _controller: mainBundle:main:reclamation }
+histreclamation:
+    path:     /histreclamation
+    defaults: { _controller: mainBundle:main:histreclamation }
+personnel:
+    path:     /personnel
+    defaults: { _controller: mainBundle:main:personnel }
+repas:
+    path:     /repas
+    defaults: { _controller: mainBundle:main:repas }
+
+acceuilBack:
+    path:     /acceuilBack
+    defaults: { _controller: mainBundle:main:acceuilAdmin }
+  #back
+listeEnfant:
+    path:     /listeEnfant
+    defaults: { _controller: mainBundle:main:listeEnfant }
+ajoutTransport:
+    path:     /ajoutTransport
+    defaults: { _controller: mainBundle:main:ajoutTransport }
+
+listeParent:
+    path:     /listeParent
+    defaults: { _controller: mainBundle:main:listeParent }
+
+Bus:
+    path:     /Bus
+    defaults: { _controller: mainBundle:main:Bus }
+
+Chauffeur:
+    path:     /Chauffeur
+    defaults: { _controller: mainBundle:main:Chauffeur }
+
+CategoriePersonnel:
+    path:     /CategoriePersonnel
+    defaults: { _controller: mainBundle:main:CategoriePersonnel }
+
+Personnel:
+    path:     /Personnel
+    defaults: { _controller: mainBundle:main:Personnel }
+
+AjouterCategoriePersonnel:
+    path:     /AjouterCategoriePersonnel
+    defaults: { _controller: mainBundle:main:AjouterCategoriePersonnel }
+
+ModifierCategoriePersonnel:
+    path:     /ModifierCategoriePersonnel
+    defaults: { _controller: mainBundle:main:ModifierCategoriePersonnel }
+
+SupprimerCategoriePersonnel:
+    path:     /SupprimerCategoriePersonnel
+    defaults: { _controller: mainBundle:main:SupprimerCategoriePersonnel }
+
+AffciherCategoriePersonnel:
+    path:     /AffciherCategoriePersonnel
+    defaults: { _controller: mainBundle:main:AffciherCategoriePersonnel }
+Cours:
+    path:     /Cours
+    defaults: { _controller: mainBundle:main:AffciherCategoriePersonnel }
+Categorie:
+    path:     /Categorie
+    defaults: { _controller: mainBundle:main:Categorie }
+
+AfficherCategorieCours:
+    path:     /AfficherCategorieCours
+    defaults: { _controller: mainBundle:main:AfficherCategorieCours }
+ModifierCategorieCours:
+    path:     /ModifierCategorieCours
+    defaults: { _controller: mainBundle:main:ModifierCategorieCours }
+SupprimerCategorieCours:
+    path:     /SupprimerCategorieCours
+    defaults: { _controller: mainBundle:main:SupprimerCategorieCours }
+AjouterCategorieCours:
+    path:     /AjouterCategorieCours
+    defaults: { _controller: mainBundle:main:AjouterCategorieCours }
+
+
+AjouterEvenement:
+    path:     /AjouterEvenement
+    defaults: { _controller: mainBundle:main:AjouterCategorieCours }
+SupprimerEvenemet:
+    path:     /SupprimerEvenemet
+    defaults: { _controller: mainBundle:main:SupprimerEvenemet }
+ModifierEvenement:
+    path:     /ModifierEvenement
+    defaults: { _controller: mainBundle:main:ModifierEvenement }
+
+AjouterAbonnement:
+    path:     /AjouterAbonnement
+    defaults: { _controller: mainBundle:main:AjouterAbonnement }
+SupprimerAbonnement:
+    path:     /SupprimerAbonnement
+    defaults: { _controller: mainBundle:main:SupprimerAbonnement }
+ModifierAbonnement:
+    path:     /ModifierAbonnement
+    defaults: { _controller: mainBundle:main:ModifierAbonnement }
+
+AjouterPlat:
+    path:     /AjouterPlat
+    defaults: { _controller: mainBundle:main:AjouterPlat }
+SupprimerPlat:
+    path:     /SupprimerPlat
+    defaults: { _controller: mainBundle:main:SupprimerPlat }
+AfficherPlat:
+    path:     /AfficherPlat
+    defaults: { _controller: mainBundle:main:AfficherPlat }
+
+
+
+HistoriqueReclamation:
+    path:     /HistoriqueReclamation
+    defaults: { _controller: mainBundle:main:HistoriqueReclamation }
+AfficherReclamation:
+    path:     /AfficherReclamation
+    defaults: { _controller: mainBundle:main:AfficherReclamation }
+ModifierCategorieReclamation:
+    path:     /ModifierAbonnement
+    defaults: { _controller: mainBundle:main:ModifierAbonnement }
+
+AjouterCategorieReclamation:
+    path:     /AjouterCategorieReclamation
+    defaults: { _controller: mainBundle:main:AjouterCategorieReclamation }
+SupprimerCategorieReclamation:
+    path:     /SupprimerCategorieReclamation
+    defaults: { _controller: mainBundle:main:SupprimerCategorieReclamation }
+AfficherCategorieReclamation:
+    path:     /AfficherCategoriePersonnel
+    defaults: { _controller: mainBundle:main:AfficherCategorieReclamation }
