@@ -4,6 +4,7 @@ imports:
     - { resource: services.yml }
     - { resource: "@mainBundle/Resources/config/services.yml" }
     - { resource: "@coursBundle/Resources/config/services.yml" }
+    - { resource: "@evenementBundle/Resources/config/services.yml" }
     - { resource: "@platBundle/Resources/config/services.yml" }
     - { resource: "@enfantBundle/Resources/config/services.yml" }
 
