@@ -21,6 +21,7 @@ class AppKernel extends Kernel
             new mainBundle\mainBundle(),
             new coursBundle\coursBundle(),
             new platBundle\platBundle(),
+            new enfantBundle\enfantBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
