@@ -1,0 +1,3 @@
+cours_homepage:
+    path:     /
+    defaults: { _controller: coursBundle:Default:index }
