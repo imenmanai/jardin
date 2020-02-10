@@ -100,11 +100,11 @@
       <command value="composer friendsofsymfony/user-bundle &quot;~2.0&quot;" />
       <command value="php composer.phar friendsofsymfony/user-bundle &quot;~2.0&quot;" />
       <command value="c dump-autoload" />
-      <command value="s doctrine:database:create" />
-      <command value="s doctrine:schema:update --force" />
-      <command value="s doctrine:schema:create" />
       <command value="s cache:clear" />
       <command value="s debug:router" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s doctrine:database:create" />
+      <command value="s doctrine:schema:create" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -138,7 +138,7 @@
       <workItem from="1581163867040" duration="22646000" />
       <workItem from="1581231303338" duration="7047000" />
       <workItem from="1581254532772" duration="38067000" />
-      <workItem from="1581358541667" duration="1184000" />
+      <workItem from="1581358541667" duration="2283000" />
     </task>
     <servers />
   </component>
