@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="" />
+    <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/enfantBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/enfantBundle.php" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,11 +79,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\jardin\src\enfantBundle" />
       <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\ameni" />
       <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\imen" />
       <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\aziza" />
       <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\houria" />
-      <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\wifek" />
     </key>
   </component>
   <component name="RunAnythingCache">

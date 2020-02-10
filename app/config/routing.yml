@@ -1,3 +1,7 @@
+enfant:
+    resource: "@enfantBundle/Resources/config/routing.yml"
+    prefix:   /
+
 plat:
     resource: "@platBundle/Resources/config/routing.yml"
     prefix:   /
