@@ -1,0 +1,25 @@
+reclamation_homepage:
+    path:     /
+    defaults: { _controller: reclamationBundle:Default:index }
+afficherReclamation:
+    path:     /afficherReclamation
+    defaults: { _controller: reclamationBundle:reclamation:afficherReclamation }
+
+ajouterReclamation:
+    path:     /ajouterReclamation
+    defaults: { _controller: reclamationBundle:reclamation:ajouterReclamation }
+
+modifierReclamation:
+    path:     /modifierReclamation/{id}
+    defaults: { _controller: reclamationBundle:reclamation:modifierReclamation }
+
+supprimerReclamation:
+    path:     /supprimerReclamation/{id}
+    defaults: { _controller: reclamationBundle:reclamation:supprimerReclamation }
+
+afficherCategorieReclamation:
+    path:     /afficherCategorieReclamation
+    defaults: { _controller: reclamationBundle:CategorieReclamation:afficherCategorieReclamation }
+afficherListe:
+    path:     /afficherListe
+    defaults: { _controller: reclamationBundle:reclamation:afficherListe }
