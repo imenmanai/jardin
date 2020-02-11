@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/enfantBundle/enfantBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/enfantBundle.php" afterDir="false" />
@@ -72,7 +75,11 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../CiteCulture" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> e039501a2f4f4d233c5a8e4b89e5d47471f4cfca
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -109,6 +116,10 @@
       <command value="s doctrine:database:create" />
       <command value="s cache:clear" />
       <command value="s debug:router" />
+<<<<<<< HEAD
+=======
+      <command value="s generate:bundle" />
+>>>>>>> e039501a2f4f4d233c5a8e4b89e5d47471f4cfca
       <command value="c dump-autoload" />
       <command value="s generate:bundle" />
       <command value="s doctrine:schema:create" />
@@ -146,8 +157,13 @@
       <workItem from="1581163867040" duration="22646000" />
       <workItem from="1581231303338" duration="7047000" />
       <workItem from="1581254532772" duration="38067000" />
+      <workItem from="1581359650872" duration="1430000" />
       <workItem from="1581359236971" duration="2560000" />
       <workItem from="1581358081046" duration="1147000" />
+<<<<<<< HEAD
+=======
+      <workItem from="1581405300276" duration="261000" />
+>>>>>>> e039501a2f4f4d233c5a8e4b89e5d47471f4cfca
     </task>
     <servers />
   </component>
@@ -159,6 +175,10 @@
       <map>
         <entry key="MAIN">
           <value>
+<<<<<<< HEAD
+=======
+            <State />
+>>>>>>> e039501a2f4f4d233c5a8e4b89e5d47471f4cfca
             <State>
               <option name="COLUMN_ORDER" />
             </State>
