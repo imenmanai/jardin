@@ -2,11 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Entity/Cours.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Entity/Matiere.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Resources/views/view/AfficherCategorie.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Resources/views/view/AfficherCours.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Resources/views/view/ajouterCategorie.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Resources/views/view/ajouterCours.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/acceuilAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/acceuilAdmin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enfantBundle/enfantBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/enfantBundle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coursBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/coursBundle/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coursBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/coursBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/houria/AfficherCategorieCours.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/houria/AfficherCategorieCours.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -72,8 +79,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/coursBundle/Resources/views/view" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -85,11 +91,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\jardin\src\coursBundle\Resources\views\view" />
+      <recent name="C:\wamp64\www\jardin\src\coursBundle\Resources\views\Default" />
       <recent name="C:\xampp\htdocs\jardin\src\enfantBundle" />
       <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\ameni" />
       <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\imen" />
-      <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\aziza" />
-      <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\houria" />
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -107,15 +113,13 @@
       <command value="php c friendsofsymfony/user-bundle &quot;~2.0&quot;" />
       <command value="composer friendsofsymfony/user-bundle &quot;~2.0&quot;" />
       <command value="php composer.phar friendsofsymfony/user-bundle &quot;~2.0&quot;" />
-      <command value="s doctrine:database:create" />
       <command value="s doctrine:schema:update --force" />
-      <command value="s doctrine:schema:create" />
       <command value="s cache:clear" />
       <command value="s debug:router" />
       <command value="s generate:bundle" />
-
       <command value="c dump-autoload" />
-
+      <command value="s doctrine:database:create" />
+      <command value="s doctrine:schema:create" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -150,7 +154,6 @@
       <workItem from="1581231303338" duration="7047000" />
       <workItem from="1581254532772" duration="38067000" />
       <workItem from="1581358081046" duration="1147000" />
-
     </task>
     <servers />
   </component>
@@ -162,7 +165,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
