@@ -47,10 +47,6 @@ listeParent:
     path:     /listeParent
     defaults: { _controller: mainBundle:main:listeParent }
 
-Bus:
-    path:     /Bus
-    defaults: { _controller: mainBundle:main:Bus }
-
 Chauffeur:
     path:     /Chauffeur
     defaults: { _controller: mainBundle:main:Chauffeur }

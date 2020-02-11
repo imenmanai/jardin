@@ -1,3 +1,7 @@
 enfant_homepage:
     path:     /
     defaults: { _controller: enfantBundle:Default:index }
+
+afficher_Bus:
+    path:     /afficher_Bus
+    defaults: { _controller: enfantBundle:Default:afficherBus }
