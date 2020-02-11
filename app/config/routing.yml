@@ -1,3 +1,10 @@
+evenement:
+    resource: "@evenementBundle/Resources/config/routing.yml"
+
+plat:
+    resource: "@platBundle/Resources/config/routing.yml"
+    prefix:   /
+
 cours:
     resource: "@coursBundle/Resources/config/routing.yml"
     prefix:   /
