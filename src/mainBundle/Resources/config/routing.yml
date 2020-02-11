@@ -63,17 +63,26 @@ AjouterCategoriePersonnel:
     path:     /AjouterCategoriePersonnel
     defaults: { _controller: mainBundle:main:AjouterCategoriePersonnel }
 
-ModifierCategoriePersonnel:
-    path:     /ModifierCategoriePersonnel
-    defaults: { _controller: mainBundle:main:ModifierCategoriePersonnel }
+AjouterPersonnel:
+    path:     /AjouterPersonnel
+    defaults: { _controller: mainBundle:main:AjouterPersonnel }
 
-SupprimerCategoriePersonnel:
-    path:     /SupprimerCategoriePersonnel
-    defaults: { _controller: mainBundle:main:SupprimerCategoriePersonnel }
+AfficherPersonnel:
+    path:     /AfficherPersonnel
+    defaults: { _controller: mainBundle:main:AfficherPersonnel }
 
-AffciherCategoriePersonnel:
-    path:     /AffciherCategoriePersonnel
-    defaults: { _controller: mainBundle:main:AffciherCategoriePersonnel }
+ModifierPersonnel:
+    path:     /ModifierPersonnel
+    defaults: { _controller: mainBundle:main:ModifierPersonnel }
+
+SupprimerPersonnel:
+    path:     /SupprimerPersonnel
+    defaults: { _controller: mainBundle:main:SupprimerPersonnel }
+
+
+AfficherCategoriePersonnel:
+    path:     /AfficherCategoriePersonnel
+    defaults: { _controller: mainBundle:main:AfficherCategoriePersonnel }
 Cours:
     path:     /Cours
     defaults: { _controller: mainBundle:main:AffciherCategoriePersonnel }

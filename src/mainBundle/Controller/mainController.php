@@ -71,6 +71,7 @@ public function acceuilAdminAction()
     {
         return $this->render('@main/Back/aziza/CategoriePersonnel.html.twig');
     }
+
     public function PresonnelAction()
     {
         return $this->render('@main/Back/aziza/Personnel.html.twig');
@@ -79,18 +80,33 @@ public function acceuilAdminAction()
     {
         return $this->render('@main/Back/aziza/AjouterCategoriePersonnel.html.twig');
     }
-    public function ModifierCategoriePersonnelAction()
-    {
-        return $this->render('@main/Back/aziza/ModifierCategoriePersonnel.html.twig');
-    }
-    public function SupprimerCategoriePersonnelAction()
-    {
-        return $this->render('@main/Back/aziza/SupprimerCategoriePersonnel.html.twig');
-    }
-    public function AffciherCategoriePersonnelAction()
+
+    public function AfficherCategoriePersonnelAction()
     {
         return $this->render('@main/Back/aziza/AfficherCategoriePersonnel.html.twig');
     }
+
+    public function AfficherPersonnelAction()
+    {
+        return $this->render('@main/Back/aziza/AfficherPersonnel.html.twig');
+    }
+
+    public function AjouterPersonnelAction()
+    {
+        return $this->render('@main/Back/aziza/AjouterPersonnel.html.twig');
+    }
+
+    public function ModifierPersonnelAction()
+    {
+        return $this->render('@main/Back/aziza/ModifierPersonnel.html.twig');
+    }
+
+    public function SupprimerPersonnelAction()
+    {
+        return $this->render('@main/Back/aziza/SupprimerPersonnel.html.twig');
+    }
+
+
     public function CoursAction()
     {
         return $this->render('@main/Back/houria/Cours.html.twig');
