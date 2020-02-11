@@ -20,6 +20,18 @@ supprimerReclamation:
 afficherCategorieReclamation:
     path:     /afficherCategorieReclamation
     defaults: { _controller: reclamationBundle:CategorieReclamation:afficherCategorieReclamation }
+
+ajouterCategorieReclamation:
+    path:     /ajouterCategorieReclamation
+    defaults: { _controller: reclamationBundle:CategorieReclamation:ajouterCategorieReclamation }
 afficherListe:
     path:     /afficherListe
     defaults: { _controller: reclamationBundle:reclamation:afficherListe }
+
+modifierCategorieReclamation:
+    path:     /modifierCategorieReclamation/{ref}
+    defaults: { _controller: reclamationBundle:CategorieReclamation:modifierCategorieReclamation }
+
+supprimerCategorieReclamation:
+    path:     /supprimerCategorieReclamation/{ref}
+    defaults: { _controller: reclamationBundle:CategorieReclamation:supprimerCategorieReclamation }

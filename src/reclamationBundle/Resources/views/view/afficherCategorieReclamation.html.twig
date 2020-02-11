@@ -17,6 +17,8 @@
             <td>{{ CategorieReclamation.ref }}</td>
             <td>{{ CategorieReclamation.nom }}</td>
             <td>{{ CategorieReclamation.description }}</td>
+            <td><a href="{{ path('modifierCategorieReclamation',{'ref':CategorieReclamation.ref}) }}">modifier</a></td>
+            <td><a href="{{ path('supprimerCategorieReclamation',{'ref':CategorieReclamation.ref}) }}">supprimer</a></td>
 
 
         </tr>
