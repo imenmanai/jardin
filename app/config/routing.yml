@@ -1,6 +1,9 @@
 reclamation:
     resource: "@reclamationBundle/Resources/config/routing.yml"
     prefix:   /aa
+jardin:
+    resource: "@JardinBundle/Resources/config/routing.yml"
+    prefix:   /
 
 evenement:
     resource: "@evenementBundle/Resources/config/routing.yml"

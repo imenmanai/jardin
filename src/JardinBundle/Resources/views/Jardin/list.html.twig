@@ -1,3 +1,4 @@
+
 {% extends'baseAdmin.html.twig' %}
 {% block body %}
     <div data-widget-group="group1">
@@ -5,7 +6,7 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h2>Data Tables</h2>
+                        <h2>Liste des personnels</h2>
                         <div class="panel-ctrls"></div>
                     </div>
                     <div class="panel-body no-padding">
@@ -13,22 +14,33 @@
                             <thead>
                             <tr>
                                 <th>Id</th>
-                                <th>Type</th>
-                                <th>Description</th>
-
+                                <th>Nom</th>
+                                <th>Prenom</th>
+                                <th>Age</th>
+                                <th>Nombre d'heures de travail</th>
+                                <th>Prix de l'heure</th>
+                                <th>Categorie</th>
                             </tr>
                             </thead>
                             <tbody>
 
-                            {% for info in clubs %}
+                            {% for info in formations %}
                                 <tr>
                                     <td>{{ info.id}}</td>
-                                    <td>{{ info.type}}</td>
-                                    <td>{{ info.description}}</td>
+                                    <td>{{ info.nom}}</td>
+
+                                    <td>{{ info.prenom}}</td>
+                                    <td>{{ info.age}}</td>
+                                    <td>{{ info.nbH}}</td>
+                                    <td>{{ info.prixH}}</td>
+
+                                    <td>{{ info.categorie.type}}</td>
+
+                                    <td><a TYPE="submit"  href="{{path('jardin_supprime',{'id':info.id})}}" onclick="return confirm('etes vous sure de supprission de ce personnel?')"><button>Supprimer</button></a></td>
+                                    <td><a TYPE="submit"  href="{{path('jardin_modifie',{'id':info.id})}} " onclick="return confirm('etes vous sure de modifier ce personnel?')" ><button>modifier</button></a></td>
 
                                 </tr>
                             {% endfor %}
-
                             </tbody>
                         </table>
                     </div>
@@ -40,3 +52,11 @@
     </div>
 
 {% endblock %}
+
+
+
+
+
+
+
+

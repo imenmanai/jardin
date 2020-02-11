@@ -446,28 +446,29 @@
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion personnel</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('Chauffeur') }}">Personnel</a></li>
-                                        <li><a href="{{ path('CategoriePersonnel') }}">Categorie Personnel</a></li>
+                                        <li><a href="{{ path('AjouterPersonnel') }}">Ajouter Personnel</a></li>
+                                        <li><a href="{{ path('ModifierPersonnel') }}">Modifier Personnel</a></li>
+                                        <li><a href="{{ path('AfficherPersonnel') }}">Afficher Personnel</a></li>
+                                        <li><a href="{{ path('SupprimerPersonnel') }}">Supprimer Personnel</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion Categorie Personnel</span></a>
                                     <ul class="acc-menu">
                                         <li><a href="{{ path('AjouterCategoriePersonnel') }}">Ajouter Categorie Personnel</a></li>
-                                        <li><a href="{{ path('ModifierCategoriePersonnel') }}">Modifier Categorie de Personnel</a></li>
-                                        <li><a href="{{ path('AffciherCategoriePersonnel') }}">afficher Categorie de Personnel</a></li>
-                                        <li><a href="{{ path('SupprimerCategoriePersonnel') }}">Supprimer Categorie de Personnel</a></li>
+                                        <li><a href="{{ path('AfficherCategoriePersonnel') }}">Afficher Categorie Personnel</a></li>
+
 
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion cours</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('Cours') }}">Cours</a></li>
+                                        <li><a href="{{ path('AfficherCours') }}">Cours</a></li>
                                         <li><a href="{{ path('Categorie') }}">Categorie</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion categorie cours</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('AjouterCategorieCours') }}">Ajouter Categorie Cours</a></li>
+                                        <li><a href="{{ path('ajoutercatCours') }}">Ajouter Categorie Cours</a></li>
                                         <li><a href="{{ path('AfficherCategorieCours') }}">Afficher Categorie Cours</a></li>
                                         <li><a href="{{ path('SupprimerCategorieCours') }}">Supprimer Categorie Cours</a></li>
                                         <li><a href="{{ path('ModifierCategorieCours') }}">Modifier Categorie Cours</a></li>
