@@ -21,13 +21,12 @@
                             </thead>
                             <tbody>
                             {% for c in cours %}
-                            <tr class="gradeC">
-                                <td>c.description</td>
-                                <td>c.duree</td>
-                                <td>c.seats</td>
-                                <td class="center">c.age</td>
-                                <td class="center">c.matiere</td>
-                            </tr>
+                                <tr class="gradeC">
+                                    <td>{{c.description}}</td>
+                                    <td>{{c.duree}}</td>
+                                    <td>{{c.seats}}</td>
+                                    <td>{{c.age}}</td>
+                                </tr>
 
                             {% endfor %}
                             </tbody>

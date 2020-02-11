@@ -1,20 +1,10 @@
 {% extends "@FOSUser/layout.html.twig" %}
 
 {% trans_default_domain 'FOSUserBundle' %}
-<h1 style="margin-bottom: 20px;margin-left:40%;margin-top: 0px;"> <img src="{{ asset('login1/jardin.png') }}" style="width: 350px;height: 300px;"></h1>
-<div class="login-wrap">
-    <div class="login-html">
-        <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-        <div class="login-form">
 
-            <div class="sign-up-htm">
 {% block fos_user_content %}
     <p>{{ 'registration.confirmed'|trans({'%username%': user.username}) }}</p>
     {% if targetUrl %}
     <p><a href="{{ targetUrl }}">{{ 'registration.back'|trans }}</a></p>
     {% endif %}
 {% endblock fos_user_content %}
-            </div>
-        </div>
-    </div>
-</div>
