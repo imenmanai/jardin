@@ -22,6 +22,7 @@ class DefaultController extends Controller
         return $this->render('@enfant/Default/afficherBus.html.twig',array('buss'=>$buss));
     }
 
+
     public function ajouterBusAction(Request $request)
     {
         $bus = new Bus();
@@ -62,11 +63,13 @@ class DefaultController extends Controller
 
     public function ajouterEnfantAction(Request $request)
     {
+        $user = $this->getUser();
         $enfant = new Enfant();
         $form = $this->createForm(EnfantType::class, $enfant);
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
             $em = $this->getDoctrine()->getManager();
+            $enfant->setIdParent($user);
             $em->persist($enfant);//persister les donner dans la base de donnee
             $em->flush();//tlansi kif el commit
             return $this->redirectToRoute('ajouter_Enfant');

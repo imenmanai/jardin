@@ -57,6 +57,29 @@ class Enfant
      *
      */
     private $idBus;
+    /**
+     *
+     * @ORM\ManyToOne(targetEntity="mainBundle\Entity\User")
+     * @ORM\JoinColumn(name="idParent",referencedColumnName="id", onDelete="CASCADE")
+     *
+     */
+    private $idParent;
+
+    /**
+     * @return mixed
+     */
+    public function getIdParent()
+    {
+        return $this->idParent;
+    }
+
+    /**
+     * @param mixed $idParent
+     */
+    public function setIdParent($idParent)
+    {
+        $this->idParent = $idParent;
+    }
 
 
 
