@@ -75,7 +75,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CiteCulture" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -127,9 +127,7 @@
       <command value="s doctrine:database:create" />
       <command value="s doctrine:schema:update" />
       <command value="s generate:bundle" />
-      <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:generate:form reclamationBundle:reclamation" />
-      <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:database:create" />
       <command value="s cache:clear" />
       <command value="s debug:router" />
@@ -140,8 +138,10 @@
       <command value="c dump-autoload" />
       <command value="s generate:bundle" />
       <command value="s doctrine:schema:create" />
-      <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:generate:form reclamationBundle:CategorieReclamation" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s doctrine:schema:update --force" />
     </option>
   </component>
   <component name="RunDashboard">
