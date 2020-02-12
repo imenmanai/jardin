@@ -435,13 +435,13 @@
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion des enfants</span></a>
                                     <ul class="acc-menu">
 
-                                        <li><a href="{{ path('listeEnfant') }}">Liste Enfant</a></li>
+                                        <li><a href="{{ path('listeEnfant') }}">Liste Enfants</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion ligne transport</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('Bus') }}">Bus</a></li>
-                                        <li><a href="{{ path('Chauffeur') }}">Chauffeur</a></li>
+                                        <li><a href="{{ path('ajouter_Bus') }}">Ajouter Bus</a></li>
+                                        <li><a href="{{ path('afficher_Bus') }}">Afficher Bus</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion personnel</span></a>
@@ -482,31 +482,26 @@
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion Abonnement</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('AjouterAbonnement') }}">Ajouter Abonnement</a></li>
-                                        <li><a href="{{ path('ModifierAbonnement') }}">Modifier Abonnement</a></li>
-                                        <li><a href="{{ path('SupprimerAbonnement') }}">Supprimer Abonnement</a></li>
+                                        <li><a href="{{ path('abonnec') }}">Afficher Abonnement</a></li>
+
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion restauration</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('AjouterPlat') }}">Ajouter Plat</a></li>
-                                        <li><a href="{{ path('SupprimerPlat') }}">Supprimer Plat</a></li>
+                                        <li><a href="{{ path('ajoutPlat') }}">Ajouter Plat</a></li>
                                         <li><a href="{{ path('AfficherPlat') }}">Afficher Plat</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion reclamation</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('AfficherReclamation') }}">Liste Reclamation</a></li>
+                                        <li><a href="{{ path('afficherListe') }}">Liste Reclamation</a></li>
                                         <li><a href="{{ path('HistoriqueReclamation') }}">Historique Reclamation</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion Categorie reclamation</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('AjouterCategorieReclamation') }}">Ajouter Categorie Reclamation</a></li>
-                                        <li><a href="{{ path('AfficherCategorieReclamation') }}">Afficher Categorie Reclamation</a></li>
-                                        <li><a href="{{ path('ModifierCategorieReclamation') }}">Modifier Categorie Reclamation</a></li>
-                                        <li><a href="{{ path('SupprimerCategorieReclamation') }}">Supprimer Categorie Reclamation</a></li>
-
+                                        <li><a href="{{ path('ajouterCategorieReclamation') }}">Ajouter Categorie Reclamation</a></li>
+                                        <li><a href="{{ path('afficherCategorieReclamation') }}">Afficher Categorie Reclamation</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-separator"><span>Extras</span></li>

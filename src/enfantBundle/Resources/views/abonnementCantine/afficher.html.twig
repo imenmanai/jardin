@@ -12,18 +12,28 @@
                         <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                             <tr>
-                                <th>ID Bus</th>
-                                <th>Matricule</th>
-                                <th>Nombres de Places</th>
+                                <th>Nom prenom</th>
+                                <th>type</th>
+                                <th>Date debut</th>
+                                <th>Date fin</th>
+                                <th>etat</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
-                            {% for info in buss  %}
-                            <tr class="gradeC">
-                                <td>{{ info.id }}</td>
-                                <td>{{ info.matricule }}</td>
-                                <td>{{ info.nbPlaces }}</td>
-                            </tr>
+                            {% for info in abonne  %}
+                                <tr class="gradeC">
+                                    <td>{{ info.id }}</td>
+                                    <td>{{ info.type  }}"</td>
+                                    <td>{{info.dateDebut|date }}</td>
+                                    <td>{{info.dateFin|date }}</td>
+                                    <td>{{info.etat }}</td>
+
+
+                                    <td class="center"><a href="{{ path('supp',{'id': info.id})}}">Supprimer</a>
+                                    </td>
+
+                                </tr>
                             {% endfor %}
                             </tbody>
                         </table>

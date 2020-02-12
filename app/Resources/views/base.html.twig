@@ -94,9 +94,9 @@
                                                 <li><a href="{{ path('eventdetail') }}">Prochain Evenement</a></li>
                                             </ul>
                                         </li>
-                                        <li class="drop"><a href="#">Enfant</a>
+                                        <li class="drop"><a href="{{ path('afficher_Enfant') }}">Enfant</a>
                                             <ul class="dropdown__menu">
-                                                <li><a href="{{ path('enfant') }}">Inscription</a></li>
+                                                <li><a href="{{ path('ajouter_Enfant') }}">Inscription</a></li>
                                             </ul>
                                         </li>
                                         <li class="drop"><a href="{{ path('transport') }}">Ligne de transport</a>
@@ -107,7 +107,9 @@
                                         </li>
                                         <li class="drop"><a href="{{ path('repas') }}">Cantine</a>
                                             <ul class="dropdown__menu">
-                                                <li><a href="{{ path('repas') }}">Repas</a></li>
+                                                <li><a href="{{ path('inscriC') }}">Inscription Cantine</a></li>
+                                                <li><a href="{{ path('repas') }}">Liste Repas du jour</a></li>
+
                                             </ul>
                                         </li>
                                         <li class="drop"><a href="{{ path('personnel') }}">Personnels</a>
@@ -117,19 +119,12 @@
                                         </li>
                                         <li class="drop"><a href="{{ path('reclamation') }}">Reclamation</a>
                                             <ul class="dropdown__menu">
-                                                <li><a href="{{ path('reclamation') }}">ajouter Reclamation</a></li>
-                                                <li><a href="{{ path('histreclamation') }}">Historique</a></li>
+                                                <li><a href="{{ path('ajouterReclamation') }}">ajouter Reclamation</a></li>
+                                                <li><a href="{{ path('afficherReclamation') }}">Historique</a></li>
 
                                             </ul>
                                         </li>
-                                        <li class="drop"><a href="{{ path('reclamation') }}">Profile</a>
-                                            <ul class="dropdown__menu">
-                                                <li><a href="{{ path('reclamation') }}">Afficher information</a></li>
-                                                <li><a href="{{ path('histreclamation') }}">modifier information</a></li>
-                                                <li><a href="{{ path('histreclamation') }}">modifier mot de passe</a></li>
 
-                                            </ul>
-                                        </li>
                                     </ul>
                                 </nav>
                             </div>
