@@ -2,14 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/ajouterCategorieReclamation.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierCategorieReclamation.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherDetaille.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Controller/CategorieReclamationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Controller/CategorieReclamationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Controller/reclamationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Controller/reclamationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Entity/CategorieReclamation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Entity/CategorieReclamation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Entity/reclamation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Entity/reclamation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Form/reclamationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Form/reclamationType.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherCategorieReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherCategorieReclamation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierReclamation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherListe.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherListe.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherReclamation.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +128,6 @@
       <command value="s doctrine:database:create" />
       <command value="s doctrine:schema:update" />
       <command value="s generate:bundle" />
-      <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:generate:form reclamationBundle:reclamation" />
       <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:database:create" />
@@ -142,6 +142,7 @@
       <command value="s doctrine:schema:create" />
       <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:generate:form reclamationBundle:CategorieReclamation" />
+      <command value="s doctrine:schema:update --force" />
     </option>
   </component>
   <component name="RunDashboard">

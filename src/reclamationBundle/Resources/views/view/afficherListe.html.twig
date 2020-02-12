@@ -7,6 +7,7 @@
     <tr class="gradeC">
         <th>Id</th>
         <th>Etat</th>
+        <th>Date</th>
         <th>Description</th>
 
     </tr>
@@ -16,6 +17,7 @@
         <tr class="gradeC">
             <td>{{ reclamation.id }}</td>
             <td>{{ reclamation.etat }}</td>
+            <td>{{ reclamation.date|date("m/d/Y")  }}</td>
             <td>{{ reclamation.description }}</td>
 
 

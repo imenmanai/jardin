@@ -24,11 +24,7 @@ class CategorieReclamation
      * @ORM\Column(type="string", length=255)
      */
     private $description;
-    /**
-     * @ORM\ManyToOne(targetEntity="reclamation")
-     * @ORM\JoinColumn(name="reclamation",referencedColumnName="id")
-     */
-    private $reclamation;
+
 
     /**
      * @return mixed
@@ -78,21 +74,6 @@ class CategorieReclamation
         $this->description = $description;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getReclamation()
-    {
-        return $this->reclamation;
-    }
-
-    /**
-     * @param mixed $reclamation
-     */
-    public function setReclamation($reclamation)
-    {
-        $this->reclamation = $reclamation;
-    }
 
 
 }
