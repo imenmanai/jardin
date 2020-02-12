@@ -7,6 +7,7 @@ namespace JardinBundle\Controller;
 
 use JardinBundle\Entity\Categorie;
 
+
 use JardinBundle\Form\CategorieType;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -36,5 +37,14 @@ class CategorieController extends Controller
         return $this->render('@Jardin/Jardin/addc.html.twig', array('form' => $form->createView()));
 
 
+    }
+    public function supprimecAction($id)
+    {
+        $em=$this->getDoctrine()->getManager();
+        $projet=$em->getRepository(Categorie::class)->find($id);//les deux lignes recuperation du categorie a supprimer
+        $em->remove($projet);
+        $em->flush();//les deux lignes la supprission
+        $this->addFlash('success', "catégorie supprimé avec succes!");
+        return $this->redirectToRoute('jardin_listc');
     }
 }

@@ -11,6 +11,8 @@ use JardinBundle\Entity\Personnel;
 use JardinBundle\Form\PersonnelType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+
 
 class PersonnelController extends Controller
 {
@@ -28,6 +30,7 @@ class PersonnelController extends Controller
             $em = $this->getDoctrine()->getManager();
             $em->persist($formation);//persister les donner dans la base de donnee
             $em->flush();//tlansi kif el commit
+            $this->addFlash('success', "Personnel ajouté!");
             return $this->redirectToRoute('jardin_list');
         }
         return $this->render('@Jardin/Jardin/add.html.twig', array('form' => $form->createView()));
@@ -37,9 +40,10 @@ class PersonnelController extends Controller
     public function supprimeAction($id)
     {
         $em=$this->getDoctrine()->getManager();
-        $projet=$em->getRepository(Personnel::class)->find($id);//les deux lignes recuperation du club a supprimer
+        $projet=$em->getRepository(Personnel::class)->find($id);//les deux lignes recuperation du categorie a supprimer
         $em->remove($projet);
         $em->flush();//les deux lignes la supprission
+        $this->addFlash('success', "Personnel supprimé avec succes!");
         return $this->redirectToRoute('jardin_list');
     }
     public function modifieAction(Request $request,$id){
@@ -52,7 +56,7 @@ class PersonnelController extends Controller
         if($form->isSubmitted()) {
             $em=$this->getDoctrine()->getManager();
             $em->flush();
-
+            $this->addFlash('success', "Personnel modifié!");
             return $this->redirectToRoute('jardin_list');
         }
 

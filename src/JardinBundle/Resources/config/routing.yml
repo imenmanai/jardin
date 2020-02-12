@@ -19,3 +19,6 @@ jardin_supprime:
 jardin_modifie:
     path:     /ModifierPersonnel/{id}
     defaults: { _controller: JardinBundle:Personnel:modifie }
+jardin_supprimec:
+    path:     /SupprimerCategoriePersonnel/{id}
+    defaults: { _controller: JardinBundle:Categorie:supprimec }

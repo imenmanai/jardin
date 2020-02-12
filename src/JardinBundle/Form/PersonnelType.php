@@ -23,7 +23,8 @@ class PersonnelType extends AbstractType
         'choice_label'=>'Type',
         'multiple'=>false
     )
-);
+)
+            ->add('image','Symfony\Component\Form\Extension\Core\Type\FileType',array('data_class' => null));
 
     }/**
      * {@inheritdoc}

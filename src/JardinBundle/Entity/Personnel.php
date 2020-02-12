@@ -4,7 +4,7 @@
 namespace JardinBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert ;
 /**
  * @ORM\Entity
  */
@@ -44,6 +44,13 @@ class Personnel
      *     referencedColumnName="id")
      */
     private $categorie;
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="Image", type="string", length=255, nullable=false)
+     * @Assert\File(mimeTypes={ "image/jpeg" , "image/png"})
+     */
+    private $image;
 
     /**
      * @return mixed
@@ -155,6 +162,22 @@ class Personnel
     public function setCategorie($categorie)
     {
         $this->categorie = $categorie;
+    }
+
+    /**
+     * @return string
+     */
+    public function getImage()
+    {
+        return $this->image;
+    }
+
+    /**
+     * @param string $image
+     */
+    public function setImage($image)
+    {
+        $this->image = $image;
     }
 
 

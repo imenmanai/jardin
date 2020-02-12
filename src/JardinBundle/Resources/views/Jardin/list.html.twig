@@ -19,6 +19,7 @@
                                 <th>Age</th>
                                 <th>Nombre d'heures de travail</th>
                                 <th>Prix de l'heure</th>
+                                <th>Photo</th>
                                 <th>Categorie</th>
                             </tr>
                             </thead>
@@ -33,7 +34,7 @@
                                     <td>{{ info.age}}</td>
                                     <td>{{ info.nbH}}</td>
                                     <td>{{ info.prixH}}</td>
-
+                                    <td>{{ info.image}}</td>
                                     <td>{{ info.categorie.type}}</td>
 
                                     <td><a TYPE="submit"  href="{{path('jardin_supprime',{'id':info.id})}}" onclick="return confirm('etes vous sure de supprission de ce personnel?')"><button>Supprimer</button></a></td>
