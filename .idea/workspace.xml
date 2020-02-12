@@ -2,9 +2,42 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="">
+
+      <change afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherDetaille.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Controller/AbonnementCantineController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Entity/Abonnec.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/afficher.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/inscriptionCantine.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platBundle/Controller/platController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platBundle/Entity/plat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platBundle/Resources/views/AfficherPlat.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platBundle/Resources/views/AjouterPlat.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platBundle/Resources/views/modifierPlat.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/styleForm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/plat/comment-retirer-le-surplus-de-graisse-dans-un-plat.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/plat/téléchargement (3).jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/plat/téléchargement.jfif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_10_02_2020_19_39_c.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_10_02_2020_20_01_c.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_10_02_2020_19_40_s.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_2_11_20__8_30_AM_s.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_10_02_2020_20_01_s.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/enfantBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Controller/DefaultController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/enfantBundle/Entity/Enfant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Entity/Enfant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Repository/enfantRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Repository/EnfantRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/afficherBus.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/afficherBus.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/ajouterCategorieReclamation.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierCategorieReclamation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Controller/reclamationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Controller/reclamationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Entity/CategorieReclamation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Entity/CategorieReclamation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Entity/reclamation.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Entity/reclamation.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Form/reclamationType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Form/reclamationType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherListe.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherListe.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherReclamation.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -152,7 +185,6 @@
       <command value="s doctrine:generate:form platBundle:plat" />
       <command value="s cache:clear" />
       <command value="s generate:bundle" />
-      <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:generate:form reclamationBundle:reclamation" />
       <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:database:create" />

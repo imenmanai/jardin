@@ -6,6 +6,8 @@ use reclamationBundle\Entity\reclamation;
 use reclamationBundle\Form\reclamationType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
+use ForumBundle\Entity\Reponse;
+
 
 class reclamationController extends Controller
 {
@@ -22,12 +24,14 @@ class reclamationController extends Controller
     }
     public function ajouterReclamationAction(Request $request)
     {
+        $user = $this->getUser();
         $reclamations =new reclamation();
         $form =$this->createForm(reclamationType::class, $reclamations);
         $form =$form->handleRequest($request);
         if ($form->isValid())
         {
             $em=$this->getDoctrine()->getManager();
+            $reclamations->setIdParent($user);
             $em->persist($reclamations);
             $em->flush();
             return $this->redirectToRoute("afficherReclamation");
@@ -65,5 +69,27 @@ class reclamationController extends Controller
         $reclamations=$this->getDoctrine()
             ->getRepository(reclamation::class)->findAll();
         return $this->render('@reclamation/view/afficherListe.html.twig',array('reclamations'=>$reclamations));
+    }
+
+    public function afficherDetailleAction(Request $request, $id)
+    {
+        $reclamations=$this->getDoctrine()
+            ->getRepository(reclamation::class)->find($id);
+        $em=$this->getDoctrine()->getManager();
+        $em->persist($reclamations);
+        $em->flush();
+        return $this->render('@reclamation/view/afficherDetaille.html.twig',array('reclamations'=>$reclamations));
+
+        $Reponse=new Reponse();
+        $form =$this->createForm(reclamationType::class, $Reponse);
+        $form =$form->handleRequest($request);
+        if ($form->isValid())
+        {
+            $em=$this->getDoctrine()->getManager();
+            $em->persist($Reponse);
+            $em->flush();
+            return $this->redirectToRoute("afficherReclamation");
+        }
+        return $this->render('@reclamation/view/afficherDetaille.html.twig', array('f'=>$form->createView()));
     }
 }
