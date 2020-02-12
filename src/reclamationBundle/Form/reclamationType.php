@@ -17,7 +17,7 @@ class reclamationType extends AbstractType
     {
         $builder->add('date')->add('etat')->add('description')
             ->add('CategorieReclamation',EntityType::class,array('class'=>'reclamationBundle:CategorieReclamation','choice_label'=>'nom','multiple'=>false))
-            ->add('save',SubmitType::class);
+            ;
     }/**
      * {@inheritdoc}
      */
