@@ -1,0 +1,26 @@
+{% extends 'baseAdmin.html.twig' %}
+{% block body %}
+<h1 style="font-weight: bold">Liste des Reclamation</h1>
+
+<table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
+    <thead>
+    <tr class="gradeC">
+        <th>Id</th>
+        <th>Etat</th>
+        <th>Description</th>
+
+    </tr>
+    </thead>
+    {% for reclamation in reclamations %}
+
+        <tr class="gradeC">
+            <td>{{ reclamation.id }}</td>
+            <td>{{ reclamation.etat }}</td>
+            <td>{{ reclamation.description }}</td>
+
+
+        </tr>
+
+    {% endfor %}
+</table>
+{% endblock %}
