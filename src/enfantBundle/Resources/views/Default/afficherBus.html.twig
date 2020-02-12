@@ -15,6 +15,7 @@
                                 <th>ID Bus</th>
                                 <th>Matricule</th>
                                 <th>Nombres de Places</th>
+                                <th>Action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -23,6 +24,11 @@
                                     <td>{{ info.id }}</td>
                                     <td>{{ info.matricule }}</td>
                                     <td>{{ info.nbPlaces }}</td>
+                                    <td><a href="{{ path('modifier_Bus',{'id':info.id}) }}" onclick="return confirm('Voulez vous vraiment modifier details de ce BUS ?')">
+                                            <button class="btn btn-primary">Modifier</button></a>
+                                        <a href="{{ path('supprimer_Bus',{'id':info.id}) }}" onclick="return confirm('Voulez vous vraiment retirer ce BUS ?')"> <button class="btn btn-primary">Retirer</button> </a>
+
+                                    </td>
                                 </tr>
                             {% endfor %}
                             </tbody>
