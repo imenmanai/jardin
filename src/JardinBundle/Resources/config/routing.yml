@@ -1,0 +1,21 @@
+jardin_homepage:
+    path:     /
+    defaults: { _controller: JardinBundle:Default:index }
+jardin_addc:
+    path:     /AjouterCategoriePersonnel
+    defaults: { _controller: JardinBundle:Categorie:addc }
+jardin_listc:
+    path:     /AfficherCategoriePersonnel
+    defaults: { _controller: JardinBundle:Categorie:listc }
+jardin_list:
+    path:     /AfficherPersonnel
+    defaults: { _controller: JardinBundle:Personnel:list }
+jardin_add:
+    path:     /AjouterPersonnel
+    defaults: { _controller: JardinBundle:Personnel:add }
+jardin_supprime:
+    path:     /SupprimerPersonnel/{id}
+    defaults: { _controller: JardinBundle:Personnel:supprime }
+jardin_modifie:
+    path:     /ModifierPersonnel/{id}
+    defaults: { _controller: JardinBundle:Personnel:modifie }

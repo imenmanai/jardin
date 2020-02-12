@@ -1,3 +1,12 @@
 cours_homepage:
     path:     /
     defaults: { _controller: coursBundle:Default:index }
+AfficherCours:
+    path:     /AfficherCours
+    defaults: { _controller: coursBundle:Default:AfficherCours }
+ajouterCours:
+    path:     /AfficherCours
+    defaults: { _controller: coursBundle:Default:AfficherCours }
+ajoutercatCours:
+    path:     /ajouterCatcours
+    defaults: { _controller: coursBundle:Default:ajoutercat }

@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+<table align="center">
+    <tr style="font-weight:bold">
+        <th>Id</th>
+        <th>etat</th>
+        <th>Description</th>
+    </tr>
+    {% for reclamation in reclamations %}
+
+        <tr>
+            <td>{{ reclamation.id }}</td>
+            <td>{{ reclamation.etat }}</td>
+            <td>{{ reclamation.description }}</td>
+
+            <td><a href="{{ path('modifierReclamation',{'id':reclamation.id}) }}">modifier</a></td>
+            <td><a href="{{ path('supprimerReclamation',{'id':reclamation.id}) }}">supprimer</a></td>
+
+
+
+        </tr>
+
+    {% endfor %}
+</table>
+{% endblock %}
