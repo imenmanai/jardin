@@ -2,6 +2,53 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="" />
+    <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Controller/AbonnementCantineController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Entity/Abonnec.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/afficher.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/index.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/inscriptionCantine.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platBundle/Controller/platController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platBundle/Entity/plat.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platBundle/Resources/views/AfficherPlat.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platBundle/Resources/views/AjouterPlat.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platBundle/Resources/views/modifierPlat.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/back/styleForm.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/plat/comment-retirer-le-surplus-de-graisse-dans-un-plat.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/plat/téléchargement (3).jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/plat/téléchargement.jfif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_10_02_2020_19_39_c.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_10_02_2020_20_01_c.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_10_02_2020_19_40_s.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_2_11_20__8_30_AM_s.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_10_02_2020_20_01_s.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainBundle/Entity/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/platBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/platBundle/Resources/config/routing.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/afficherEnfant.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/ajouterBus.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/ajouterEnfant.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/modifierBus.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/modifierEnfant.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Repository/enfantRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Repository/EnfantRepository.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/afficherBus.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/afficherBus.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/ajouterCategorieReclamation.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierCategorieReclamation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Controller/CategorieReclamationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Controller/CategorieReclamationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherCategorieReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherCategorieReclamation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierReclamation.html.twig" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +60,13 @@
     <execution>
       <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="a5888cb7-6d6f-4555-a7b9-1c755aabe1b3" />
     </execution>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -68,6 +122,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/enfantBundle" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -77,6 +133,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
@@ -84,6 +141,11 @@
       <recent name="C:\xampp\htdocs\jardin\src\enfantBundle\Resources\views\Default" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\pi\src\enfantBundle\Resources\views\abonnementCantine" />
+      <recent name="C:\wamp64\www\pi\src\enfantBundle\Resources\views" />
+      <recent name="C:\wamp64\www\pi\src\enfantBundle\Controller" />
+      <recent name="C:\wamp64\www\pi\src\platBundle\Form" />
+      <recent name="C:\wamp64\www\pi\web" />
       <recent name="C:\xampp\htdocs\jardin\src\enfantBundle" />
       <recent name="C:\xampp\htdocs\jardin\src\enfantBundle\Repository" />
       <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\ameni" />
@@ -126,6 +188,13 @@
       <command value="s debug:router" />
       <command value="c dump-autoload" />
       <command value="s doctrine:database:create" />
+      <command value="s debug:router" />
+      <command value="s generate:bundle" />
+      <command value="c dump-autoload" />
+      <command value="s doctrine:schema:create" />
+      <command value="s doctrine:generate:form platBundle:plat" />
+      <command value="s cache:clear" />
+      <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:schema:update" />
       <command value="s generate:bundle" />
       <command value="s doctrine:schema:update --force" />
@@ -187,6 +256,7 @@
       <workItem from="1581359236971" duration="2560000" />
       <workItem from="1581358081046" duration="1147000" />
       <workItem from="1581405300276" duration="261000" />
+      <workItem from="1581406270404" duration="33237000" />
     </task>
     <servers />
   </component>
