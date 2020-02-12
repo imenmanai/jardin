@@ -105,4 +105,10 @@ class DefaultController extends Controller
         return $this->redirectToRoute("afficher_Enfant");
     }
 
+    public function afficherEnfantBackAction()
+    {
+        $enf=$this->getDoctrine()->getRepository(Enfant::class)->findAll();
+        return $this->render('@enfant/Default/afficherEnfantBack.html.twig',array('enf'=>$enf));
+    }
+
 }
