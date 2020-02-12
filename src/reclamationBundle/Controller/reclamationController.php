@@ -24,12 +24,14 @@ class reclamationController extends Controller
     }
     public function ajouterReclamationAction(Request $request)
     {
+        $user = $this->getUser();
         $reclamations =new reclamation();
         $form =$this->createForm(reclamationType::class, $reclamations);
         $form =$form->handleRequest($request);
         if ($form->isValid())
         {
             $em=$this->getDoctrine()->getManager();
+            $reclamations->setIdParent($user);
             $em->persist($reclamations);
             $em->flush();
             return $this->redirectToRoute("afficherReclamation");
