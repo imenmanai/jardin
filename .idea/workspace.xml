@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/afficherEnfant.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/ajouterBus.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/ajouterEnfant.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/modifierBus.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/modifierEnfant.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Repository/enfantRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Repository/EnfantRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/afficherBus.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/afficherBus.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/ajouterCategorieReclamation.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierCategorieReclamation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Controller/CategorieReclamationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Controller/CategorieReclamationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherCategorieReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherCategorieReclamation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierReclamation.html.twig" afterDir="false" />
-    </list>
+    <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,6 +80,9 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\xampp\htdocs\jardin\src\enfantBundle\Resources\views\Default" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\xampp\htdocs\jardin\src\enfantBundle" />
       <recent name="C:\xampp\htdocs\jardin\src\enfantBundle\Repository" />
@@ -123,9 +105,6 @@
       <recent name="C:\wamp\www\jardin\src\JardinBundle\Resources\views" />
       <recent name="C:\wamp\www\jardin\src\mainBundle\Resources\views\Back" />
       <recent name="C:\xampp\htdocs\jardin\src\enfantBundle" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\xampp\htdocs\jardin\src\enfantBundle\Resources\views\Default" />
     </key>
   </component>
   <component name="RunAnythingCache">
