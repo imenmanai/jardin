@@ -1,3 +1,42 @@
 enfant_homepage:
     path:     /
     defaults: { _controller: enfantBundle:Default:index }
+
+abonnec:
+    path:     /abonnec
+    defaults: { _controller: enfantBundle:AbonnementCantine:afficherAbon }
+supp:
+    path:     /supp/{id}
+    defaults: { _controller: enfantBundle:AbonnementCantine:deleteAbon }
+
+afficher_Bus:
+    path:     /afficher_Bus
+    defaults: { _controller: enfantBundle:Default:afficherBus }
+
+ajouter_Bus:
+    path:     /ajouter_Bus
+    defaults: { _controller: enfantBundle:Default:ajouterBus }
+
+supprimer_Bus:
+    path:     /supprimer_Bus/{id}
+    defaults: { _controller: enfantBundle:Default:supprimerBus }
+
+modifier_Bus:
+    path:     /modifier_Bus/{id}
+    defaults: { _controller: enfantBundle:Default:modifierBus }
+
+ajouter_Enfant:
+    path:     /ajouter_Enfant
+    defaults: { _controller: enfantBundle:Default:ajouterEnfant }
+
+afficher_Enfant:
+    path:     /afficher_Enfant
+    defaults: { _controller: enfantBundle:Default:afficherEnfant }
+
+modifier_Enfant:
+    path:     /modifier_Enfant/{id}
+    defaults: { _controller: enfantBundle:Default:modifierEnfant }
+
+supprimer_Enfant:
+    path:     /supprimer_Enfant/{id}
+    defaults: { _controller: enfantBundle:Default:supprimerEnfant }
