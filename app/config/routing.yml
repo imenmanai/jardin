@@ -59,6 +59,16 @@ listeEnfant:
 ajoutTransport:
     path:      /ajoutTransport
     defaults:  { _controller: mainBundle:main:ajoutTransport }
-
-
+ajoutPlat:
+    path:     /plat
+    defaults: { _controller: platBundle:plat:ajouterPlat }
+abonnec:
+    path:     /abonnec
+    defaults: { _controller: enfantBundle:AbonnementCantine:afficherAbon }
+supp:
+    path:     /supp/{id}
+    defaults: { _controller: enfantBundle:AbonnementCantine:deleteAbon }
+inscriC:
+    path:     /inscriC
+    defaults: { _controller: enfantBundle:AbonnementCantine:inscriAbon }
 

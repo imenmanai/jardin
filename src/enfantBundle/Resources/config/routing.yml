@@ -1,3 +1,9 @@
 enfant_homepage:
     path:     /
     defaults: { _controller: enfantBundle:Default:index }
+abonnec:
+    path:     /abonnec
+    defaults: { _controller: enfantBundle:AbonnementCantine:afficherAbon }
+supp:
+    path:     /supp/{id}
+    defaults: { _controller: enfantBundle:AbonnementCantine:deleteAbon }
