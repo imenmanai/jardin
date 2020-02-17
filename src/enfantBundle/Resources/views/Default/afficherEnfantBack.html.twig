@@ -17,6 +17,7 @@
                                 <th>Nom</th>
                                 <th>Prenom</th>
                                 <th>Age</th>
+                                <th>Trajet</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -27,6 +28,11 @@
                                     <td>{{ info.nom }}</td>
                                     <td>{{ info.prenom }}</td>
                                     <td>{{ info.age }}</td>
+                                    {% if info.idBus != null %}
+                                        <td>{{ info.idBus.ligne}}</td>
+                                    {% else %}
+                                        <td> Aucune ligne</td>
+                                    {% endif %}
 
                                 </tr>
                             {% endfor %}

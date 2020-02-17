@@ -3,6 +3,8 @@
 namespace enfantBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 
 /**
  * Enfant
@@ -32,6 +34,7 @@ class Enfant
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=255)
+     *
      */
     private $nom;
 
@@ -39,6 +42,7 @@ class Enfant
      * @var string
      *
      * @ORM\Column(name="prenom", type="string", length=255)
+     *
      */
     private $prenom;
 

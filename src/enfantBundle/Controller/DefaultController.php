@@ -63,6 +63,7 @@ class DefaultController extends Controller
 
     public function ajouterEnfantAction(Request $request)
     {
+        $buss=$this->getDoctrine()->getRepository(Bus::class)->findAll();
         $user = $this->getUser();
         $enfant = new Enfant();
         $form = $this->createForm(EnfantType::class, $enfant);
@@ -74,7 +75,7 @@ class DefaultController extends Controller
             $em->flush();//tlansi kif el commit
             return $this->redirectToRoute('ajouter_Enfant');
         }
-        return $this->render('@enfant/Default/ajouterEnfant.html.twig', array('form' => $form->createView()));
+        return $this->render('@enfant/Default/ajouterEnfant.html.twig', array('form' => $form->createView(),'listBus'=>$buss));
     }
     public function afficherEnfantAction()
     {
@@ -89,6 +90,9 @@ class DefaultController extends Controller
         $form=$this->createForm(EnfantType::class,$enf);
         $form->handleRequest($request);
         if($form->isSubmitted()) {
+
+
+
             $em=$this->getDoctrine()->getManager();
             $em->flush();
             return $this->redirectToRoute('afficher_Enfant');
