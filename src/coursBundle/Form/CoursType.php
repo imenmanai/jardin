@@ -1,30 +1,27 @@
 <?php
 
-namespace reclamationBundle\Form;
+namespace coursBundle\Form;
 
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
-use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-
-class CategorieReclamationType extends AbstractType
+class CoursType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('description', TextareaType::class)
-            ;
+        $builder->add('description')->add('duree')->add('seats')->add('age')->add('matiere',EntityType::class,array('class'=>'coursBundle:Matiere','choice_label'=>'nom','multiple'=>false));
     }/**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'reclamationBundle\Entity\CategorieReclamation'
+            'data_class' => 'coursBundle\Entity\Cours'
         ));
     }
 
@@ -33,7 +30,7 @@ class CategorieReclamationType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'reclamationbundle_categoriereclamation';
+        return 'coursbundle_cours';
     }
 
 

@@ -9,6 +9,22 @@
                         <div class="panel-ctrls"></div>
                     </div>
                     <div class="panel-body no-padding">
+                        {{ form_start(form) }}
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Categorie Reclamation</label>
+                            <div class="col-sm-8">
+                                {{ form_widget(form.CategorieReclamation, {'attr': {'class': 'form-control','placeholder':' ...'}}) }}
+                            </div>
+                        </div>
+                        <button class="btn-primary btn" type="submit">Ajouter</button>
+
+                        {{ form_end(form) }}
+
+
+
+
+
+
                         <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                             <tr class="gradeC">
@@ -38,9 +54,7 @@
                         </table>
                     </div>
                     <div class="panel-footer">
-                        <div class="row"><div class="col-sm-6">
-                                <div class="dataTables_info" id="example_info" role="status" aria-live="polite">Showing 1 to 10 of 57 entries</div></div><div class="col-sm-6"><div class="dataTables_paginate paging_bootstrap" id="example_paginate"><ul class="pagination pull-right m-n"><li class="previous disabled"><a href="#">Previous</a></li><li class="active"><a href="#">1</a></li><li><a href="#">2</a></li><li><a href="#">3</a></li><li><a href="#">4</a></li><li><a href="#">5</a></li><li class="next"><a href="#">Next</a></li></ul></div></div></div></div>                </div>
-            </div>
+
         </div>
     </div>
 
