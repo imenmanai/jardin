@@ -13,30 +13,29 @@
 
                             <!-- Checkout Method -->
                             <div class="single-accordion">
-                                <a class="accordion-head" data-toggle="collapse" data-parent="#checkout-accordion" href="#checkout-method">1. Inscription Cantine</a>
+                                <a class="accordion-head" data-toggle="collapse" data-parent="#checkout-accordion" href="#checkout-method">1. Modifier Abonnement</a>
 
                                 <div id="checkout-method" class="collapse show">
                                     <div class="checkout-method accordion-body fix">
 
                                         <ul class="checkout-method-list">
-                                            <li data-form="checkout-register-form">Inscription</li>
+                                            <li data-form="checkout-register-form">Modifier</li>
                                         </ul>
 
 
 
                                         <form method="post" class="checkout-register-form">
                                             <div class="row"> <label>type:</label>
-                                                <div class="input-box col-md-6 col-12 mb--20"> <select name="type"><option value="mentuelle">mentuelle</option>
+                                                <div class="input-box col-md-6 col-12 mb--20"> <select value="{{ abon.type }}" name="type"><option value="mentuelle">mentuelle</option>
                                                         <option value="semestriel">semestriel</option>
                                                         <option value="trimestrie">trimestriel</option>
                                                         <option value="annulle">annulle</option>
                                                     </select></div>
-                                                <div class="input-box col-md-6 col-12 mb--20">  <label>Date debut</label>
-                                                    <input name="dateDebut" type="date" placeholder="datedebut"></div>
 
 
-                                                <div class="input-box col-md-6 col-12 mb--20">  <label>Date fin</label><input name="dateFin" type="date" placeholder="dateFin"></div>
-                                                <div class="input-box col-12"><input type="submit" value="Inscrire"></div>
+
+                                                <div class="input-box col-md-6 col-12 mb--20">  <label>Date fin</label><input name="dateFin" type="date" value="{{ abon.dateF }}" placeholder="dateFin"></div>
+                                                <div class="input-box col-12"><input type="submit" value="Modifier"></div>
                                             </div>
                                         </form>
 
@@ -47,7 +46,6 @@
 
                             <!-- Billing Method -->
 
-
                             <!-- Shipping Method -->
 
                             <!-- Payment Method -->
@@ -57,7 +55,24 @@
                     </div>
 
                     <!-- Order Details -->
+                    <div class="col-lg-6 col-12 mb-30">
 
+                        <div class="order-details-wrapper">
+                            <h2>your order</h2>
+                            <div class="order-details">
+                                <form action="#">
+                                    <ul>
+                                        <li><p class="strong">Nom  </p><p class="strong">{{ app.user.username }}</p></li>
+                                        <li><p>type</p><p>{{ abon.type }}</p></li>
+                                        <li><p>Etat </p><p>{{ abon.etat }}</p></li>
+                                        <li><p class="strong">Tarif</p><p class="strong">{{ abon.tarif }}</p></li>
+
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
 
                 </div>
             </div>

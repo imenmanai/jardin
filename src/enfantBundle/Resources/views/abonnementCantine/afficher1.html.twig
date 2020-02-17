@@ -30,10 +30,11 @@
                                     <td>{{info.dateD|date }}</td>
                                     <td>{{info.dateF|date }}</td>
                                     <td>{{info.etat }}
-                                    <a href="{{ path('modifierEtat',{'id': info.id})}}"><button  id="myBtn" type="submit"><img style="width: 20px;height:20px" src="{{ asset('edit.png') }}"></button></a>
-<
 
 
+
+                                        {{ form_start(form) }}
+                                        {{ form_end(form) }}
 
                                     </td>
 

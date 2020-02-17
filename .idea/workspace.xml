@@ -2,51 +2,55 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Controller/AbonnementCantineController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Entity/Abonnec.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/afficher.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/index.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/inscriptionCantine.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/platBundle/Controller/platController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/platBundle/Entity/plat.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/platBundle/Resources/views/AfficherPlat.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/platBundle/Resources/views/AjouterPlat.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/platBundle/Resources/views/modifierPlat.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/back/styleForm.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/plat/comment-retirer-le-surplus-de-graisse-dans-un-plat.jpeg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/plat/téléchargement (3).jfif" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/plat/téléchargement.jfif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_10_02_2020_19_39_c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_10_02_2020_20_01_c.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_10_02_2020_19_40_s.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_2_11_20__8_30_AM_s.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_10_02_2020_20_01_s.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Entity/Menu.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Form/AbonneType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Repository/AbonneRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/Menu.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/afficher1.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/detailMenu.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/modifier1Abonnement.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/modifierAbonnement.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/mainBundle/Repository/ParentRepository.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platBundle/Entity/image.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/platBundle/Form/ajoutType.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/cantine.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/edit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/images/cantine.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_2_11_20__8_30_AM_c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_2_12_20__2_24_PM_c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_2_11_20__8_30_AM_s.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_2_12_20__2_25_PM_s.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pi.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pi.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/symfony2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/symfony2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/register_content.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Controller/AbonnementCantineController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Controller/AbonnementCantineController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Entity/Abonnec.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Entity/Abonnec.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Entity/Enfant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Entity/Enfant.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/enfantBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/afficher.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/afficher.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/inscriptionCantine.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/inscriptionCantine.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainBundle/Controller/mainController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainBundle/Controller/mainController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/mainBundle/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainBundle/Entity/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/platBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/platBundle/Resources/config/routing.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/afficherEnfant.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/ajouterBus.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/ajouterEnfant.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/modifierBus.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/modifierEnfant.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Controller/DefaultController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Repository/enfantRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Repository/EnfantRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/afficherBus.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/afficherBus.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/ajouterCategorieReclamation.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierCategorieReclamation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Controller/CategorieReclamationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Controller/CategorieReclamationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherCategorieReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherCategorieReclamation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierReclamation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/platBundle/Controller/platController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/platBundle/Controller/platController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/platBundle/Entity/plat.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/platBundle/Entity/plat.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/platBundle/Form/platType.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/platBundle/Form/platType.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/platBundle/Resources/views/AfficherPlat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/platBundle/Resources/views/AfficherPlat.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/platBundle/Resources/views/AjouterPlat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/platBundle/Resources/views/AjouterPlat.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/platBundle/Resources/views/modifierPlat.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/platBundle/Resources/views/modifierPlat.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/funfact/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/funfact/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/funfact/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/funfact/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/funfact/fact-2/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/funfact/fact-2/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/funfact/fact-2/3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/images/funfact/fact-2/4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/plat/comment-retirer-le-surplus-de-graisse-dans-un-plat.jpeg" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -112,6 +116,14 @@
       <path value="$PROJECT_DIR$/vendor/jdorn/sql-formatter" />
       <path value="$PROJECT_DIR$/vendor/incenteev/composer-parameter-handler" />
       <path value="$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle" />
+      <path value="$PROJECT_DIR$/vendor/azine/email-bundle" />
+      <path value="$PROJECT_DIR$/vendor/azine/emailupdateconfirmation-bundle" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/twig/extensions" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy-bundle" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-snappy" />
     </include_path>
   </component>
   <component name="ProjectId" id="1XTNxenmg9cansf6ChZIYslYWTn" />
@@ -121,10 +133,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../ff" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/enfantBundle" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -137,11 +147,16 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\pi\src\enfantBundle\Entity" />
+      <recent name="C:\wamp64\www\pi\src\enfantBundle\Form" />
+      <recent name="C:\wamp64\www\pi\web" />
       <recent name="C:\wamp64\www\pi\src\enfantBundle\Resources\views\abonnementCantine" />
+      <recent name="C:\wamp64\www\pi\src\platBundle\Form" />
+      <recent name="C:\wamp64\www\pi\web\images" />
+      <recent name="C:\wamp64\www\pi\src\mainBundle" />
+      <recent name="C:\wamp64\www\pi\src\enfantBundle\Repository" />
       <recent name="C:\wamp64\www\pi\src\enfantBundle\Resources\views" />
       <recent name="C:\wamp64\www\pi\src\enfantBundle\Controller" />
-      <recent name="C:\wamp64\www\pi\src\platBundle\Form" />
-      <recent name="C:\wamp64\www\pi\web" />
       <recent name="C:\xampp\htdocs\jardin\src\enfantBundle" />
       <recent name="C:\xampp\htdocs\jardin\src\enfantBundle\Repository" />
       <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\ameni" />
@@ -183,7 +198,6 @@
       <command value="composer friendsofsymfony/user-bundle &quot;~2.0&quot;" />
       <command value="php composer.phar friendsofsymfony/user-bundle &quot;~2.0&quot;" />
       <command value="s doctrine:schema:create" />
-      <command value="s cache:clear" />
       <command value="s debug:router" />
       <command value="c dump-autoload" />
       <command value="s doctrine:database:create" />
@@ -192,22 +206,16 @@
       <command value="c dump-autoload" />
       <command value="s doctrine:schema:create" />
       <command value="s doctrine:generate:form platBundle:plat" />
-      <command value="s cache:clear" />
-      <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:schema:update" />
       <command value="s generate:bundle" />
-      <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:generate:form reclamationBundle:reclamation" />
-      <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:database:create" />
       <command value="s debug:router" />
       <command value="s generate:bundle" />
       <command value="s doctrine:schema:create" />
-      <command value="s doctrine:schema:update --force" />
       <command value=" php composer.phar update friendsofsymfony/user-bundle" />
       <command value="s doctrine:generate:form enfantBundle:Bus" />
       <command value="s doctrine:generate:form enfantBundle:Enfant" />
-      <command value="s cache:clear" />
       <command value="c dump-autoload" />
       <command value="s generate:bundle" />
       <command value="c dump-autoload" />
@@ -216,8 +224,15 @@
       <command value="c dump-autoload" />
       <command value="s generate:bundle" />
       <command value="s doctrine:schema:create" />
-      <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:generate:form reclamationBundle:CategorieReclamation" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s cache:clear" />
+      <command value="s cache:clear" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s doctrine:schema:update --force" />
+      <command value="s cache:clear" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -256,6 +271,12 @@
       <workItem from="1581358081046" duration="1147000" />
       <workItem from="1581405300276" duration="261000" />
       <workItem from="1581406270404" duration="33237000" />
+      <workItem from="1581528263309" duration="519000" />
+      <workItem from="1581532970493" duration="19531000" />
+      <workItem from="1581581264431" duration="394000" />
+      <workItem from="1581582917489" duration="1457000" />
+      <workItem from="1581758811079" duration="4068000" />
+      <workItem from="1581933773922" duration="22647000" />
     </task>
     <servers />
   </component>
@@ -274,5 +295,25 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/inscriptionCantine.html.twig</url>
+          <line>31</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/Menu.html.twig</url>
+          <line>34</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/src/enfantBundle/Resources/views/abonnementCantine/detailMenu.html.twig</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

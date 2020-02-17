@@ -19,6 +19,12 @@ class User extends BaseUser
      */
     protected $id;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="enfantBundle\Entity\Enfant")
+     * @ORM\JoinColumn(name="idEnfant",referencedColumnName="id")
+     */
+    private $idEnfant;
+
     public function __construct()
     {
         parent::__construct();

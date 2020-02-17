@@ -390,7 +390,7 @@
                 <li><a href="#/"><i class="ti ti-stats-up"></i><span>Earnings</span></a></li>
                 <li><a href="#/"><i class="ti ti-money"></i><span>Withdrawals</span></a></li>
                 <li class="divider"></li>
-                <li><a href="#/"><i class="ti ti-shift-right"></i><span>Sign Out</span></a></li>
+                <li><a href="{{ logout_path('main') }}"><i class="ti ti-shift-right"></i><span>Se deconnecter</span></a></li>
             </ul>
         </li>
 
@@ -492,7 +492,7 @@
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion restauration</span></a>
                                     <ul class="acc-menu">
                                         <li><a href="{{ path('ajoutPlat') }}">Ajouter Plat</a></li>
-                                        <li><a href="{{ path('AfficherPlat') }}">Afficher Plat</a></li>
+                                        <li><a href="{{ path('afficherPlat') }}">Afficher Plat</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion reclamation</span></a>

@@ -8,14 +8,14 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class platType extends AbstractType
+class ajoutType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('description')->add('image',FileType::class ,array('data_class' => null))->add('date')->add('valider',SubmitType::class);
+        $builder->add('nom')->add('description')->add('image',FileType::class ,array('data_class' => null))->add('date');
     }/**
      * {@inheritdoc}
      */
