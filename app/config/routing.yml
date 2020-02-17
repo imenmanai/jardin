@@ -35,16 +35,11 @@ class:
 index:
     path:      /index
     defaults:  { _controller: mainBundle:main:index }
-<<<<<<< HEAD
-enfant:
-=======
+
 event:
     path:      /event
     defaults:  { _controller: mainBundle:main:event }
-enfant1:
->>>>>>> 91147945d97ec11322679b489da67b8970354f86
-    path:      /enfant
-    defaults:  { _controller: mainBundle:main:enfant }
+
 transport:
     path:      /transport
     defaults:  { _controller: mainBundle:main:transport }
@@ -58,9 +53,7 @@ personnel:
 repas:
     path:      /repas
     defaults:  { _controller: mainBundle:main:repas }
-reclamation:
-    path:      /reclamation
-    defaults:  { _controller: mainBundle:main:reclamation }
+
 histreclamation:
     path:      /histreclamation
     defaults:  { _controller: mainBundle:main:histreclamation }
