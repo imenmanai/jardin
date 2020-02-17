@@ -1,5 +1,7 @@
 {% extends'baseAdmin.html.twig' %}
 {% block body %}
+
+
     <div data-widget-group="group1">
         <div class="row">
             <div class="col-md-12">
@@ -25,13 +27,23 @@
                                 <tr class="gradeC">
                                     <td>{{ info.id }}</td>
                                     <td>{{ info.type  }}"</td>
-                                    <td>{{info.dateDebut|date }}</td>
-                                    <td>{{info.dateFin|date }}</td>
-                                    <td>{{info.etat }}</td>
+                                    <td>{{info.dateD|date }}</td>
+                                    <td>{{info.dateF|date }}</td>
+                                    <td>{{info.etat }}
+                                    <a href="{{ path('modifierEtat',{'id': info.id})}}"><button  id="myBtn" type="submit"><img style="width: 20px;height:20px" src="{{ asset('edit.png') }}"></button></a>
+<
+
+
+
+                                    </td>
+
 
 
                                     <td class="center"><a href="{{ path('supp',{'id': info.id})}}">Supprimer</a>
+
                                     </td>
+
+
 
                                 </tr>
                             {% endfor %}
@@ -44,5 +56,9 @@
             </div>
         </div>
     </div>
+
+
+
+
 
 {% endblock %}

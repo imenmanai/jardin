@@ -6,7 +6,7 @@ namespace enfantBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- *@ORM\Entity()
+ *@ORM\Entity(repositoryClass="enfantBundle\Repository\AbonneRepository")
 
  */
 class Abonnec
@@ -43,6 +43,27 @@ class Abonnec
      * @ORM\JoinColumn(name="idParent",referencedColumnName="id")
      */
     private $idParent;
+    /**
+     * @ORM\Column(type="float",nullable= true)
+     */
+
+    private $tarif;
+
+    /**
+     * @return mixed
+     */
+    public function getTarif()
+    {
+        return $this->tarif;
+    }
+
+    /**
+     * @param mixed $tarif
+     */
+    public function setTarif($tarif)
+    {
+        $this->tarif = $tarif;
+    }
 
     /**
      * @return mixed

@@ -2,8 +2,9 @@
 
 
 namespace platBundle\Entity;
-use Doctrine\ORM\Mapping as ORM;
 
+use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert ;
 /**
  *@ORM\Entity()
 
@@ -25,13 +26,31 @@ private $nom;
      */
 private $description;
     /**
-     * @ORM\Column(type="string",length=255)
+     * @var string
+     *
+     * @ORM\Column(name="image", type="string", length=255, nullable=false)
+     * @Assert\File(mimeTypes={ "image/jpeg" , "image/png","image/jpg","image/GIF" })
      */
 private $image;
     /**
-     * @ORM\Column(type="date")
+     * @ORM\Column(type="string",length=255,nullable=true)
      */
 private $date;
+
+    /**
+     * plat constructor.
+     * @param $nom
+     * @param $description
+     * @param string $image
+     * @param $date
+     */
+    public function __construct($nom, $description, $image, $date)
+    {
+        $this->nom = $nom;
+        $this->description = $description;
+        $this->image = $image;
+        $this->date = $date;
+    }
 
 
     /**

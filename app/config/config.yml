@@ -16,6 +16,7 @@ parameters:
     locale: en
     photos_directory: '%kernel.root_dir%/../web/images'
 
+
 framework:
     #esi: ~
     translator: { fallbacks: ['%locale%'] }

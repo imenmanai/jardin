@@ -79,4 +79,22 @@ supp:
 inscriC:
     path:     /inscriC
     defaults: { _controller: enfantBundle:AbonnementCantine:inscriAbon }
+modifierC:
+    path:     /modifierC
+    defaults: { _controller: enfantBundle:AbonnementCantine:modifierAbon }
+Menu:
+    path:     /menu
+    defaults: { _controller: enfantBundle:AbonnementCantine:Menu }
+afficherPlat:
+    path:     /afficherPlat
+    defaults: { _controller: platBundle:plat:afficherPlat }
+afficher1:
+    path:     /afficher1
+    defaults: { _controller: enfantBundle:AbonnementCantine:afficher1 }
+modifierEtat:
+    path:     /modifierEtat/{id}
+    defaults: { _controller: enfantBundle:AbonnementCantine:modifierEtat }
+affecterMenu:
+    path:     /affecterMenu/{id}
+    defaults: { _controller: enfantBundle:AbonnementCantine:affecterMenu }
 

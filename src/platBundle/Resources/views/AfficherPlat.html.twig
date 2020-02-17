@@ -23,7 +23,7 @@
                             {% for info in liste  %}
                             <tr class="gradeC">
                                 <td>{{ info.nom }}</td>
-                                <td><img src="{{ asset('plat/')}}{{ info.image  }}"></td>
+                                <td><img src="{{ asset('images/' ~ info.image)}} " style="width: 50px;"></td>
                                 <td>{{info.description}}</td>
                                 <td class="center">{{ info.date|date }}</td>
                                 <td class="center"><a href="{{ path('deletePlat',{'id': info.id})}}">Supprimer</a>
