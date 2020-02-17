@@ -25,7 +25,7 @@ class CategorieReclamationController extends Controller
         $CategorieReclamations =new CategorieReclamation();
         $form =$this->createForm(CategorieReclamationType::class, $CategorieReclamations);
         $form =$form->handleRequest($request);
-        if ($form->isValid())
+        if ($form->isSubmitted())
         {
             $em=$this->getDoctrine()->getManager();
             $em->persist($CategorieReclamations);
