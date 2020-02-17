@@ -4,9 +4,14 @@
 namespace reclamationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Symfony\Component\Validator\Mapping\ClassMetadata;
 /**
  *@ORM\Table(name="categorie_reclamation")
  * @ORM\Entity(repositoryClass="reclamationBundle\Repository\CategorieReclamationRepository")
+ * @UniqueEntity("nom")
+ * @UniqueEntity("description")
  */
 class CategorieReclamation
 {
@@ -18,10 +23,12 @@ class CategorieReclamation
     private $ref;
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $nom;
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank()
      */
     private $description;
 
@@ -74,6 +81,13 @@ class CategorieReclamation
         $this->description = $description;
     }
 
-
+    public static function loadValidatorMetaData(ClassMetadata $metadata)
+    {
+        $metadata->addConstraint(new UniqueEntity(array(
+            'fields' => array('nom'),
+            'errorPath' => 'nom',
+            'message' => 'ce nom ({{ value }}) est deja utilise'
+        )));
+    }
 
 }

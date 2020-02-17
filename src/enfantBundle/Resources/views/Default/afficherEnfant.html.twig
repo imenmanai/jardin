@@ -27,6 +27,7 @@
                                 <th class="product-name">Nom</th>
                                 <th class="product-price">Prenom</th>
                                 <th class="product-quantity">Age</th>
+                                <th class="product-quantity">Trajet</th>
                                 <th class="product-quantity">Actions</th>
                             </tr>
                             </thead>
@@ -37,6 +38,12 @@
                                     <td>{{ info.nom }}</td>
                                     <td>{{ info.prenom }}</td>
                                     <td>{{ info.age }}</td>
+                                    {% if info.idBus != null %}
+                                    <td>{{ info.idBus.ligne}}</td>
+                                        {% else %}
+                                        <td> Aucune ligne</td>
+                                    {% endif %}
+
                                     <td>
                                             <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
 

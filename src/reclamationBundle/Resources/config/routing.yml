@@ -40,3 +40,7 @@ supprimerCategorieReclamation:
 afficherDetaille:
     path:     /afficherDetaille/{id}
     defaults: { _controller: reclamationBundle:reclamation:afficherDetaille }
+
+rechercherReclamation:
+    path:     /rechercherReclamation
+    defaults: { _controller: reclamationBundle:reclamation:rechercherReclamation }

@@ -56,6 +56,18 @@
                                         </div>
 
                                     </div>
+                                    <div class="single-accordion">
+                                        <a class="accordion-head collapsed" data-toggle="collapse" data-parent="#checkout-accordion" href="#payment-method">Inscrire votre enfant à la ligne de Transport</a>
+                                        <div id="payment-method" class="collapse">
+                                            <div class="accordion-body payment-method fix">
+                                                Ligne : <div class="col-12 mb--20">
+                                                {{ form_widget(form.idBus, {'attr': {'class': 'form-control','placeholder':'  ...'}}) }}
+
+
+
+                                            </div>
+                                        </div>
+                                    </div>
 
 
                                 </form>
@@ -75,19 +87,7 @@
                     <!-- Transport Method -->
 
                     <!-- Payment Method -->
-                    <div class="single-accordion">
-                        <a class="accordion-head collapsed" data-toggle="collapse" data-parent="#checkout-accordion" href="#payment-method">Inscrire votre enfant à la ligne de Transport</a>
-                        <div id="payment-method" class="collapse">
-                            <div class="accordion-body payment-method fix">
 
-                                <ul class="payment-method-list">
-                                    <li class="active">Oui je veux l'inscrire à votre Bus.</li>
-                                    <li class="payment-form-toggle">Non merci.</li>
-                                </ul>
-
-                            </div>
-                        </div>
-                    </div>
 
                 </div><!-- Checkout Accordion Start -->
             </div>
@@ -101,4 +101,5 @@
 
 {{ form_end(form) }}
 {% endblock %}
+
 

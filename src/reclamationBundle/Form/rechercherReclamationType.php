@@ -1,26 +1,29 @@
 <?php
 
-namespace enfantBundle\Form;
+namespace reclamationBundle\Form;
 
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
-class BusType extends AbstractType
+class rechercherReclamationType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('matricule')->add('nbPlaces')->add('ligne');
+        $builder->add('CategorieReclamation',EntityType::class,array('class'=>'reclamationBundle:CategorieReclamation','choice_label'=>'nom','multiple'=>false))
+            ;
     }/**
      * {@inheritdoc}
      */
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults(array(
-            'data_class' => 'enfantBundle\Entity\Bus'
+            'data_class' => 'reclamationBundle\Entity\reclamation'
         ));
     }
 
@@ -29,7 +32,7 @@ class BusType extends AbstractType
      */
     public function getBlockPrefix()
     {
-        return 'enfantbundle_bus';
+        return 'reclamationbundle_reclamation';
     }
 
 

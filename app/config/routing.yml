@@ -1,9 +1,12 @@
+reclamation:
+    resource: "@reclamationBundle/Resources/config/routing.yml"
+    prefix:   /aa
 jardin:
     resource: "@JardinBundle/Resources/config/routing.yml"
     prefix:   /
+
 evenement:
     resource: "@evenementBundle/Resources/config/routing.yml"
-    prefix:   /
 
 enfant:
     resource: "@enfantBundle/Resources/config/routing.yml"
@@ -32,12 +35,11 @@ class:
 index:
     path:      /index
     defaults:  { _controller: mainBundle:main:index }
+
 event:
     path:      /event
     defaults:  { _controller: mainBundle:main:event }
-enfant1:
-    path:      /enfant
-    defaults:  { _controller: mainBundle:main:enfant }
+
 transport:
     path:      /transport
     defaults:  { _controller: mainBundle:main:transport }
@@ -51,9 +53,7 @@ personnel:
 repas:
     path:      /repas
     defaults:  { _controller: mainBundle:main:repas }
-reclamation:
-    path:      /reclamation
-    defaults:  { _controller: mainBundle:main:reclamation }
+
 histreclamation:
     path:      /histreclamation
     defaults:  { _controller: mainBundle:main:histreclamation }
@@ -79,4 +79,3 @@ supp:
 inscriC:
     path:     /inscriC
     defaults: { _controller: enfantBundle:AbonnementCantine:inscriAbon }
-

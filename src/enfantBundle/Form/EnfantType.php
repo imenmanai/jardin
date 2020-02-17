@@ -2,6 +2,7 @@
 
 namespace enfantBundle\Form;
 
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -29,7 +30,7 @@ class EnfantType extends AbstractType
                     '6'=> '6'
                 ],
             ]
-            );
+            )->add('idBus',EntityType::class,array('class'=>'enfantBundle:Bus','choice_label'=>'ligne','multiple'=>false,'placeholder' => 'Choose an option','required' => false));
     }/**
      * {@inheritdoc}
      */
