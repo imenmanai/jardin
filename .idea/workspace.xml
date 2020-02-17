@@ -2,14 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/ajouterCategorieReclamation.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierCategorieReclamation.html.twig" afterDir="false" />
+<<<<<<< HEAD
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Entity/Cours.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Entity/Matiere.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Resources/views/view/AfficherCategorie.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Resources/views/view/AfficherCours.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Resources/views/view/ajouterCategorie.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Resources/views/view/ajouterCours.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Controller/CategorieReclamationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Controller/CategorieReclamationController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/config/routing.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherCategorieReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/afficherCategorieReclamation.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierReclamation.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coursBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/coursBundle/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coursBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/coursBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/houria/AfficherCategorieCours.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/houria/AfficherCategorieCours.html.twig" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/enfantBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/enfantBundle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/acceuilAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/acceuilAdmin.html.twig" afterDir="false" />
+>>>>>>> cb53504c2b9afd6c1be541df950fba3cb844b9df
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -75,7 +90,19 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+<<<<<<< HEAD
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../CiteCulture" />
+=======
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/coursBundle/Resources/views/view" />
+=======
+<<<<<<< HEAD
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CiteCulture" />
+=======
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+>>>>>>> e039501a2f4f4d233c5a8e4b89e5d47471f4cfca
+>>>>>>> cb53504c2b9afd6c1be541df950fba3cb844b9df
+>>>>>>> b29a062fa04702a44ff328df4a8bb9ff5f88bdd7
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -87,22 +114,19 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\wamp64\www\jardin\src\reclamationBundle\Resources\views\view" />
-      <recent name="C:\wamp64\www\jardin\src\reclamationBundle\Form" />
-      <recent name="C:\wamp64\www\jardin\src\reclamationBundle\Controller" />
-      <recent name="C:\xampp\htdocs\jardin\src\enfantBundle" />
-      <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\ameni" />
-      <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\imen" />
+<<<<<<< HEAD
       <recent name="C:\wamp64\www\jardin\src\coursBundle\Resources\views\view" />
       <recent name="C:\wamp64\www\jardin\src\coursBundle\Resources\views\Default" />
       <recent name="C:\xampp\htdocs\jardin\src\enfantBundle" />
       <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\ameni" />
       <recent name="C:\wamp64\www\pi\src\mainBundle\Resources\views\Back\imen" />
+=======
       <recent name="C:\wamp\www\jardin\src\JardinBundle\Controller" />
       <recent name="C:\wamp\www\jardin\src\JardinBundle" />
       <recent name="C:\wamp\www\jardin\src\JardinBundle\Resources\views" />
       <recent name="C:\wamp\www\jardin\src\mainBundle\Resources\views\Back" />
       <recent name="C:\xampp\htdocs\jardin\src\enfantBundle" />
+>>>>>>> cb53504c2b9afd6c1be541df950fba3cb844b9df
     </key>
   </component>
   <component name="RunAnythingCache">
@@ -128,6 +152,8 @@
       <command value="s doctrine:schema:update" />
       <command value="s generate:bundle" />
       <command value="s doctrine:generate:form reclamationBundle:reclamation" />
+
+      <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:database:create" />
       <command value="s cache:clear" />
       <command value="s debug:router" />
@@ -139,6 +165,7 @@
       <command value="s generate:bundle" />
       <command value="s doctrine:schema:create" />
       <command value="s doctrine:generate:form reclamationBundle:CategorieReclamation" />
+      <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:schema:update --force" />
@@ -178,6 +205,7 @@
       <workItem from="1581359650872" duration="1430000" />
       <workItem from="1581359236971" duration="2560000" />
       <workItem from="1581358081046" duration="1147000" />
+
       <workItem from="1581405300276" duration="261000" />
     </task>
     <servers />
@@ -190,6 +218,7 @@
       <map>
         <entry key="MAIN">
           <value>
+            <State />
             <State>
               <option name="COLUMN_ORDER" />
             </State>
