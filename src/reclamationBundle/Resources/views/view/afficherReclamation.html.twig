@@ -1,26 +1,62 @@
-{% extends 'base.html.twig' %}
-{% block body %}
 
-<table align="center">
-    <tr style="font-weight:bold">
-        <th>Id</th>
-        <th>etat</th>
-        <th>Description</th>
-    </tr>
-    {% for reclamation in reclamations %}
+        {% extends'base.html.twig' %}
+        {% block body %}
+            <div class="ht__bradcaump__area">
+                <div class="ht__bradcaump__container">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="bradcaump__inner text-center">
+                                    <h2 class="bradcaump-title">Afficher Reclamations</h2>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-main-area section-padding--lg bg--white">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 ol-lg-12">
+                            <form action="#">
+                                <ul class="table-content table-responsive">
+                                    <table>
+                                        <thead>
+                                        <tr style="font-weight:bold">
+                                            <th class="product-name">Id</th>
+                                            <th class="product-price">etat</th>
+                                            <th class="product-subtotal">Nom Categorie</th>
+                                            <th class="product-subtotal">Actions</th>
+                                        </tr>
+                                        </thead>
+                                        {% for reclamation in reclamations %}
 
-        <tr>
-            <td>{{ reclamation.id }}</td>
-            <td>{{ reclamation.etat }}</td>
-            <td>{{ reclamation.description }}</td>
+                                            <tr>
+                                                <td>{{ reclamation.id }}</td>
+                                                <td>{{ reclamation.etat }}</td>
+                                                <td>{{ reclamation.CategorieReclamation.nom}}</td>
 
-            <td><a href="{{ path('modifierReclamation',{'id':reclamation.id}) }}">modifier</a></td>
-            <td><a href="{{ path('supprimerReclamation',{'id':reclamation.id}) }}">supprimer</a></td>
+                                                <td>
+                                                    <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
+                                                      <li><a href="{{ path('modifierReclamation',{'id':reclamation.id}) }}">modifier</a></li>
+                                                      <li> <a href="{{ path('supprimerReclamation',{'id':reclamation.id}) }}">supprimer</a></li>
+                                                      <li>  <a href="{{ path('afficherDetaille',{'id':reclamation.id}) }}">afficherDetaille</a></li>
+                                                    </ul>
+                                                </td>
+
+                                            </tr>
+
+                                        {% endfor %}
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
 
 
+                </div>
+            </div>
 
-        </tr>
-
-    {% endfor %}
-</table>
-{% endblock %}
+        {% endblock %}

@@ -54,8 +54,22 @@
                                             age : <div class="col-12 mb--20">
                                                 {{ form_widget(form.age, {'attr': {'class': 'form-control','placeholder':'Sexe enfant  ...'}}) }}
                                             </div>
+                                            <div class="single-accordion">
+                                                <a class="accordion-head collapsed" data-toggle="collapse" data-parent="#checkout-accordion" href="#payment-method">Inscrire votre enfant à la ligne de Transport</a>
+                                                    <div class="accordion-body payment-method fix">
+                                                        Ligne : <div class="col-12 mb--20">
+                                                            {{ form_widget(form.idBus, {'attr': {'class': 'form-control','placeholder':'  ...'}}) }}
 
+
+
+                                                        </div>
+                                                    </div>
+
+                                                </div>
                                         </div>
+
+
+
 
 
                                     </form>

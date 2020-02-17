@@ -391,6 +391,7 @@
                 <li><a href="#/"><i class="ti ti-money"></i><span>Withdrawals</span></a></li>
                 <li class="divider"></li>
                 <li><a href="{{ logout_path('main') }}"><i class="ti ti-shift-right"></i><span>Se deconnecter</span></a></li>
+
             </ul>
         </li>
 
@@ -435,7 +436,7 @@
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion des enfants</span></a>
                                     <ul class="acc-menu">
 
-                                        <li><a href="{{ path('listeEnfant') }}">Liste Enfants</a></li>
+                                        <li><a href="{{ path('afficher_EnfantBack') }}">Liste Enfants</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion ligne transport</span></a>
@@ -448,7 +449,7 @@
                                     <ul class="acc-menu">
                                         <li><a href="{{ path('AjouterPersonnel') }}">Ajouter Personnel</a></li>
                                         <li><a href="{{ path('ModifierPersonnel') }}">Modifier Personnel</a></li>
-                                        <li><a href="{{ path('AfficherPersonnel') }}">Afficher Personnel</a></li>
+                                        <li><a href="{{ path('AfficherPersonnel') }}">liste Personnel</a></li>
                                         <li><a href="{{ path('SupprimerPersonnel') }}">Supprimer Personnel</a></li>
                                     </ul>
                                 </li>
@@ -462,24 +463,21 @@
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion cours</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('AfficherCours') }}">Cours</a></li>
-                                        <li><a href="{{ path('Categorie') }}">Categorie</a></li>
+                                        <li><a href="{{ path('AfficherCours') }}">afficher les Cours</a></li>
+                                        <li><a href="{{ path('ajouterCours') }}">ajouter un cours </a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion categorie cours</span></a>
                                     <ul class="acc-menu">
                                         <li><a href="{{ path('ajoutercatCours') }}">Ajouter Categorie Cours</a></li>
-                                        <li><a href="{{ path('AfficherCategorieCours') }}">Afficher Categorie Cours</a></li>
-                                        <li><a href="{{ path('SupprimerCategorieCours') }}">Supprimer Categorie Cours</a></li>
-                                        <li><a href="{{ path('ModifierCategorieCours') }}">Modifier Categorie Cours</a></li>
+                                        <li><a href="{{ path('Affichcatcours') }}">Afficher Categorie Cours</a></li>
 
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion evenement</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('AjouterEvenement') }}">Ajouter evenement</a></li>
-                                        <li><a href="{{ path('ModifierEvenement') }}">Modifier evenement</a></li>
-                                        <li><a href="{{ path('SupprimerEvenemet') }}">supprimer evenement</a></li>
+                                        <li><a href="{{ path('ajoutevent') }}">Ajouter evenement</a></li>
+                                        <li><a href="{{ path('afficherevent') }}">afficher evenement</a></li>
 
                                     </ul>
                                 </li>
@@ -497,14 +495,13 @@
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion reclamation</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('afficherListe') }}">Liste Reclamation</a></li>
                                         <li><a href="{{ path('HistoriqueReclamation') }}">Historique Reclamation</a></li>
+                                        <li><a href="{{ path('rechercherReclamation') }}">Liste Reclamation</a></li>
+                                        <li><a href="{{ path('afficherListe') }}">Gerer Reclamation</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion Categorie reclamation</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('ajouterCategorieReclamation') }}">Ajouter Categorie Reclamation</a></li>
-                                        <li><a href="{{ path('afficherCategorieReclamation') }}">Afficher Categorie Reclamation</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-separator"><span>Extras</span></li>
@@ -528,7 +525,11 @@
 
                     </ol>
 
-
+                    {% for message in app.flashes('success') %}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
                     {% block body %}
                     {% endblock %}
 

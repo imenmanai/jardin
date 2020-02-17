@@ -41,3 +41,6 @@ supprimer_Enfant:
     path:     /supprimer_Enfant/{id}
     defaults: { _controller: enfantBundle:Default:supprimerEnfant }
 
+afficher_EnfantBack:
+  path:     /afficher_EnfantBack
+  defaults: { _controller: enfantBundle:Default:afficherEnfantBack }

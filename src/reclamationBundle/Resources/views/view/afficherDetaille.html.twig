@@ -1,0 +1,31 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <h1 style="font-weight: bold">Detaille de votre Reclamation:</h1>
+
+    <div class="table-content table-responsive">
+    <table>
+        <thead>
+        <tr class="title-top">
+        <tr style="font-weight:bold">
+            <th class="product-name">Id</th>
+            <th class="product-price">etat</th>
+            <th class="product-subtotal">Nom Categorie</th>
+            <th class="product-quantity">Date</th>
+            <th class="product-subtotal">Description</th>
+
+
+        </tr>
+        </thead>
+
+            <tr>
+                <td>{{ reclamations.id }}</td>
+                <td>{{ reclamations.etat }}</td>
+                <td>{{ reclamations.CategorieReclamation.nom}}</td>
+                <td>{{ reclamations.date|date("m/d/Y") }}</td>
+                <td>{{ reclamations.description }}</td>
+
+
+            </tr>
+
+    </table>
+{% endblock %}

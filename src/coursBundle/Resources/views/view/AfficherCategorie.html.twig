@@ -1,3 +1,4 @@
+
 {% extends'baseAdmin.html.twig' %}
 {% block body %}
     <div data-widget-group="group1">
@@ -5,29 +6,28 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h2>Data Tables</h2>
+                        <h2>Liste des personnels</h2>
                         <div class="panel-ctrls"></div>
                     </div>
                     <div class="panel-body no-padding">
                         <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
                             <thead>
                             <tr>
-                                <th>description</th>
-                                <th>duree</th>
-                                <th>nombre place</th>
-                                <th>age</th>
-                                <th>matiere</th>
+                                <th>nom de la matiere</th>
+                                <th>coefficient</th>
                             </tr>
                             </thead>
                             <tbody>
-                            {% for c in cours %}
-                                <tr class="gradeC">
-                                    <td>{{c.description}}</td>
-                                    <td>{{c.duree}}</td>
-                                    <td>{{c.seats}}</td>
-                                    <td>{{c.age}}</td>
-                                </tr>
 
+                            {% for m in matiere %}
+                                <tr>
+                                    <td>{{ m.nom}}</td>
+                                    <td>{{ m.coeff}}</td>
+
+
+                                    <td><a href="{{ path('deletematiere',{'id':m.id}) }}"><img width="20" height="20" src="{{ asset('images/icon/supprimer.png') }}" ></a></td>
+
+                                </tr>
                             {% endfor %}
                             </tbody>
                         </table>
@@ -40,3 +40,11 @@
     </div>
 
 {% endblock %}
+
+
+
+
+
+
+
+

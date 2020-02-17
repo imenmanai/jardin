@@ -4,6 +4,8 @@
 namespace reclamationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * @ORM\Table(name="reclamation")
  * @ORM\Entity(repositoryClass="reclamationBundle\Repository\reclamationRepository")
@@ -28,8 +30,35 @@ class reclamation
     private $etat;
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="ecrire haja")
      */
     private $description;
+    /**
+     * @ORM\ManyToOne(targetEntity="CategorieReclamation")
+     * @ORM\JoinColumn(name="CategorieReclamation",referencedColumnName="ref")
+     */
+    private $CategorieReclamation;
+    /**
+     * @ORM\ManyToOne(targetEntity="mainBundle\Entity\User")
+     * @ORM\JoinColumn(name="idParent",referencedColumnName="id")
+     */
+    private $idParent;
+
+    /**
+     * @return mixed
+     */
+    public function getIdParent()
+    {
+        return $this->idParent;
+    }
+
+    /**
+     * @param mixed $idParent
+     */
+    public function setIdParent($idParent)
+    {
+        $this->idParent = $idParent;
+    }
 
     /**
      * @return mixed
@@ -94,4 +123,21 @@ class reclamation
     {
         $this->description = $description;
     }
+
+    /**
+     * @return mixed
+     */
+    public function getCategorieReclamation()
+    {
+        return $this->CategorieReclamation;
+    }
+
+    /**
+     * @param mixed $CategorieReclamation
+     */
+    public function setCategorieReclamation($CategorieReclamation)
+    {
+        $this->CategorieReclamation = $CategorieReclamation;
+    }
+
 }
