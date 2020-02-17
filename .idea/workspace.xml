@@ -21,6 +21,26 @@
       <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/ajouterReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/ajouterReclamation.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierCategorieReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierCategorieReclamation.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierReclamation.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view/modifierReclamation.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Entity/Cours.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Entity/Matiere.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Resources/views/view/AfficherCategorie.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Resources/views/view/AfficherCours.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Resources/views/view/ajouterCategorie.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/coursBundle/Resources/views/view/ajouterCours.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Registration/confirmed.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coursBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/coursBundle/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/coursBundle/Resources/config/routing.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/coursBundle/Resources/config/routing.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/houria/AfficherCategorieCours.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/houria/AfficherCategorieCours.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/FOSUserBundle/views/Profile/show_content.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/security.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/security.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/enfantBundle.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/enfantBundle.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/acceuilAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/mainBundle/Resources/views/Back/acceuilAdmin.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -33,13 +53,6 @@
     <execution>
       <phar pharPath="$PROJECT_DIR$/composer.phar" interpreterId="a5888cb7-6d6f-4555-a7b9-1c755aabe1b3" />
     </execution>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="CSS File" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -89,14 +102,15 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1XTNxenmg9cansf6ChZIYslYWTn" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/reclamationBundle/Resources/views/view" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/coursBundle/Resources/views/view" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../CiteCulture" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -104,7 +118,6 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="php.override.implement.member.chooser.php.doc" value="NONE" />
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php.zend.framework.tool" />
   </component>
   <component name="RecentsManager">
@@ -143,6 +156,7 @@
   <component name="RunAnythingCache">
     <option name="myCommands">
       <command value="php composer.phar friendsofsymfony/user-bundle &quot;~2.0&quot; " />
+      <command value=" php composer.phar update friendsofsymfony/user-bundle" />
       <command value="c require friendsofsymfony/user-bundle &quot;~2.0&quot;" />
       <command value=" php composer.phar &quot;friendsofsymfony/user-bundle&quot;: &quot;2.0.*@dev&quot;" />
       <command value=" php composer.phar friendsofsymfony/user-bundle &quot;~2.0&quot; " />
@@ -175,8 +189,11 @@
       <command value=" php composer.phar update friendsofsymfony/user-bundle" />
       <command value="s doctrine:generate:form enfantBundle:Bus" />
       <command value="s doctrine:generate:form enfantBundle:Enfant" />
+
+      <command value="s doctrine:schema:update --force" />
+      <command value="s doctrine:database:create" />
       <command value="s cache:clear" />
-      <command value="c dump-autoload" />
+      <command value="s debug:router" />
       <command value="s generate:bundle" />
       <command value="c dump-autoload" />
       <command value="s doctrine:database:create" />
@@ -228,7 +245,6 @@
       <workItem from="1581359236971" duration="2560000" />
       <workItem from="1581358081046" duration="1147000" />
       <workItem from="1581405300276" duration="261000" />
-      <workItem from="1581406270404" duration="33237000" />
     </task>
     <servers />
   </component>
@@ -240,6 +256,7 @@
       <map>
         <entry key="MAIN">
           <value>
+            <State />
             <State>
               <option name="COLUMN_ORDER" />
             </State>
