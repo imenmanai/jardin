@@ -47,8 +47,8 @@ class Personnel
     /**
      * @var string
      *
-     * @ORM\Column(name="Image", type="string", length=255, nullable=false)
-     * @Assert\File(mimeTypes={ "image/jpeg" , "image/png"})
+     * @ORM\Column(name="image", type="string", length=255, nullable=false)
+     * @Assert\File(mimeTypes={ "image/jpeg" , "image/png","image/jpg","image/GIF" })
      */
     private $image;
 

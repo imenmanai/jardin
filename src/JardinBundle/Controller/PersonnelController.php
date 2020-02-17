@@ -6,12 +6,15 @@ namespace JardinBundle\Controller;
 
 
 
+
 use JardinBundle\Form\PersonnelType1;
 use JardinBundle\Entity\Personnel;
 use JardinBundle\Form\PersonnelType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
+use Symfony\Component\HttpFoundation\Response;
 
 
 class PersonnelController extends Controller
@@ -21,6 +24,11 @@ class PersonnelController extends Controller
         $formations=$this->getDoctrine()->getRepository(Personnel::class)->findAll();
         return $this->render('@Jardin/Jardin/list.html.twig', array('formations' => $formations));
     }
+    public function listFrontAction()
+    {
+        $formations=$this->getDoctrine()->getRepository(Personnel::class)->findAll();
+        return $this->render('@Jardin/Jardin/listFront.html.twig', array('formations' => $formations));
+    }
     public function addAction(Request $request)
     {
         $formation = new Personnel();
@@ -28,6 +36,11 @@ class PersonnelController extends Controller
         $form->handleRequest($request);
         if ($form->isSubmitted()) {
             $em = $this->getDoctrine()->getManager();
+            /** @var UploadedFile $file */
+            $file = $formation->getImage();
+            $filename = $this->generateUniqueFileName().'.'.$file->guessExtension();
+            $file->move($this->getParameter('photos_directory'), $filename);
+            $formation->setImage($filename);
             $em->persist($formation);//persister les donner dans la base de donnee
             $em->flush();//tlansi kif el commit
             $this->addFlash('success', "Personnel ajouté!");
@@ -55,6 +68,11 @@ class PersonnelController extends Controller
         $form->handleRequest($request);
         if($form->isSubmitted()) {
             $em=$this->getDoctrine()->getManager();
+            /** @var UploadedFile $file */
+            $file = $club->getImage();
+            $filename = $this->generateUniqueFileName().'.'.$file->guessExtension();
+            $file->move($this->getParameter('photos_directory'), $filename);
+            $club->setImage($filename);
             $em->flush();
             $this->addFlash('success', "Personnel modifié!");
             return $this->redirectToRoute('jardin_list');
@@ -65,5 +83,33 @@ class PersonnelController extends Controller
 
 
 
+    }
+
+    private function generateUniqueFileName()
+    {
+        return md5(uniqid());
+    }
+    public function searchAction(Request $request){
+        $em=$this->getDoctrine()->getManager();
+        $requestString= $request->get('q');
+        $posts=$em->getRepository('JardinBundle:Personnel')->findEntitiesByString($requestString);
+        if(!$posts){
+        $result['posts']['error']='Post not found';
+
+        }
+        else {
+            $result['posts']=$this->getRealEntities($posts);
+    }
+
+
+
+return new Response(json_encode($result));
+}
+
+    public function getRealEntities($posts)
+    { foreach ($posts as $posts){
+        $realEntities[$posts->getId()]=[$posts->getNom(),$posts->getPrenom()];
+    }
+    return $realEntities;
     }
 }

@@ -52,7 +52,7 @@
 
 {% else %}
                                 <ul class="accounting d-flex justify-content-lg-end justify-content-md-end justify-content-start align-items-center">
-                                    <li><a class="r" href="{{ logout_path('main') }}">S'inscrire</a></li>
+                                    <li><a class="r" href="{{ path('fos_user_registration_register') }}">S'inscrire</a></li>
                                     <li><a class="r" href="{{ logout_path('main') }}">Se connecter</a></li>
 
                                 </ul>
@@ -88,15 +88,15 @@
                                                 <li><a href="{{ path('class') }}">liste des classes</a></li>
                                             </ul>
                                         </li>
-                                        <li class="drop"><a href="{{ path('event') }}">évenement</a>
+                                        <li class="drop"><a href="{{ path('eventafficherf') }}">évenement</a>
                                             <ul class="dropdown__menu">
-                                                <li><a href="{{ path('event') }}">événement passé</a></li>
+                                                <li><a href="{{ path('eventafficherf') }}">événement passé</a></li>
                                                 <li><a href="{{ path('eventdetail') }}">Prochain Evenement</a></li>
                                             </ul>
                                         </li>
-                                        <li class="drop"><a href="#">Enfant</a>
+                                        <li class="drop"><a href="{{ path('afficher_Enfant') }}">Enfant</a>
                                             <ul class="dropdown__menu">
-                                                <li><a href="{{ path('enfant') }}">Inscription</a></li>
+                                                <li><a href="{{ path('ajouter_Enfant') }}">Inscription</a></li>
                                             </ul>
                                         </li>
                                         <li class="drop"><a href="{{ path('transport') }}">Ligne de transport</a>
@@ -107,29 +107,18 @@
                                         </li>
                                         <li class="drop"><a href="{{ path('repas') }}">Cantine</a>
                                             <ul class="dropdown__menu">
-                                                <li><a href="{{ path('repas') }}">Repas</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop"><a href="{{ path('personnel') }}">Personnels</a>
-                                            <ul class="dropdown__menu">
-                                                <li><a href="{{ path('personnel') }}">Liste personnels</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="drop"><a href="{{ path('reclamation') }}">Reclamation</a>
-                                            <ul class="dropdown__menu">
-                                                <li><a href="{{ path('ajouterReclamation') }}">ajouter Reclamation</a></li>
-                                                <li><a href="{{ path('afficherReclamation') }}">Historique</a></li>
+                                                <li><a href="{{ path('inscriC') }}">Inscription Cantine</a></li>
+                                                <li><a href="{{ path('repas') }}">Liste Repas du jour</a></li>
 
                                             </ul>
                                         </li>
-                                        <li class="drop"><a href="{{ path('reclamation') }}">Profile</a>
+                                        <li class="drop"><a href="{{ path('jardin_listFront') }}">Personnels</a>
                                             <ul class="dropdown__menu">
-                                                <li><a href="{{ path('reclamation') }}">Afficher information</a></li>
-                                                <li><a href="{{ path('histreclamation') }}">modifier information</a></li>
-                                                <li><a href="{{ path('histreclamation') }}">modifier mot de passe</a></li>
-
+                                                <li><a href="{{ path('jardin_listFront') }}">Liste personnels</a></li>
                                             </ul>
                                         </li>
+
+
                                     </ul>
                                 </nav>
                             </div>

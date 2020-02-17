@@ -1,0 +1,104 @@
+{% extends'base.html.twig' %}
+{% block body %}
+    {{ form_start(form) }}
+<!-- Start Bradcaump area -->
+<div class="ht__bradcaump__area">
+    <div class="ht__bradcaump__container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bradcaump__inner text-center">
+                        <h2 class="bradcaump-title">Inscription</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Bradcaump area -->
+<section class="htc__checkout bg--white section-padding--lg">
+    <!-- Checkout Section Start-->
+    <div class="checkout-section">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-lg-6 col-12 mb-30">
+
+                    <!-- Checkout Accordion Start -->
+                    <div id="checkout-accordion">
+
+                        <!-- Checkout Method -->
+
+                    </div>
+
+                    <!-- Billing Method -->
+                    <div class="single-accordion">
+                        <a class="accordion-head" data-toggle="collapse" data-parent="#checkout-accordion" href="#checkout-method">Inscrire votre enfant au jardin</a>
+                        <div id="billing-method" class="collapse show">
+
+                            <div class="accordion-body billing-method fix">
+
+                                <form action="#" class="billing-form checkout-form">
+
+                                    <div class="row">
+                                        sexe:    <div class="col-12 mb--20">
+           {{ form_widget(form.sexe, {'attr': {'class': 'form-control','placeholder':'Matricule du Bus ...'}}) }}
+                                        </div>
+                                        <div class="col-md-6 col-12 mb--20">
+             {{ form_widget(form.nom, {'attr': {'class': 'form-control','placeholder':'Son nom de famille ...'}}) }}
+                                        </div>
+                                        <div class="col-md-6 col-12 mb--20">
+          {{ form_widget(form.prenom, {'attr': {'class': 'form-control','placeholder':'Son prenom  ...'}}) }}
+                                        </div>
+                                        age : <div class="col-12 mb--20">
+               {{ form_widget(form.age, {'attr': {'class': 'form-control','placeholder':'Sexe enfant  ...'}}) }}
+                                        </div>
+
+                                    </div>
+
+
+                                </form>
+                                <div class="panel-footer">
+                                    <div class="row">
+                                        <div class="col-sm-8 col-sm-offset-2">
+                                            <button class="btn-primary btn">Inscrire </button>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Transport Method -->
+
+                    <!-- Payment Method -->
+                    <div class="single-accordion">
+                        <a class="accordion-head collapsed" data-toggle="collapse" data-parent="#checkout-accordion" href="#payment-method">Inscrire votre enfant à la ligne de Transport</a>
+                        <div id="payment-method" class="collapse">
+                            <div class="accordion-body payment-method fix">
+
+                                <ul class="payment-method-list">
+                                    <li class="active">Oui je veux l'inscrire à votre Bus.</li>
+                                    <li class="payment-form-toggle">Non merci.</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- Checkout Accordion Start -->
+            </div>
+
+            <!-- Order Details -->
+
+
+        </div>
+    </div>
+</section>
+
+{{ form_end(form) }}
+{% endblock %}
+

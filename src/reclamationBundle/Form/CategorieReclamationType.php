@@ -14,7 +14,7 @@ class CategorieReclamationType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('description')->add('save',SubmitType::class);
+        $builder->add('nom')->add('description');
     }/**
      * {@inheritdoc}
      */

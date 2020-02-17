@@ -10,6 +10,9 @@ jardin_listc:
 jardin_list:
     path:     /AfficherPersonnel
     defaults: { _controller: JardinBundle:Personnel:list }
+jardin_listFront:
+    path:     /AfficherPersonnelFront
+    defaults: { _controller: JardinBundle:Personnel:listFront }
 jardin_add:
     path:     /AjouterPersonnel
     defaults: { _controller: JardinBundle:Personnel:add }
@@ -22,3 +25,6 @@ jardin_modifie:
 jardin_supprimec:
     path:     /SupprimerCategoriePersonnel/{id}
     defaults: { _controller: JardinBundle:Categorie:supprimec }
+ajax_search:
+    path:     /search
+    defaults: { _controller: JardinBundle:Personnel:search }

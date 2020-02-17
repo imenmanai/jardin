@@ -17,6 +17,7 @@
                                 <th>nombre place</th>
                                 <th>age</th>
                                 <th>matiere</th>
+                                <th>action</th>
                             </tr>
                             </thead>
                             <tbody>
@@ -26,6 +27,11 @@
                                     <td>{{c.duree}}</td>
                                     <td>{{c.seats}}</td>
                                     <td>{{c.age}}</td>
+                                    <td>{{c.matiere.nom}}</td>
+                                    <td><a href="{{ path('deletecours',{'id':c.id}) }}"><img width="20" height="20" src="{{ asset('images/icon/supprimer.png') }}" ></a>
+                                    <a href="{{ path('modifiercours',{'id':c.id}) }}"><img width="40" height="40" src="{{ asset('images/icon/modifier.png') }}" ></a></td>
+
+
                                 </tr>
 
                             {% endfor %}
