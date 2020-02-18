@@ -85,3 +85,6 @@ fos_user:
     from_email:
         address: "imen.manai@esprit.tn"
         sender_name: "imenmanai"
+doc_doc_doc_nexmo:
+    api_key: 7b4ae542
+    api_secret: 7PI95P9MEgDM9YDL

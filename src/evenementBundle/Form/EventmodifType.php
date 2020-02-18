@@ -14,7 +14,7 @@ class EventmodifType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('description')->add('date')->add('nbpart')->add('nom')->add('local')->add('image','Symfony\Component\Form\Extension\Core\Type\FileType',array('data_class' => null));
+        $builder->add('description')->add('date')->add('datefin')->add('nbpart')->add('nom')->add('local')->add('image','Symfony\Component\Form\Extension\Core\Type\FileType',array('data_class' => null));
         ;
     }/**
      * {@inheritdoc}

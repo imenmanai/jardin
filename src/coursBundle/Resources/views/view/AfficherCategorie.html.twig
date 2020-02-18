@@ -25,7 +25,8 @@
                                     <td>{{ m.coeff}}</td>
 
 
-                                    <td><a href="{{ path('deletematiere',{'id':m.id}) }}"><img width="20" height="20" src="{{ asset('images/icon/supprimer.png') }}" ></a></td>
+                                    <td><a href="{{ path('deletematiere',{'id':m.id}) }}"><img width="20" height="20" src="{{ asset('images/icon/supprimer.png') }}" ></a>
+                                    <a href="{{ path('modifiermatiere',{'id':m.id}) }}"><img width="40" height="40" src="{{ asset('images/icon/modifier.png') }}" ></a></td>
 
                                 </tr>
                             {% endfor %}

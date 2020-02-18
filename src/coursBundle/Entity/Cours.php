@@ -34,7 +34,7 @@ class Cours
     private $age;
     /**
      * @ORM\ManyToOne(targetEntity="Matiere")
-     * @ORM\JoinColumn(name="matiere",referencedColumnName="id")
+     * @ORM\JoinColumn(name="matiere",referencedColumnName="id",onDelete="CASCADE")
      */
     private $matiere;
 

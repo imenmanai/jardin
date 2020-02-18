@@ -25,6 +25,7 @@ class AppKernel extends Kernel
             new enfantBundle\enfantBundle(),
             new reclamationBundle\reclamationBundle(),
             new JardinBundle\JardinBundle(),
+            new DocDocDoc\NexmoBundle\DocDocDocNexmoBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

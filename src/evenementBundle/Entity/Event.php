@@ -12,7 +12,7 @@ use Symfony\Component\Validator\Constraints as Assert ;
 class Event
 {
     /**
-     * @ORM\Column(type="integer")
+     * @ORM\Column( name="IdEvent",type="integer" )
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
@@ -25,6 +25,10 @@ class Event
      * @ORM\Column(type="datetime")
      */
     private $date;
+    /**
+     * @ORM\Column(name="date_fin", type="datetime")
+     */
+    private $datefin;
     /**
      * @ORM\Column(type="integer")
      */
@@ -44,6 +48,22 @@ class Event
      * @Assert\File(maxSize="500k", mimeTypes={"image/jpeg", "image/jpg", "image/png", "image/GIF"})
      */
     public $image;
+
+    /**
+     * @return mixed
+     */
+    public function getDatefin()
+    {
+        return $this->datefin;
+    }
+
+    /**
+     * @param mixed $datefin
+     */
+    public function setDatefin($datefin)
+    {
+        $this->datefin = $datefin;
+    }
 
     /**
      * @return mixed

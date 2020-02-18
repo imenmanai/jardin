@@ -31,9 +31,11 @@ class DefaultController extends Controller
             $event->setImage($filename);
             $em->persist($event);
             $em->flush();
+            $message = new \DocDocDoc\NexmoBundle\Message\Simple("2", "21656346606", "nchlh yemchi");
+            $nexmoResponse = $this->container->get('doc_doc_doc_nexmo')->send($message);
             return $this->redirectToRoute('afficherevent');
         }
-        return $this->render('@evenement/view//ajouterevent.html.twig', array('form' => $form->createView()));
+        return $this->render('@evenement/view/ajouterevent.html.twig', array('form' => $form->createView()));
     }
     public function supprimereventAction(Request $request,$id){
 
@@ -43,32 +45,23 @@ class DefaultController extends Controller
         $model->flush();
         return $this->redirectToRoute("afficherevent");
     }
-    public function modifiereventAction(Request $request,$id){
-        $cours= new Event();
-        $em=$this->getDoctrine()->getManager();
-        $cours=$em->getRepository(Event::class)->find($id);
-        $form=$this->createForm(EventType::class,$cours);
-        $form->handleRequest($request);
-        if($form->isSubmitted()) {
-            $file = $cours->getImage();
-
-            $fileName = $this->generateUniqueFileName().'.'.$file->guessExtension();
-            try {
-                $file->move(
-                    $this->getParameter('images_directory'),
-                    $fileName
-                );
-            } catch (FileException $e) {
-                // ... handle exception if something happens during file upload
-            }
-
-            $em=$this->getDoctrine()->getManager();
+    public function modifiereventAction(Request $request,$id)
+    {
+        $em = $this->getDoctrine()->getManager();
+        $event = $em->getRepository(Event::class)->find($id);
+        $form = $this->createForm(EventType::class, $event);
+        $form = $form->handleRequest($request);
+        if ($form->isSubmitted()) {
+            $file = $event->getImage();
+            $filename = $this->generateUniqueFileName().'.'.$file->guessExtension();
+            $file->move($this->getParameter('photos_directory'), $filename);
+            $event->setImage($filename);
+            $em->persist($event);
             $em->flush();
-
             return $this->redirectToRoute('afficherevent');
         }
 
-        return $this->render('@cours/view/modifierevent.html.twig', array('form' => $form->createView()));
+        return $this->render('@evenement/view/modifierevent.html.twig', array('form' => $form->createView()));
 
     }
     private function generateUniqueFileName()

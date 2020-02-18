@@ -6,6 +6,7 @@ use coursBundle\Entity\Cours;
 use coursBundle\Entity\Matiere;
 use coursBundle\Form\CoursmodifType;
 use coursBundle\Form\CoursType;
+use coursBundle\Form\MatieremodifierType;
 use coursBundle\Form\MatiereType;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
@@ -87,5 +88,26 @@ class DefaultController extends Controller
 
         return $this->render('@cours/view/modifiercours.html.twig', array('form' => $form->createView()));
 
+    }
+    public function modifiermatiereAction(Request $request,$id){
+        $cours= new Matiere();
+        $em=$this->getDoctrine()->getManager();
+        $cours=$em->getRepository(Matiere::class)->find($id);
+        $form=$this->createForm(MatieremodifierType::class,$cours);
+        $form->handleRequest($request);
+        if($form->isSubmitted()) {
+            $em=$this->getDoctrine()->getManager();
+            $em->flush();
+
+            return $this->redirectToRoute('Affichcatcours');
+        }
+
+        return $this->render('@cours/view/modifierCategorie.html.twig', array('form' => $form->createView()));
+
+    }
+    public function afficherfrontcoursAction(){
+
+        $courss=$this->getDoctrine()->getRepository(Cours::class)->findAll();
+        return $this->render('@cours/view/afficherfrontcours.html.twig',array('cours'=>$courss));
     }
 }

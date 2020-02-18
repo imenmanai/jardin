@@ -13,7 +13,9 @@
 <table id="example" class="table table-striped table-bordered" cellspacing="0" width="100%">
     <tr>
         <th>descr</th>
-        <th>date</th>
+        <th>date debut</th>
+        <th>date fin</th>
+
         <th>nbpartic</th>
         <th>nom</th>
         <th>adresse evenement</th>
@@ -26,6 +28,8 @@
 
             <td>{{ m.description}}</td>
             <td>{{ m.date|date}}</td>
+            <td>{{ m.datefin|date}}</td>
+
             <td>{{ m.nbpart }}</td>
             <td>{{ m.nom }}</td>
             <td>{{ m.local }}</td>

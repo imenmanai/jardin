@@ -25,7 +25,7 @@ security:
                 default_target_path: /login
             anonymous:    true
             logout:
-                target: /login
+                target: /index
 
     access_control:
         - { path: ^/main, role: IS_AUTHENTICATED_REMEMBERED }

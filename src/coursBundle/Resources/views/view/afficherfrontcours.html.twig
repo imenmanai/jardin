@@ -1,0 +1,34 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+    <br>
+    <br>
+    <br>
+
+    <!-- Start Single Service -->
+    <div class="footer__wrapper poss-relative ftr__btm__image section-padding--lg bg--white">
+    <div class="container">
+    <div class="row">
+    {% for c in cours %}
+
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        <div class="service bg--white border__color wow fadeInUp">
+            <div class="service__icon">
+                <img src="{{ asset('images/shape/sm-icon/2.png') }}" alt="icon images">
+            </div>
+
+            <div class="service__details">
+                <h6>{{c.matiere.nom}}</h6>
+                <h3>{{c.description}}</h3>
+
+            </div>
+        </div>
+
+    </div>
+    {% endfor %}
+    </div></div></div>
+
+
+    <!-- End Single Service -->
+    <br>
+    <br>
+{% endblock %}

@@ -16,3 +16,13 @@ suppevent:
 modifierevent:
     path:     /modifier/{id}
     defaults: { _controller: evenementBundle:Default:modifierevent }
+event_ajoutParticipation:
+    path:     /ajoutParticipation/{id}
+    defaults: { _controller: evenementBundle:Participation:ajoutParticipation }
+UserAfficheParticipation:
+    path:     /UserAfficheParticipation
+    defaults: { _controller: evenementBundle:Participation:UserAfficheParticipation }
+UserDeleteParticipation:
+    path:     /UserDeleteParticipation/{id}
+    defaults: { _controller: evenementBundle:Participation:UserDeleteParticipation }
+

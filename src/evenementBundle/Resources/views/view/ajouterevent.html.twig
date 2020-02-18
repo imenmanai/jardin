@@ -41,10 +41,20 @@
                         </div>
                         <br>
                         <div class="form-group">
-                            <label class="col-sm-2 control-label">date de l event</label>
+                            <label class="col-sm-2 control-label">date debut de l event</label>
                             <div class="col-sm-8">
 
                                 {{ form_widget(form.date, {'attr': {'class': 'form-control','placeholder':'date...'}}) }}
+
+                            </div>
+                        </div>
+                        <br>
+                        <br>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">date fin de l event</label>
+                            <div class="col-sm-8">
+
+                                {{ form_widget(form.datefin, {'attr': {'class': 'form-control','placeholder':'date fin...'}}) }}
 
                             </div>
                         </div>

@@ -28,21 +28,13 @@ fos_user:
 app:
     resource: '@AppBundle/Controller/'
     type: annotation
-
-class:
-    path:      /class
-    defaults:  { _controller: mainBundle:main:class }
 index:
     path:      /index
     defaults:  { _controller: mainBundle:main:index }
-<<<<<<< HEAD
-enfant:
-=======
 event:
     path:      /event
     defaults:  { _controller: mainBundle:main:event }
 enfant1:
->>>>>>> 91147945d97ec11322679b489da67b8970354f86
     path:      /enfant
     defaults:  { _controller: mainBundle:main:enfant }
 transport:
@@ -51,16 +43,12 @@ transport:
 inscritransport:
     path:      /inscritransport
     defaults:  { _controller: mainBundle:main:inscritransport }
-
 personnel:
     path:      /personnel
     defaults:  { _controller: mainBundle:main:personnel }
 repas:
     path:      /repas
     defaults:  { _controller: mainBundle:main:repas }
-reclamation:
-    path:      /reclamation
-    defaults:  { _controller: mainBundle:main:reclamation }
 histreclamation:
     path:      /histreclamation
     defaults:  { _controller: mainBundle:main:histreclamation }

@@ -18,6 +18,8 @@
                                 </div>
                                 <ul class="event__time">
                                     <li><i class="fa fa-clock-o"></i>{{m.date |date}}</li>
+                                    <li>-><i class="fa fa-clock-o"></i>{{m.datefin |date}}</li>
+
                                     <li><i class="fa fa-home"></i>{{m.local}}</li>
                                 </ul>
                             </div>
@@ -25,7 +27,10 @@
                                 <p><a href="event-details.html">{{m.description}}</a></p>
                             </div>
                             <ul class="event__btn">
-                                <li><a href="#">participer</a></li>
+                                {% if (m.nbpart>0) %}
+                                <li>  <a href="{{ path('event_ajoutParticipation',{'id':m.id })}}"> <button class="btn btn-dark"> Participer </button></a></li>
+
+                                {% endif %}
                                 <li><a href="event-details.html">j aime</a></li>
                             </ul>
                         </div>
