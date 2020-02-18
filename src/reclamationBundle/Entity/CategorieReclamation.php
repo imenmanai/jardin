@@ -23,7 +23,7 @@ class CategorieReclamation
     private $ref;
     /**
      * @ORM\Column(type="string", length=255)
-     * @Assert\NotBlank()
+     * @Assert\NotBlank(message="ekteb messagek houni")
      */
     private $nom;
     /**
