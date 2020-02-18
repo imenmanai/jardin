@@ -1,0 +1,72 @@
+{% extends'base.html.twig' %}
+{% block body %}
+    <section class="htc__checkout bg--white section-padding--lg">
+        <!-- Checkout Section Start-->
+        <div class="checkout-section">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 mb-30">
+
+                        <!-- Checkout Accordion Start -->
+                        <div id="checkout-accordion">
+
+                            <!-- Checkout Method -->
+                            <div class="single-accordion">
+                                <a class="accordion-head" data-toggle="collapse" data-parent="#checkout-accordion" href="#checkout-method">1. Modifier Abonnement</a>
+
+                                <div id="checkout-method" class="collapse show">
+                                    <div class="checkout-method accordion-body fix">
+
+                                        <ul class="checkout-method-list">
+                                            <li data-form="checkout-register-form">Modifier</li>
+                                        </ul>
+
+
+
+                                        <form method="post" class="checkout-register-form">
+                                            <div class="row">
+
+
+                                                <div class="input-box col-md-6 col-12 mb--20">  <label style="font-size: large;">Vous devez faire une inscription a la cantine</label></div>
+                                            </div>
+                                        </form>
+
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!-- Billing Method -->
+
+
+                            <!-- Shipping Method -->
+
+                            <!-- Payment Method -->
+
+
+                        </div><!-- Checkout Accordion Start -->
+                    </div>
+
+                    <!-- Order Details -->
+                    <div class="col-lg-6 col-12 mb-30">
+
+                        <div class="order-details-wrapper">
+                            <h2>your order</h2>
+                            <div class="order-details">
+                                <form action="#">
+                                    <ul>
+
+
+                                    </ul>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div><!-- Checkout Section End-->
+    </section>
+{% endblock %}

@@ -391,6 +391,8 @@
                 <li><a href="#/"><i class="ti ti-money"></i><span>Withdrawals</span></a></li>
                 <li class="divider"></li>
                 <li><a href="{{ path('fos_user_security_logout') }}"><i class="ti ti-shift-right"></i><span>Sign Out</span></a></li>
+                <li><a href="{{ logout_path('main') }}"><i class="ti ti-shift-right"></i><span>Se deconnecter</span></a></li>
+
             </ul>
         </li>
 
@@ -435,7 +437,7 @@
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion des enfants</span></a>
                                     <ul class="acc-menu">
 
-                                        <li><a href="{{ path('listeEnfant') }}">Liste Enfants</a></li>
+                                        <li><a href="{{ path('afficher_EnfantBack') }}">Liste Enfants</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion ligne transport</span></a>
@@ -448,7 +450,7 @@
                                     <ul class="acc-menu">
                                         <li><a href="{{ path('AjouterPersonnel') }}">Ajouter Personnel</a></li>
                                         <li><a href="{{ path('ModifierPersonnel') }}">Modifier Personnel</a></li>
-                                        <li><a href="{{ path('AfficherPersonnel') }}">Afficher Personnel</a></li>
+                                        <li><a href="{{ path('AfficherPersonnel') }}">liste Personnel</a></li>
                                         <li><a href="{{ path('SupprimerPersonnel') }}">Supprimer Personnel</a></li>
                                     </ul>
                                 </li>
@@ -489,19 +491,18 @@
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion restauration</span></a>
                                     <ul class="acc-menu">
                                         <li><a href="{{ path('ajoutPlat') }}">Ajouter Plat</a></li>
-                                        <li><a href="{{ path('AfficherPlat') }}">Afficher Plat</a></li>
+                                        <li><a href="{{ path('afficherPlat') }}">Afficher Plat</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion reclamation</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('afficherListe') }}">Liste Reclamation</a></li>
                                         <li><a href="{{ path('HistoriqueReclamation') }}">Historique Reclamation</a></li>
+                                        <li><a href="{{ path('rechercherReclamation') }}">Liste Reclamation</a></li>
+                                        <li><a href="{{ path('afficherListe') }}">Gerer Reclamation</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion Categorie reclamation</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('ajouterCategorieReclamation') }}">Ajouter Categorie Reclamation</a></li>
-                                        <li><a href="{{ path('afficherCategorieReclamation') }}">Afficher Categorie Reclamation</a></li>
                                     </ul>
                                 </li>
                                 <li class="nav-separator"><span>Extras</span></li>
@@ -525,7 +526,11 @@
 
                     </ol>
 
-
+                    {% for message in app.flashes('success') %}
+                        <div class="alert alert-success">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
                     {% block body %}
                     {% endblock %}
 

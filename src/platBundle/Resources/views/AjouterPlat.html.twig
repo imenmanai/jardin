@@ -1,8 +1,171 @@
-
-{% extends'baseAdmin.html.twig' %}
+{% extends 'baseAdmin.html.twig' %}
 {% block body %}
-    <h1>Ajouter un plat</h1>
-    {{ form_start(f) }}
+    <style>
+        * {
+            box-sizing: border-box;
+        }
 
-    {{ form_end(f) }}
+        input[type=text], select, textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            resize: vertical;
+        }
+
+        label {
+            padding: 12px 12px 12px 0;
+            display: inline-block;
+        }
+
+        input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: right;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+        .container {
+            border-radius: 5px;
+            background-color: #f2f2f2;
+            padding: 20px;
+        }
+
+        .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+        }
+
+        .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+        }
+
+        /* Clear floats after the columns */
+        .row:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+        /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+        @media screen and (max-width: 600px) {
+            .col-25, .col-75, input[type=submit] {
+                width: 100%;
+                margin-top: 0;
+            }
+        }
+    </style>
+    <script>
+      /*  function validation() {
+            if(document.formA.nom.value=="")
+            {
+                alert("Merci indiquer votre nom");
+                return false;
+            } else { return true;}
+        }*/
+      document.getElementById("inscription").addEventListener("submit", function(e) {
+
+          var erreur;
+
+          var inputs = this.getElementsByTagName("input");
+
+          for (var i = 0; i < inputs.length; i++) {
+              console.log(inputs[i]);
+              if (!inputs[i].value) {
+                  erreur = "Veuillez renseigner tous les champs";
+              }
+          }
+
+          if (erreur) {
+              e.preventDefault();
+              document.getElementById("erreur").innerHTML = erreur;
+              return false;
+          } else {
+              alert('Formulaire envoyé !');
+          }
+
+
+          var pseudo = document.getElementById("pseudo");
+          var email = document.getElementById("email");
+          var email2 = document.getElementById("email2");
+          var mdp = document.getElementById("mdp");
+
+          if (!mdp.value) {
+              erreur = "Veuillez renseigner un mot de passe";
+          }
+          if (!email.value) {
+              erreur = "Veuillez renseigner un email";
+          }
+          if (!pseudo.value) {
+              erreur = "Veuillez renseigner un pseudo";
+          }
+
+
+
+      });
+    </script>
+
+    <h1 style="margin-left: 30%;">Ajouter un plat</h1>
+<div class="container">
+
+<form action="" method="post" name="inscription" >
+        <div class="row">
+            <div class="col-25">
+                <label for="fname">Nom</label>
+            </div>
+            <div class="col-75">
+                <input type="text" id="fname" name="nom"  placeholder="Your name..">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="lname">Date</label>
+            </div>
+            <div class="col-75">
+            </div>      <input type="date"  id="lname" name="date" placeholder="Your last name..">
+
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="country">Image</label>
+            </div>
+            <div class="col-75">
+                <input type="file" id="image" name="image" placeholder="Your last name..">
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-25">
+                <label for="subject">Description</label>
+            </div>
+            <div class="col-75">
+                <textarea id="subject" name="description" placeholder="Write something.." style="height:200px"></textarea>
+            </div>
+        </div>
+        <div class="row">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+{#
+
+    <form method="POST" name="inscription">
+        <input type="text" name="pseudo" placeholder="Pseudo"><br>
+        <input type="email" name="email" placeholder="Email" id="email"><br>
+        <input type="email" name="email-confirmation" placeholder="Confirmation de l'email" id="email2"><br>
+        <input type="password" name="mdp" placeholder="Mot de passe"><br>
+        <input type="submit" value="Inscription">
+    </form>
+
+    <p style="color: red;" id="erreur"></p> #}
 {% endblock %}

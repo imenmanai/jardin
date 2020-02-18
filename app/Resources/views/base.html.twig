@@ -54,7 +54,7 @@
                                 <ul class="accounting d-flex justify-content-lg-end justify-content-md-end justify-content-start align-items-center">
                                     <li><a class="r" href="{{ path('fos_user_registration_register') }}">S'inscrire</a></li>
                                     <li><a class="r" href="{{ path('fos_user_security_login') }}">Se connecter</a></li>
-
+                                    <li><a class="r" href="{{ logout_path('main') }}">Se connecter</a></li>
                                 </ul>
                                 {%endif%}
                             </div>
@@ -108,22 +108,18 @@
                                         <li class="drop"><a href="{{ path('repas') }}">Cantine</a>
                                             <ul class="dropdown__menu">
                                                 <li><a href="{{ path('inscriC') }}">Inscription Cantine</a></li>
-                                                <li><a href="{{ path('repas') }}">Liste Repas du jour</a></li>
+                                                <li><a href="{{ path('modifierC') }}">modifier Abonnement</a></li>
+
+                                                <li><a href="{{ path('Menu') }}">Liste Repas du jour</a></li>
 
                                             </ul>
                                         </li>
-                                        <li class="drop"><a href="{{ path('personnel') }}">Personnels</a>
+                                        <li class="drop"><a href="{{ path('jardin_listFront') }}">Personnels</a>
                                             <ul class="dropdown__menu">
-                                                <li><a href="{{ path('personnel') }}">Liste personnels</a></li>
+                                                <li><a href="{{ path('jardin_listFront') }}">Liste personnels</a></li>
                                             </ul>
                                         </li>
-                                        <li class="drop"><a href="{{ path('reclamation') }}">Reclamation</a>
-                                            <ul class="dropdown__menu">
-                                                <li><a href="{{ path('ajouterReclamation') }}">ajouter Reclamation</a></li>
-                                                <li><a href="{{ path('afficherReclamation') }}">Historique</a></li>
 
-                                            </ul>
-                                        </li>
 
                                     </ul>
                                 </nav>

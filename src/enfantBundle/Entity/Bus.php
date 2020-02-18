@@ -35,6 +35,13 @@ class Bus
      */
     private $nbPlaces;
 
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="ligne", type="string", length=255)
+     */
+    private $ligne;
+
 
     /**
      * Get id
@@ -93,5 +100,23 @@ class Bus
     {
         return $this->nbPlaces;
     }
+
+    /**
+     * @return string
+     */
+    public function getLigne()
+    {
+        return $this->ligne;
+    }
+
+    /**
+     * @param string $ligne
+     */
+    public function setLigne($ligne)
+    {
+        $this->ligne = $ligne;
+    }
+
+
 }
 
