@@ -1,9 +1,9 @@
 <?php
 
 namespace enfantBundle\Entity;
-
-use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+use Doctrine\ORM\Mapping as ORM;
 
 
 /**
@@ -11,6 +11,8 @@ use Symfony\Component\Validator\Constraints as Assert;
  *
  * @ORM\Table(name="enfant")
  * @ORM\Entity(repositoryClass="enfantBundle\Repository\EnfantRepository")
+ * @UniqueEntity("prenom",message="Le prenom de votre enfant vous l'avez déja saisi!")
+
  */
 class Enfant
 {
@@ -34,6 +36,11 @@ class Enfant
      * @var string
      *
      * @ORM\Column(name="nom", type="string", length=255)
+     * @Assert\NotBlank(message="Champ ne doit pas être vide!")
+     * @Assert\Regex(
+     *     pattern     = "/^[a-z]+$/i",
+     *     htmlPattern = "^[a-zA-Z]+$",message="Caracteres speciaux interdits"
+     * )
      *
      */
     private $nom;
@@ -42,7 +49,11 @@ class Enfant
      * @var string
      *
      * @ORM\Column(name="prenom", type="string", length=255)
-     *
+     * @Assert\NotBlank(message="Champ ne doit pas être vide!")
+     * @Assert\Regex(
+     *     pattern     = "/^[a-z]+$/i",
+     *     htmlPattern = "^[a-zA-Z]+$",message="Caracteres speciaux interdits"
+     * )
      */
     private $prenom;
 
@@ -54,7 +65,7 @@ class Enfant
     private $age;
 
     /**
-    * @var int
+     * @var int
      *
      * @ORM\ManyToOne(targetEntity="Bus")
      * @ORM\JoinColumn(name="id_Bus",referencedColumnName="id", onDelete="CASCADE")
@@ -66,12 +77,7 @@ class Enfant
      * @ORM\JoinColumn(name="idParent",referencedColumnName="id")
      */
     private $idParent;
-     *
-     * @ORM\ManyToOne(targetEntity="mainBundle\Entity\User")
-     * @ORM\JoinColumn(name="idParent",referencedColumnName="id", onDelete="CASCADE")
-     *
-     */
-    private $idParent;
+
 
     /**
      * @return mixed
@@ -89,21 +95,6 @@ class Enfant
         $this->idParent = $idParent;
     }
 
-    /**
-     * @return mixed
-     */
-    public function getIdParent()
-    {
-        return $this->idParent;
-    }
-
-    /**
-     * @param mixed $idParent
-     */
-    public function setIdParent($idParent)
-    {
-        $this->idParent = $idParent;
-    }
 
 
     /**
@@ -229,4 +220,3 @@ class Enfant
     }
 
 }
-

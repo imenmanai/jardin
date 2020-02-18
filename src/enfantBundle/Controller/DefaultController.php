@@ -28,7 +28,7 @@ class DefaultController extends Controller
         $bus = new Bus();
         $form = $this->createForm(BusType::class, $bus);
         $form->handleRequest($request);
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($bus);//persister les donner dans la base de donnee
             $em->flush();//tlansi kif el commit
@@ -52,7 +52,7 @@ class DefaultController extends Controller
         $bus=$em->getRepository(Bus::class)->find($id);
         $form=$this->createForm(BusType::class,$bus);
         $form->handleRequest($request);
-        if($form->isSubmitted()) {
+        if($form->isSubmitted() && $form->isValid()) {
             $em=$this->getDoctrine()->getManager();
             $em->flush();
             return $this->redirectToRoute('afficher_Bus');
@@ -68,7 +68,7 @@ class DefaultController extends Controller
         $enfant = new Enfant();
         $form = $this->createForm(EnfantType::class, $enfant);
         $form->handleRequest($request);
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $enfant->setIdParent($user);
             $em->persist($enfant);//persister les donner dans la base de donnee
@@ -89,7 +89,7 @@ class DefaultController extends Controller
         $enf=$em->getRepository(Enfant::class)->find($id);
         $form=$this->createForm(EnfantType::class,$enf);
         $form->handleRequest($request);
-        if($form->isSubmitted()) {
+        if($form->isSubmitted() && $form->isValid()) {
 
 
 

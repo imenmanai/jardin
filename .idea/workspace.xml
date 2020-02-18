@@ -2,7 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="41051786-1577-4420-a0a5-dd5bac9d8f0f" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_12_02_2020_17_36_c.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_18_02_2020_10_00_c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Composer_18_02_2020_10_18_c.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Composer_2_12_20__2_24_PM_c.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_12_02_2020_17_37_s.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_18_02_2020_10_01_s.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_18_02_2020_10_19_s.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Symfony_2_12_20__2_25_PM_s.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/app/Resources/views/baseAdmin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/config/config.yml" beforeDir="false" afterPath="$PROJECT_DIR$/app/config/config.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Controller/DefaultController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Controller/DefaultController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Entity/Bus.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Entity/Bus.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Entity/Enfant.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Entity/Enfant.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/ajouterBus.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/src/enfantBundle/Resources/views/Default/ajouterBus.html.twig" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -159,7 +172,6 @@
       <command value="s doctrine:database:create" />
       <command value="s debug:router" />
       <command value="s generate:bundle" />
-      <command value="c dump-autoload" />
       <command value="s doctrine:schema:create" />
       <command value="s doctrine:generate:form platBundle:plat" />
       <command value="s doctrine:schema:update" />
@@ -193,13 +205,14 @@
       <command value="c dump-autoload" />
       <command value="s doctrine:schema:update --force" />
       <command value="s doctrine:schema:update --force" />
-      <command value="s cache:clear" />
-      <command value="s cache:clear" />
       <command value="c dump-autoload" />
       <command value="s cache:clear" />
       <command value="s cache:clear" />
       <command value="s doctrine:schema:update --force" />
       <command value="c dump-autoload" />
+      <command value="s cache:clear" />
+      <command value="c dump-autoload" />
+      <command value="s cache:clear" />
     </option>
   </component>
   <component name="RunDashboard">
@@ -249,6 +262,7 @@
       <workItem from="1581582917489" duration="1457000" />
       <workItem from="1581758811079" duration="4068000" />
       <workItem from="1581933773922" duration="22647000" />
+      <workItem from="1582017396565" duration="1224000" />
     </task>
     <servers />
   </component>
