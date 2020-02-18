@@ -26,6 +26,8 @@
                                     <td>{{ info.id}}</td>
                                     <td>{{ info.type}}</td>
                                     <td>{{ info.description}}</td>
+                                    <td><a TYPE="submit"  href="{{path('jardin_supprimec',{'id':info.id})}}" onclick="return confirm('etes vous sure de supprission de cet categorie?')"><button>Supprimer Catégorie</button></a></td>
+
 
                                 </tr>
                             {% endfor %}

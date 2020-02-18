@@ -1,0 +1,86 @@
+{% extends'base.html.twig' %}
+{% block body %}
+    <div class="ht__bradcaump__area">
+        <div class="ht__bradcaump__container">
+            <img src="{{ asset('images/bg-png/6.png') }}" alt="bradcaump images">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bradcaump__inner text-center">
+                            <h2 class="bradcaump-title">Creer un menu<</h2>
+                            <nav class="bradcaump-inner">
+                                <a class="breadcrumb-item" href="index.html">Acceuil</a>
+                                <span class="brd-separetor"><img src="{{ asset('images/icons/brad.png') }}" alt="separator images"></span>
+                                <span class="breadcrumb-item active">Creer un menu</span>
+                            </nav>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="dcare__event__area bg--white section-padding--lg">
+
+        <div class="container">
+
+            <div class="row event-grid-page">
+                <!-- Start Single Event -->
+
+                {% for info in liste  %}
+                <div class="col-md-6 ">
+
+                    <div class="dcare__event">
+
+                        <div class="event__thumb">
+                            <a href="event-details.html">
+                                <img src="{{ asset('images/' ~ info.image) }}" alt="event images">
+                            </a>
+                        </div>
+                        <div class="event__content">
+                            <div class="event__pub">
+                                <div class="event__date">
+                                    <span class="date"></span><span></span>
+                                </div>
+                                <ul class="event__time">
+                                    <li><i class=""></i></li>
+                                    <li><i class="fa fa-clock-o"> Date </i>{{info.date|date}}</li>
+                                </ul>
+                            </div>
+                            <div class="event__inner">
+                                <p><a href="event-details.html">{{info.nom}}</a></p>
+                                <ul class="event__time">
+                                    <li>Nom  repas<i class=""></i>{{info.description}}</li>
+                                </ul>
+                            </div>
+                            <ul class="event__btn">
+                                <li> <form method="post">
+                                <input type="submit" value="affecter"></form></li>
+                                <li><a href="event-details.html">Annuler plat</a></li>
+                            </ul>
+
+                        </div>
+
+
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="dcare__pagination mt--80">
+                        <ul class="dcare__page__list d-flex justify-content-center">
+                            <li><a href="#"><span class="ti-angle-double-left"></span></a></li>
+                            <li><a class="page" href="#">Prev</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#"><i class="fa fa-ellipsis-h"></i></a></li>
+                            <li><a href="#">28</a></li>
+                            <li><a class="page" href="#">Next</a></li>
+                            <li><a href="#"><span class="ti-angle-double-right"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

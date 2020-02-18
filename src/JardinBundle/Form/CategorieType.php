@@ -15,17 +15,7 @@ class CategorieType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('type',ChoiceType::class, [
-            'choices'  => [
-                'Animateur' => 'Animateur',
-                'chauffeur' => 'chauffeur',
-                'secritaire' => 'secretaire',
-                'directeur'=>'directeur',
-                'femme de menage'=>'femme de menage'
-
-
-            ],
-        ])
+        $builder->add('type')
             ->add('description');
 
     }

@@ -1,5 +1,8 @@
 {% extends'baseAdmin.html.twig' %}
 {% block body %}
+
+
+
     {{ form_start(form) }}
     <div class="container-fluid">
 
@@ -17,36 +20,34 @@
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Nom</label>
                             <div class="col-sm-8">
-                                {{ form_widget(form.nom, {'attr': {'class': 'form-control','placeholder':'name of the monument ...'}}) }}
-                            </div>
+                                {{ form_widget(form.nom, {'attr': {'class': 'form-control','placeholder':'saisir le nom ....'}}) }}
+                            </div><br>
 
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Prenom</label>
-                            <div class="col-sm-8">
-                                {{ form_widget(form.prenom, {'attr': {'class': 'form-control','placeholder':'name of the monument ...'}}) }}
-                            </div>
+                            <div class="col-sm-8">{{ form_widget(form.prenom, {'attr': {'class': 'form-control','placeholder':'saisir le prénom'}}) }}
+                            </div><br>
 
-                        </div>
+                        </div><br>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Age</label>
-                            <div class="col-sm-8">
-                              {{ form_widget(form.age, {'attr': {'class': 'form-control','placeholder':'name of the monument ...'}}) }}
-                            </div>
+                            <div class="col-sm-8">{{ form_widget(form.age, {'attr': {'class': 'form-control','placeholder':'saisir age ....'}}) }}
+                            </div><br>
 
-                        </div>
+                        </div><br>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Nombre d'heures</label>
                             <div class="col-sm-8">
-                                {{ form_widget(form.nbH, {'attr': {'class': 'form-control','placeholder':'name of the monument ...'}}) }}
-                            </div>
+                                {{ form_widget(form.nbH, {'attr': {'class': 'form-control','placeholder':'saisir nombre heures...'}}) }}
+                            </div><br>
 
                         </div>
                         <div class="form-group">
                             <label class="col-sm-2 control-label">Prix Heure</label>
                             <div class="col-sm-8">
-                                {{ form_widget(form.prixH, {'attr': {'class': 'form-control','placeholder':'name of the monument ...'}}) }}
-                            </div>
+                                {{ form_widget(form.prixH, {'attr': {'class': 'form-control','placeholder':'saisir prix une heure....'}}) }}
+                            </div><br>
 
                         </div>
 
@@ -56,7 +57,15 @@
 
                                 {{ form_widget(form.categorie, {'attr': {'class': 'form-control','placeholder':'Description categorie...'}}) }}
 
-                            </div>
+                            </div><br>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">Photo</label>
+                            <div class="col-sm-8">
+
+                                {{ form_widget(form.image, {'attr': {'class': 'form-control','placeholder':'Description categorie...'}}) }}
+
+                            </div> <br>
                         </div>
 
 
