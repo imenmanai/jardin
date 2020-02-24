@@ -30,9 +30,9 @@ class DefaultController extends Controller
             $file->move($this->getParameter('photos_directory'), $filename);
             $event->setImage($filename);
             $em->persist($event);
-            $em->flush();
+            $em->flush();/*
             $message = new \DocDocDoc\NexmoBundle\Message\Simple("Coccinelle", "21656346606", "Bonjour mdme/msr on a ajouter un nouveau evenement consulter notre site pour plus d information ");
-            $nexmoResponse = $this->container->get('doc_doc_doc_nexmo')->send($message);
+            $nexmoResponse = $this->container->get('doc_doc_doc_nexmo')->send($message);*/
             return $this->redirectToRoute('afficherevent');
         }
         return $this->render('@evenement/view/ajouterevent.html.twig', array('form' => $form->createView()));
