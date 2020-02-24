@@ -8,6 +8,10 @@ jardin:
 evenement:
     resource: "@evenementBundle/Resources/config/routing.yml"
 
+enfant:
+    resource: "@enfantBundle/Resources/config/routing.yml"
+    prefix:   /
+
 plat:
     resource: "@platBundle/Resources/config/routing.yml"
     prefix:   /
@@ -31,10 +35,14 @@ class:
 index:
     path:      /index
     defaults:  { _controller: mainBundle:main:index }
+<<<<<<< HEAD
+enfant:
+=======
 event:
     path:      /event
     defaults:  { _controller: mainBundle:main:event }
-enfant:
+enfant1:
+>>>>>>> 91147945d97ec11322679b489da67b8970354f86
     path:      /enfant
     defaults:  { _controller: mainBundle:main:enfant }
 transport:
@@ -66,6 +74,16 @@ listeEnfant:
 ajoutTransport:
     path:      /ajoutTransport
     defaults:  { _controller: mainBundle:main:ajoutTransport }
-
-
+ajoutPlat:
+    path:     /plat
+    defaults: { _controller: platBundle:plat:ajouterPlat }
+abonnec:
+    path:     /abonnec
+    defaults: { _controller: enfantBundle:AbonnementCantine:afficherAbon }
+supp:
+    path:     /supp/{id}
+    defaults: { _controller: enfantBundle:AbonnementCantine:deleteAbon }
+inscriC:
+    path:     /inscriC
+    defaults: { _controller: enfantBundle:AbonnementCantine:inscriAbon }
 

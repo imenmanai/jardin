@@ -435,13 +435,13 @@
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion des enfants</span></a>
                                     <ul class="acc-menu">
 
-                                        <li><a href="{{ path('listeEnfant') }}">Liste Enfant</a></li>
+                                        <li><a href="{{ path('listeEnfant') }}">Liste Enfants</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion ligne transport</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('Bus') }}">Bus</a></li>
-                                        <li><a href="{{ path('Chauffeur') }}">Chauffeur</a></li>
+                                        <li><a href="{{ path('ajouter_Bus') }}">Ajouter Bus</a></li>
+                                        <li><a href="{{ path('afficher_Bus') }}">Afficher Bus</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion personnel</span></a>
@@ -462,38 +462,33 @@
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion cours</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('AfficherCours') }}">Cours</a></li>
-                                        <li><a href="{{ path('Categorie') }}">Categorie</a></li>
+                                        <li><a href="{{ path('AfficherCours') }}">afficher les Cours</a></li>
+                                        <li><a href="{{ path('ajouterCours') }}">ajouter un cours </a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion categorie cours</span></a>
                                     <ul class="acc-menu">
                                         <li><a href="{{ path('ajoutercatCours') }}">Ajouter Categorie Cours</a></li>
-                                        <li><a href="{{ path('AfficherCategorieCours') }}">Afficher Categorie Cours</a></li>
-                                        <li><a href="{{ path('SupprimerCategorieCours') }}">Supprimer Categorie Cours</a></li>
-                                        <li><a href="{{ path('ModifierCategorieCours') }}">Modifier Categorie Cours</a></li>
+                                        <li><a href="{{ path('Affichcatcours') }}">Afficher Categorie Cours</a></li>
 
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion evenement</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('AjouterEvenement') }}">Ajouter evenement</a></li>
-                                        <li><a href="{{ path('ModifierEvenement') }}">Modifier evenement</a></li>
-                                        <li><a href="{{ path('SupprimerEvenemet') }}">supprimer evenement</a></li>
+                                        <li><a href="{{ path('ajoutevent') }}">Ajouter evenement</a></li>
+                                        <li><a href="{{ path('afficherevent') }}">afficher evenement</a></li>
 
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion Abonnement</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('AjouterAbonnement') }}">Ajouter Abonnement</a></li>
-                                        <li><a href="{{ path('ModifierAbonnement') }}">Modifier Abonnement</a></li>
-                                        <li><a href="{{ path('SupprimerAbonnement') }}">Supprimer Abonnement</a></li>
+                                        <li><a href="{{ path('abonnec') }}">Afficher Abonnement</a></li>
+
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion restauration</span></a>
                                     <ul class="acc-menu">
-                                        <li><a href="{{ path('AjouterPlat') }}">Ajouter Plat</a></li>
-                                        <li><a href="{{ path('SupprimerPlat') }}">Supprimer Plat</a></li>
+                                        <li><a href="{{ path('ajoutPlat') }}">Ajouter Plat</a></li>
                                         <li><a href="{{ path('AfficherPlat') }}">Afficher Plat</a></li>
                                     </ul>
                                 </li>

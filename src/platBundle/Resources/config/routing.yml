@@ -1,3 +1,16 @@
 plat_homepage:
     path:     /
     defaults: { _controller: platBundle:Default:index }
+ajoutPlat:
+    path:     /plat
+    defaults: { _controller: platBundle:plat:ajouterPlat }
+afficherPlat:
+    path:     /afficherPlat
+    defaults: { _controller: platBundle:plat:afficherPlat }
+deletePlat:
+    path:     /deletePlat/{id}
+    defaults: { _controller: platBundle:plat:deletePlat }
+updatePlat:
+    path:     /updatePlat/{id}
+    defaults: { _controller: platBundle:plat:update }
+

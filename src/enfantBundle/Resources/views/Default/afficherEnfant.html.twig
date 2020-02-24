@@ -1,0 +1,65 @@
+{% extends'base.html.twig' %}
+{% block body %}
+<div class="ht__bradcaump__area">
+    <div class="ht__bradcaump__container">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="bradcaump__inner text-center">
+                        <h2 class="bradcaump-title">Liste des Enfants</h2>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="cart-main-area section-padding--lg bg--white">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 col-sm-12 ol-lg-12">
+                <form action="#">
+                    <div class="table-content table-responsive">
+                        <table>
+                            <thead>
+                            <tr class="title-top">
+                                <th class="product-thumbnail">Sexe</th>
+                                <th class="product-name">Nom</th>
+                                <th class="product-price">Prenom</th>
+                                <th class="product-quantity">Age</th>
+                                <th class="product-quantity">Actions</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {% for info in enf  %}
+                                <tr>
+                                    <td>{{ info.sexe }}</td>
+                                    <td>{{ info.nom }}</td>
+                                    <td>{{ info.prenom }}</td>
+                                    <td>{{ info.age }}</td>
+                                    <td>
+                                            <ul class="cart__btn__list d-flex flex-wrap flex-md-nowrap flex-lg-nowrap justify-content-between">
+
+                                                <li><a href="{{ path('modifier_Enfant',{'id':info.id}) }} " onclick="return confirm('Voulez vous vraiment mettre à jour ses details ?')">Mettre à jour</a></li>
+                                                <li>
+                                                    <a href="{{ path('supprimer_Enfant',{'id':info.id}) }}" onclick="return confirm('Voulez vous vraiment retirer votre enfant ?')"> Retirer </a>
+
+                                                </li>
+                                            </ul>
+                                         </td>
+                                </tr>
+
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+
+    </div>
+</div>
+
+{% endblock %}

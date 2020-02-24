@@ -1,39 +1,57 @@
-{% extends 'baseAdmin.html.twig' %}
+{% extends'baseAdmin.html.twig' %}
 {% block body %}
-        <div class="panel-body">
-            <div class="tab-content">
-                <div class="tab-pane active" id="horizontal-form">
-                    <form class="form-horizontal">
-                        <div class="form-group">
-                            <label for="focusedinput" class="col-sm-2 control-label" name="">Nom</label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control" id="focusedinput" placeholder="nom de la matiere">
-                            </div>
-                            <div class="col-sm-2">
-                                <p class="help-block">Your help text!</p>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="disabledinput" class="col-sm-2 control-label">Coefficient</label>
-                            <div class="col-sm-8">
-                                <input disabled type="integer" class="form-control" id="disabledinput" placeholder="coefficient">
-                            </div>
-                        </div>
-                    </form>
+    {{ form_start(form) }}
+    <div class="container-fluid">
+
+
+        <div data-widget-group="group1">
+
+            <div class="panel panel-default" data-widget='{"draggable": "false"}'>
+                <div class="panel-heading">
+                    <h2>Ajouter Matiere </h2>
+                    <div class="panel-ctrls" data-actions-container="" data-action-collapse='{"target": ".panel-body"}'></div>
                 </div>
-        <div class="panel-footer">
-            <div class="row">
-                <div class="col-sm-8 col-sm-offset-2">
-                    <button class="btn-primary btn">Submit</button>
-                    <button class="btn-default btn">Cancel</button>
+                <div class="panel-editbox" data-widget-controls=""></div>
+                <div class="panel-body">
+                    <form action="#" class="form-horizontal row-border">
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">nom de la matiere</label>
+                            <div class="col-sm-8">
+                                {{ form_widget(form.nom, {'attr': {'class': 'form-control','placeholder':'name of the monument ...'}}) }}
+                            </div>
+
+                        </div>
+
+                        <br>
+                        <div class="form-group">
+                            <label class="col-sm-2 control-label">coefficient</label>
+                            <div class="col-sm-8">
+
+                                {{ form_widget(form.coeff, {'attr': {'class': 'form-control','placeholder':'coefficient...'}}) }}
+
+                            </div>
+                        </div>
+
+
+                    </form>
+
+                </div>
+                <div class="panel-footer">
+                    <div class="row">
+                        <div class="col-sm-8 col-sm-offset-2">
+                            <button class="btn-primary btn">Ajouter Matiere</button>
+
+                        </div>
+                    </div>
                 </div>
             </div>
+
+
+
+
         </div>
+
+
     </div>
-    </div>
-    </div>
-
-
-
-
+    {{ form_end(form) }}
 {% endblock %}

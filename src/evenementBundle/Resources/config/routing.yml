@@ -1,3 +1,18 @@
 evenement_homepage:
     path:     /
     defaults: { _controller: evenementBundle:Default:index }
+eventafficherf:
+    path:      /event
+    defaults:  { _controller: evenementBundle:Default:affichfront }
+afficherevent:
+    path:     /afficherevent
+    defaults: { _controller: evenementBundle:Default:afficherevent }
+ajoutevent:
+    path:     /ajouterevent
+    defaults: { _controller: evenementBundle:Default:ajevent }
+suppevent:
+    path:     /supp/{id}
+    defaults: { _controller: evenementBundle:Default:supprimerevent }
+modifierevent:
+    path:     /modifier/{id}
+    defaults: { _controller: evenementBundle:Default:modifierevent }

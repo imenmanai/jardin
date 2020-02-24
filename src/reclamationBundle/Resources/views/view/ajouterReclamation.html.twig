@@ -1,6 +1,96 @@
-{% extends 'base.html.twig' %}
+{% extends'base.html.twig' %}
 {% block body %}
-<h1 style="font-weight: bold">Ajouter Reclamation</h1>
-{{ form_start(f) }}
-{{ form_end(f) }}
+    {{ form_start(f) }}
+    <!-- Start Bradcaump area -->
+    <div class="ht__bradcaump__area">
+        <div class="ht__bradcaump__container">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="bradcaump__inner text-center">
+                            <h2 class="bradcaump-title">Reclamer</h2>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Bradcaump area -->
+    <section class="htc__checkout bg--white section-padding--lg">
+        <!-- Checkout Section Start-->
+        <div class="checkout-section">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-lg-6 col-12 mb-30">
+
+                        <!-- Checkout Accordion Start -->
+                        <div id="checkout-accordion">
+
+                            <!-- Checkout Method -->
+
+                        </div>
+
+                        <!-- Billing Method -->
+                        <div class="single-accordion">
+                            <a class="accordion-head" data-toggle="collapse" data-parent="#checkout-accordion" href="#checkout-method">Pour reclamer par ici : </a>
+                            <div id="billing-method" class="collapse show">
+
+                                <div class="accordion-body billing-method fix">
+
+                                    <form action="#" class="billing-form checkout-form">
+
+                                        <div class="row">
+                                            Date:    <div class="col-12 mb--20">
+                                                {{ form_widget(f.date, {'attr': {'class': 'form-control'}}) }}
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb--20">
+                                                Etat:
+                                                {{ form_widget(f.etat, {'attr': {'class': 'form-control','placeholder':'Etat ...'}}) }}
+                                            </div>
+
+                                            <div class="col-md-6 col-12 mb--20">
+                                                Description:
+                                                {{ form_widget(f.description, {'attr': {'class': 'form-control','placeholder':'Description  ...'}}) }}
+                                            </div>
+                                            <div class="col-12 mb--20">
+                                                Categorie Reclamation :
+                                                {{ form_widget(f.CategorieReclamation, {'attr': {'class': 'form-control'}}) }}
+                                            </div>
+
+                                        </div>
+
+
+                                    </form>
+                                    <div class="panel-footer">
+                                        <div class="row">
+                                            <div class="col-sm-8 col-sm-offset-2">
+                                                <button class="btn-primary btn">Reclamer </button>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- Transport Method -->
+
+
+
+                    </div><!-- Checkout Accordion Start -->
+                </div>
+
+                <!-- Order Details -->
+
+
+            </div>
+        </div>
+    </section>
+
+    {{ form_end(f) }}
 {% endblock %}
+
