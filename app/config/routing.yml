@@ -1,12 +1,9 @@
-reclamation:
-    resource: "@reclamationBundle/Resources/config/routing.yml"
-    prefix:   /aa
 jardin:
     resource: "@JardinBundle/Resources/config/routing.yml"
     prefix:   /
-
 evenement:
     resource: "@evenementBundle/Resources/config/routing.yml"
+    prefix:   /
 
 enfant:
     resource: "@enfantBundle/Resources/config/routing.yml"
@@ -35,14 +32,10 @@ class:
 index:
     path:      /index
     defaults:  { _controller: mainBundle:main:index }
-<<<<<<< HEAD
-enfant:
-=======
 event:
     path:      /event
     defaults:  { _controller: mainBundle:main:event }
 enfant1:
->>>>>>> 91147945d97ec11322679b489da67b8970354f86
     path:      /enfant
     defaults:  { _controller: mainBundle:main:enfant }
 transport:

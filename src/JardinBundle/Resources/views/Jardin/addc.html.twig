@@ -1,57 +1,139 @@
 {% extends'baseAdmin.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
 {% block body %}
-    {{ form_start(form) }}
-    <div class="container-fluid">
 
 
-        <div data-widget-group="group1">
-
-            <div class="panel panel-default" data-widget='{"draggable": "false"}'>
-                <div class="panel-heading">
-                    <h2>Ajouter categorie personnel</h2>
-                    <div class="panel-ctrls" data-actions-container="" data-action-collapse='{"target": ".panel-body"}'></div>
-                </div>
-                <div class="panel-editbox" data-widget-controls=""></div>
-                <div class="panel-body">
-                    <form action="#" class="form-horizontal row-border">
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Type*</label>
-                            <div class="col-sm-8">
-                                {{ form_widget(form.type, {'attr': {'class': 'form-control','placeholder':'name of the monument ...'}}) }}
-                            </div>
-
-                        </div>
-
-<br>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Description</label>
-                            <div class="col-sm-8">
-
-                                {{ form_widget(form.description, {'attr': {'class': 'form-control','placeholder':'Description categorie...'}}) }}
-
-                            </div>
-                        </div>
+    <h1 style="margin-left: 30%;">Ajouter Catégorie</h1>
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
 
 
-                    </form>
+    {{ form_row(form.type, {'attr':{'placeholder':"nom.."}}) }}
 
-                </div>
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2">
-                            <button class="btn-primary btn">Ajouter Categorie</button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
+    {{ form_row(form.description,{'attr':{'placeholder':"prenom.."}}) }}
 
 
-
-
-        </div>
-
-
-    </div>
+    <button type="submit" class="btn-primary btn"> Ajouter Catégorie </button>
     {{ form_end(form) }}
+
+    <script src="{{ asset('js/vendor/jquery-3.2.1.min.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#span2").hide();
+            $("#span1").hide();
+            $("#span4").hide();
+            $("#span5").hide();
+            $("#span6").hide();
+
+            $('#jardinbundle_personnel_nom').keyup(function () {
+
+                var nom = $('#jardinbundle_personnel_nom').val();
+                var test=/^[A-Za-z]+$/;
+                if (test.test(nom)) {
+
+                    $('#span2').hide();
+
+                    $('#ajouter').prop('disabled', false);
+
+                } else {
+                    $('#span2').show();
+
+
+
+                    $('#ajouter').prop('disabled', true);
+                }
+            });
+
+            $('#jardinbundle_personnel_prenom').keyup(function () {
+
+                var prenom = $('#jardinbundle_personnel_prenom').val();
+                var test=/^[A-Za-z]+$/;
+                if (test.test(prenom)) {
+
+                    $('#span1').hide();
+
+                    $('#ajouter').prop('disabled', false);
+
+                } else {
+                    $('#span1').show();
+
+
+
+                    $('#ajouter').prop('disabled', true);
+                }
+            });
+
+            $('#jardinbundle_personnel_age').keyup(function () {
+
+                var nom = $('#jardinbundle_personnel_age').val();
+                var test=/^['25'-'40']+$/;
+                if (test.test(nom)) {
+
+
+                    $('#span4').hide();
+                    $('#ajouter').prop('disabled', false);
+
+                } else {
+                    $('#span4').show();
+
+
+                    $('#ajouter').prop('disabled', true);
+                }
+
+            });
+            $('#jardinbundle_personnel_nbH').keyup(function () {
+
+                var nom = $('#jardinbundle_personnel_nbH').val();
+                var test=/^['10'-'15']+$/;
+                if (test.test(nom)) {
+
+                    $('#span5').hide();
+
+                    $('#ajouter').prop('disabled', false);
+
+                } else {
+                    $('#span5').show();
+
+
+
+                    $('#ajouter').prop('disabled', true);
+                }
+            });
+
+            $('#jardinbundle_personnel_prixH').keyup(function () {
+
+                var prenom = $('#jardinbundle_personnel_prixH').val();
+                var test=/^[1-9]+$/;
+                if (test.test(prenom)) {
+
+                    $('#span6').hide();
+
+                    $('#ajouter').prop('disabled', false);
+
+                } else {
+                    $('#span6').show();
+
+
+
+                    $('#ajouter').prop('disabled', true);
+                }
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        })
+    </script>
 {% endblock %}

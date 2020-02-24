@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset('css1/bootstrap.min.css')) }}">
+    <link href="{{ absolute_url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700|Old+Standard+TT') }}" rel="stylesheet">
+    <link href="{{ absolute_url('https://fonts.googleapis.com/css?family=Old+Standard+TT:400,500,700') }}" rel="stylesheet">
+    <!--    <link rel="stylesheet" type="text/css" href="css/animate.css" /> -->
+    <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset('css1/prettyPhoto.css')) }}" />
+    <link href="{{ absolute_url(asset('css1/jquery.bsPhotoGallery.css')) }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="{{ absolute_url(asset('css1/style.css')) }}">
+    <link rel="stylesheet" href="{{ absolute_url('https://www.w3schools.com/w3css/4/w3.css') }}">
+    <link rel="stylesheet" href="{{ absolute_url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css') }}">
+    <style>
+        .checked {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+        <div>
+            <img src="{{ absolute_url(asset('images/' ~ ps.image)) }}" class="w3-round-large" style="width:30%">
+        </div>
+</header>
+    <div class="container">
+        <h2>RATING :</h2>
+        {% set star = 0 %}
+        {% set i = 0 %}
+        {% for avi in avis %}
+            {% if avi.personnel == ps %}
+                {% set star = star+avi.avis %}
+                {% set i = i+1 %}
+            {% endif %}
+        {% endfor %}
+        {% if star == 0 %}
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        {% elseif star/i < 1 or star/i == 1 %}
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        {% elseif star/i > 1 and star/i <= 2  %}
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star "></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        {% elseif star/i > 2 and star/i <= 3  %}
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+            <span class="fa fa-star"></span>
+        {% elseif star/i > 3 and star/i <= 4  %}
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+        {% else %}
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+        {% endif %}
+        <div><h2>NOM :</h2><H4>{{ ps.nom }}</H4></div>
+        <p><h2>PRENOM :</h2> <H4>{{ ps.prenom }}</H4></p>
+        <p><h2>CATEGORIE :</h2><H4>{{ ps.categorie.type }}</H4></p>
+        <p><h2>NOMBRE HEURES :</h2><H4>{{ ps.nbH }}</H4></p>
+        <p><h2>PRIX PAR HEURE :</h2> <H4>{{ ps.prixH }}</H4></p>
+            <h2>Adresse</h2>
+            <h4>Ariana Rue</h4>
+            <h2>Contact</h2>
+            <h4>
+                +216 58857039 /
+                +216 98275202</h4>
+            <h2>E-Mail</h2>
+            <h4>
+                Coccinelle@gmail.com -
+                Coccinelle.@yahoo.com</h4>
+        </h2>
+        <br>
+        <br>
+        <h6><p>Cette institution vise à éduquer les enfants selon une approche globale et équilibrée dans
+                un environnement sain et en étroite collaboration avec la famille selon les exigences des orientations
+                pédagogiques scientifiques pour qu’ils se développent en intériorisant les valeurs humaines, de modération, de tolérance,
+                d‘appartenance identitaire et l’ouverture sur les autres cultures et civilisations.</p></h6>
+    </div>
+<footer>
+</footer>
+<script type="text/javascript" src="{{ absolute_url(asset('js3/jquery.js')) }}"></script>
+<script type="text/javascript" src="{{ absolute_url(asset('js3/bootstrap.min.js')) }}">
+</script>
+<script src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+<script src="{{ absolute_url(asset('js3/jquery.mixitup.min.js')) }}"></script>
+<script type="text/javascript" src="{{ absolute_url(asset('js3/jquery.prettyPhoto.js')) }}"></script>
+<script type="text/javascript" src="{{ absolute_url(asset('js3/jquery.isotope.js')) }}"></script>
+<script src="{{ absolute_url(asset('js3/jquery.bsPhotoGallery.js')) }}"></script>
+<script type="text/javascript" src="{{ absolute_url(asset('js3/main.js')) }}"></script>
+<script>
+    $(document).ready(function() {
+        $('ul.first').bsPhotoGallery({
+            "classes": "col-md-3 col-sm-4 col-2 ",
+            "hasModal": true,
+            // "fullHeight" : false
+        });
+    });
+</script>
+</body>
+
+</html>

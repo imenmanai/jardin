@@ -19,23 +19,37 @@ class Personnel
     private $id;
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="azizaaaaaaaaaa")
      */
     private $nom;
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\NotBlank(message="azizaaaaaaaaaa")
      */
     private $prenom;
     /**
      * @ORM\Column(type="integer", length=255)
+     *
+     * @Assert\GreaterThan(
+     *     value=0
+     *     )
      */
     private $age;
     /**
      * @ORM\Column(type="integer", length=255)
+     *
+     * @Assert\GreaterThan(
+     *     value=0
+     *     )
      */
     private $nbH;
 
     /**
      * @ORM\Column(type="integer" ,length=255)
+     *
+     * @Assert\GreaterThan(
+     *     value=0
+     *     )
      */
     private $prixH;
     /**
@@ -47,8 +61,8 @@ class Personnel
     /**
      * @var string
      *
-     * @ORM\Column(name="Image", type="string", length=255, nullable=false)
-     * @Assert\File(mimeTypes={ "image/jpeg" , "image/png"})
+     * @ORM\Column(name="image", type="string", length=255, nullable=false)
+     * @Assert\File(mimeTypes={ "image/jpeg" , "image/png","image/jpg","image/GIF" })
      */
     private $image;
 

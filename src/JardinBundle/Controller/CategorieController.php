@@ -29,10 +29,22 @@ class CategorieController extends Controller
         $form->handleRequest($request);
         if($form->isSubmitted())
         {
+            $test = true;
+            $clubs=$this->getDoctrine()->getRepository(Categorie::class)->findAll();
+
+            foreach ($clubs as $value) {
+                if($value->getType() == $club->getType())
+                {
+                    $test=false;
+                }
+            }
             $em=$this->getDoctrine()->getManager();
-            $em->persist($club);//persister les donner dans la base de donnee
-            $em->flush();//tlansi kif el commit
-            return $this->redirectToRoute('jardin_listc');
+            if($test) {
+                $em->persist($club);//persister les donner dans la base de donnee
+                $em->flush();//tlansi kif el commit
+                $this->addFlash('success', "Categorie ajouté!");
+                return $this->redirectToRoute('jardin_listc');
+            }
         }
         return $this->render('@Jardin/Jardin/addc.html.twig', array('form' => $form->createView()));
 

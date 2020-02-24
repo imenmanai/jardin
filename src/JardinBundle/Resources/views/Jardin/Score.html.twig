@@ -1,0 +1,13 @@
+{% extends'baseAdmin.html.twig' %}
+{% block body %}
+    {{ form_start(form) }}
+    <div class="form-group">
+    <label class="col-sm-2 control-label">Score</label>
+    <div class="col-sm-8">
+        {{ form_widget(form.score, {'attr': {'class': 'form-control','placeholder':'Score...'}}) }}
+    </div>
+    <div class="col-sm-8 col-sm-offset-2">
+        <button class="btn-primary btn">Ajouter Score</button>
+    </div>
+    {{ form_end(form) }}
+{% endblock %}

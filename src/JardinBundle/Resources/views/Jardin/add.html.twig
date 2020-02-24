@@ -1,94 +1,147 @@
 {% extends'baseAdmin.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
 {% block body %}
 
 
+    <h1 style="margin-left: 30%;">Ajouter Personnel</h1>
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
 
-    {{ form_start(form) }}
-    <div class="container-fluid">
+    <span  id="span2">le nom ne contient pas des chiffres</span>
+    {{ form_row(form.nom, {'attr':{'placeholder':"nom.."}}) }}
+    <span  id="span1">le prénom ne contient pas des chiffres</span>
+    {{ form_row(form.prenom,{'attr':{'placeholder':"prenom.."}}) }}
+    <span  id="span4">l'age entre 25 et 40</span>
+    {{ form_row(form.age,{'attr':{'placeholder':"age"}}) }}
+    <span  id="span5">le nombre d'heures est entre 10 et 15</span>
+    {{ form_row(form.nbH,{'attr':{'placeholder':"Nombre heures.."}}) }}
+    <span  id="span6">le prix de l'heure contient des chiffres</span>
+    {{ form_row(form.prixH,{'attr':{'placeholder':"prix heure.."}}) }}
+    {{ form_row(form.categorie, {'attr': {'placeholder':'Description categorie...'}}) }}
+    {{ form_row(form.image, {'attr': {'placeholder':'Description categorie...'}}) }}
 
-
-        <div data-widget-group="group1">
-
-            <div class="panel panel-default" data-widget='{"draggable": "false"}'>
-                <div class="panel-heading">
-                    <h2>Ajouter personnel</h2>
-                    <div class="panel-ctrls" data-actions-container="" data-action-collapse='{"target": ".panel-body"}'></div>
-                </div>
-                <div class="panel-editbox" data-widget-controls=""></div>
-                <div class="panel-body">
-                    <form action="#" class="form-horizontal row-border">
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Nom</label>
-                            <div class="col-sm-8">
-                                {{ form_widget(form.nom, {'attr': {'class': 'form-control','placeholder':'saisir le nom ....'}}) }}
-                            </div><br>
-
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Prenom</label>
-                            <div class="col-sm-8">{{ form_widget(form.prenom, {'attr': {'class': 'form-control','placeholder':'saisir le prénom'}}) }}
-                            </div><br>
-
-                        </div><br>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Age</label>
-                            <div class="col-sm-8">{{ form_widget(form.age, {'attr': {'class': 'form-control','placeholder':'saisir age ....'}}) }}
-                            </div><br>
-
-                        </div><br>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Nombre d'heures</label>
-                            <div class="col-sm-8">
-                                {{ form_widget(form.nbH, {'attr': {'class': 'form-control','placeholder':'saisir nombre heures...'}}) }}
-                            </div><br>
-
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Prix Heure</label>
-                            <div class="col-sm-8">
-                                {{ form_widget(form.prixH, {'attr': {'class': 'form-control','placeholder':'saisir prix une heure....'}}) }}
-                            </div><br>
-
-                        </div>
-
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Catégorie</label>
-                            <div class="col-sm-8">
-
-                                {{ form_widget(form.categorie, {'attr': {'class': 'form-control','placeholder':'Description categorie...'}}) }}
-
-                            </div><br>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Photo</label>
-                            <div class="col-sm-8">
-
-                                {{ form_widget(form.image, {'attr': {'class': 'form-control','placeholder':'Description categorie...'}}) }}
-
-                            </div> <br>
-                        </div>
-
-
-                    </form>
-
-                </div>
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2">
-                            <button class="btn-primary btn">Ajouter Personnel</button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-        </div>
-
-
-    </div>
+    <button type="submit" class="btn-primary btn"> Ajouter Personnel </button>
     {{ form_end(form) }}
 
+    <script src="{{ asset('js/vendor/jquery-3.2.1.min.js') }}"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#span2").hide();
+            $("#span1").hide();
+            $("#span4").hide();
+            $("#span5").hide();
+            $("#span6").hide();
+
+            $('#jardinbundle_personnel_nom').keyup(function () {
+
+                var nom = $('#jardinbundle_personnel_nom').val();
+                var test=/^[A-Za-z]+$/;
+                if (test.test(nom)) {
+
+                    $('#span2').hide();
+
+                    $('#ajouter').prop('disabled', false);
+
+                } else {
+                    $('#span2').show();
+
+
+
+                    $('#ajouter').prop('disabled', true);
+                }
+            });
+
+            $('#jardinbundle_personnel_prenom').keyup(function () {
+
+                var prenom = $('#jardinbundle_personnel_prenom').val();
+                var test=/^[A-Za-z]+$/;
+                if (test.test(prenom)) {
+
+                    $('#span1').hide();
+
+                    $('#ajouter').prop('disabled', false);
+
+                } else {
+                    $('#span1').show();
+
+
+
+                    $('#ajouter').prop('disabled', true);
+                }
+            });
+
+            $('#jardinbundle_personnel_age').keyup(function () {
+
+                var nom = $('#jardinbundle_personnel_age').val();
+                var test=/^[0-9]+$/;
+                if (test.test(nom)) {
+
+
+                    $('#span4').hide();
+                    $('#ajouter').prop('disabled', false);
+
+                } else {
+                    $('#span4').show();
+
+
+                    $('#ajouter').prop('disabled', true);
+                }
+
+            });
+            $('#jardinbundle_personnel_nbH').keyup(function () {
+
+                var nom = $('#jardinbundle_personnel_nbH').val();
+                var test=/^[0-9]+$/;
+                if (test.test(nom)) {
+
+                    $('#span5').hide();
+
+                    $('#ajouter').prop('disabled', false);
+
+                } else {
+                    $('#span5').show();
+
+
+
+                    $('#ajouter').prop('disabled', true);
+                }
+            });
+
+            $('#jardinbundle_personnel_prixH').keyup(function () {
+
+                var prenom = $('#jardinbundle_personnel_prixH').val();
+                var test=/^[0-9]+$/;
+                if (test.test(prenom)) {
+
+                    $('#span6').hide();
+
+                    $('#ajouter').prop('disabled', false);
+
+                } else {
+                    $('#span6').show();
+
+
+
+                    $('#ajouter').prop('disabled', true);
+                }
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        })
+    </script>
 {% endblock %}
+
