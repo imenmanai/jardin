@@ -1,57 +1,15 @@
 {% extends'baseAdmin.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
 {% block body %}
-    {{ form_start(form) }}
-    <div class="container-fluid">
+
+    <h1 style="margin-left: 30%;">Ajouter une matiere </h1>
+
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_row(form.nom,{'attr':{'placeholder':" nom de la matiere"}}) }}
+    {{ form_row(form.coeff,{'attr':{'placeholder':"coefficient"}}) }}
 
 
-        <div data-widget-group="group1">
-
-            <div class="panel panel-default" data-widget='{"draggable": "false"}'>
-                <div class="panel-heading">
-                    <h2>Ajouter Matiere </h2>
-                    <div class="panel-ctrls" data-actions-container="" data-action-collapse='{"target": ".panel-body"}'></div>
-                </div>
-                <div class="panel-editbox" data-widget-controls=""></div>
-                <div class="panel-body">
-                    <form action="#" class="form-horizontal row-border">
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">nom de la matiere</label>
-                            <div class="col-sm-8">
-                                {{ form_widget(form.nom, {'attr': {'class': 'form-control','placeholder':'name of the monument ...'}}) }}
-                            </div>
-
-                        </div>
-
-                        <br>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">coefficient</label>
-                            <div class="col-sm-8">
-
-                                {{ form_widget(form.coeff, {'attr': {'class': 'form-control','placeholder':'coefficient...'}}) }}
-
-                            </div>
-                        </div>
-
-
-                    </form>
-
-                </div>
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2">
-                            <button class="btn-primary btn">Ajouter Matiere</button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-        </div>
-
-
-    </div>
+    <button type="submit" class="btn-primary btn"> Ajouter </button>
     {{ form_end(form) }}
+
 {% endblock %}

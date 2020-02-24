@@ -15,7 +15,7 @@ class platType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('description')->add('image',FileType::class ,array('data_class' => null))->add('date')->add('Valider',SubmitType::class);
+        $builder->add('nom')->add('description')->add('image',FileType::class ,array('data_class' => null))->add('date')->add('valider',SubmitType::class);
     }/**
      * {@inheritdoc}
      */

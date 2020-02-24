@@ -53,8 +53,12 @@
 {% else %}
                                 <ul class="accounting d-flex justify-content-lg-end justify-content-md-end justify-content-start align-items-center">
                                     <li><a class="r" href="{{ path('fos_user_registration_register') }}">S'inscrire</a></li>
+<<<<<<< HEAD
                                     <li><a class="r" href="{{ logout_path('main') }}">Se connecter</a></li>
 
+=======
+                                    <li><a class="r" href="{{ path('fos_user_security_login') }}">Se connecter</a></li>
+>>>>>>> 9c216b0b00143a319616303a9538bae4b4f9d770
                                 </ul>
                                 {%endif%}
                             </div>
@@ -83,15 +87,15 @@
                                                 <li><a href="{{ path('index') }}">Accueil</a></li>
                                             </ul>
                                         </li>
-                                        <li class="drop"><a href="{{ path('class') }}">Classe</a>
+                                        <li class="drop"><a href="{{ path('classe') }}">Classe</a>
                                             <ul class="dropdown__menu">
-                                                <li><a href="{{ path('class') }}">liste des classes</a></li>
+                                                <li><a href="{{ path('classe') }}">liste des classes</a></li>
                                             </ul>
                                         </li>
                                         <li class="drop"><a href="{{ path('eventafficherf') }}">évenement</a>
                                             <ul class="dropdown__menu">
-                                                <li><a href="{{ path('eventafficherf') }}">événement passé</a></li>
-                                                <li><a href="{{ path('eventdetail') }}">Prochain Evenement</a></li>
+                                                <li><a href="{{ path('eventafficherpassee') }}">événement passé</a></li>
+                                                <li><a href="{{ path('eventafficherf') }}">Prochain Evenement</a></li>
                                             </ul>
                                         </li>
                                         <li class="drop"><a href="{{ path('afficher_Enfant') }}">Enfant</a>
@@ -108,7 +112,9 @@
                                         <li class="drop"><a href="{{ path('repas') }}">Cantine</a>
                                             <ul class="dropdown__menu">
                                                 <li><a href="{{ path('inscriC') }}">Inscription Cantine</a></li>
-                                                <li><a href="{{ path('repas') }}">Liste Repas du jour</a></li>
+                                                <li><a href="{{ path('modifierC') }}">modifier Abonnement</a></li>
+
+                                                <li><a href="{{ path('Menu') }}">Liste Repas du jour</a></li>
 
                                             </ul>
                                         </li>
@@ -117,6 +123,7 @@
                                                 <li><a href="{{ path('jardin_listFront') }}">Liste personnels</a></li>
                                             </ul>
                                         </li>
+
 
 
                                     </ul>

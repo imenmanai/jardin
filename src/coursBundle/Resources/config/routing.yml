@@ -14,7 +14,7 @@ Affichcatcours:
     path:     /affichercat
     defaults: { _controller: coursBundle:Default:affichercategorie }
 deletematiere:
-    path:     /supp/{id}
+    path:     /suppmat/{id}
     defaults: { _controller: coursBundle:Default:supprimercategorie }
 deletecours:
     path:     /suppcours/{id}
@@ -22,15 +22,9 @@ deletecours:
 modifiercours:
     path:     /modifiercours/{id}
     defaults: { _controller: coursBundle:Default:modifiercours }
-ajouterevent:
-    path:     /ajouterevent
-    defaults: { _controller: coursBundle:Default:ajouterevent }
-Afficherevent:
-    path:     /afficherevent
-    defaults: { _controller: coursBundle:Default:afficherevent }
-deleteevent:
-    path:     /suppevent/{id}
-    defaults: { _controller: coursBundle:Default:supprimerevent }
-modifierevent:
-    path:     /modifierevent/{id}
-    defaults: { _controller: coursBundle:Default:modifierevent }
+classe:
+    path:      /classe
+    defaults:  { _controller: coursBundle:Default:afficherfrontcours }
+modifiermatiere:
+    path:      /modifiermatiere/{id}
+    defaults:  { _controller: coursBundle:Default:modifiermatiere }

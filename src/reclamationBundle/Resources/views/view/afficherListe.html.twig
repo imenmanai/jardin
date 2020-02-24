@@ -5,7 +5,7 @@
             <div class="col-md-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h2>Data Tables</h2>
+                        <h2>Liste des Reclamations:</h2>
                         <div class="panel-ctrls"></div>
                     </div>
                     <div class="panel-body no-padding">
@@ -16,6 +16,7 @@
                                 <th>Etat</th>
                                 <th>Date</th>
                                 <th>Description</th>
+                                <th>CategorieReclamation</th>
                                 <th>IdParent</th>
 
 
@@ -28,12 +29,12 @@
                                     <td>{{ reclamation.etat }}</td>
                                     <td>{{ reclamation.date|date("m/d/Y")  }}</td>
                                     <td>{{ reclamation.description }}</td>
+                                    <td>{{ reclamation.CategorieReclamation.nom}}</td>
                                     <td>{{ reclamation.idParent }}</td>
 
 
                                 </tr>
                             {% endfor %}
-                            </tbody>
                         </table>
                     </div>
                     <div class="panel-footer">

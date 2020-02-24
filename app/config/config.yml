@@ -16,6 +16,7 @@ parameters:
     locale: en
     photos_directory: '%kernel.root_dir%/../web/images'
 
+
 framework:
     #esi: ~
     translator: { fallbacks: ['%locale%'] }
@@ -44,7 +45,7 @@ framework:
 twig:
     debug: '%kernel.debug%'
     strict_variables: '%kernel.debug%'
-
+    form_themes: ['bootstrap_4_layout.html.twig']
 # Doctrine Configuration
 doctrine:
     dbal:
@@ -85,6 +86,7 @@ fos_user:
     from_email:
         address: "imen.manai@esprit.tn"
         sender_name: "imenmanai"
+<<<<<<< HEAD
 knp_paginator:
     page_range: 5                       # number of links showed in the pagination menu (e.g: you have 10 pages, a page_range of 3, on the 5th page you'll see links to page 4, 5, 6)
     default_options:
@@ -107,3 +109,8 @@ knp_snappy:
         enabled:    true
         binary:     "\"C:\\Program Files\\wkhtmltopdf\\bin\\wkhtmltoimage.exe\""
         options:    []
+=======
+doc_doc_doc_nexmo:
+    api_key: 7b4ae542
+    api_secret: 7PI95P9MEgDM9YDL
+>>>>>>> 9c216b0b00143a319616303a9538bae4b4f9d770

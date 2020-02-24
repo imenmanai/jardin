@@ -10,9 +10,12 @@ jardin_listc:
 jardin_list:
     path:     /AfficherPersonnel
     defaults: { _controller: JardinBundle:Personnel:list }
+<<<<<<< HEAD
 jardin_listFront1:
     path:     /AfficherPersonnelFront1/{categorie}
     defaults: { _controller: JardinBundle:Personnel:listFront1 }
+=======
+>>>>>>> 9c216b0b00143a319616303a9538bae4b4f9d770
 jardin_listFront:
     path:     /AfficherPersonnelFront
     defaults: { _controller: JardinBundle:Personnel:listFront }
@@ -30,6 +33,7 @@ jardin_supprimec:
     defaults: { _controller: JardinBundle:Categorie:supprimec }
 ajax_search:
     path:     /search
+<<<<<<< HEAD
     defaults: { _controller: JardinBundle:Personnel:search }
 list:
     path:     /list
@@ -43,3 +47,6 @@ avis:
 score:
     path:     /score/{id}
     defaults: { _controller: JardinBundle:Personnel:score }
+=======
+    defaults: { _controller: JardinBundle:Personnel:search }
+>>>>>>> 9c216b0b00143a319616303a9538bae4b4f9d770

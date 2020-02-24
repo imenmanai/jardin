@@ -1,57 +1,16 @@
 {% extends'baseAdmin.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+
 {% block body %}
-    {{ form_start(form) }}
-    <div class="container-fluid">
 
 
-        <div data-widget-group="group1">
+    <h1 style="margin-left: 30%;">Ajouter un Bus</h1>
 
-            <div class="panel panel-default" data-widget='{"draggable": "false"}'>
-                <div class="panel-heading">
-                    <h2>Ajouter Bus</h2>
-                    <div class="panel-ctrls" data-actions-container="" data-action-collapse='{"target": ".panel-body"}'></div>
-                </div>
-                <div class="panel-editbox" data-widget-controls=""></div>
-                <div class="panel-body">
-                    <form action="#" class="form-horizontal row-border">
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Matricule</label>
-                            <div class="col-sm-8">
-                                {{ form_widget(form.matricule, {'attr': {'class': 'form-control','placeholder':'Matricule du Bus ...'}}) }}
-                            </div>
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_row(form.matricule,{'attr':{'placeholder':"matricule"}}) }}
+    {{ form_row(form.nbPlaces,{'attr':{'placeholder':"matricule"}}) }}
+    {{ form_row(form.ligne,{'attr':{'placeholder':"ligne"}}) }}
 
-                        </div>
-
-                        <br>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">Nombre Places</label>
-                            <div class="col-sm-8">
-
-                                {{ form_widget(form.nbPlaces, {'attr': {'class': 'form-control','placeholder':'Nombre Places ...'}}) }}
-
-                            </div>
-                        </div>
-
-
-                    </form>
-
-                </div>
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2">
-                            <button class="btn-primary btn">Ajouter </button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-        </div>
-
-
-    </div>
+    <button type="submit" class="btn-primary btn"> Ajouter </button>
     {{ form_end(form) }}
 {% endblock %}

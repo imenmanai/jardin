@@ -13,7 +13,7 @@ class BusType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('matricule')->add('nbPlaces');
+        $builder->add('matricule')->add('nbPlaces')->add('ligne');
     }/**
      * {@inheritdoc}
      */

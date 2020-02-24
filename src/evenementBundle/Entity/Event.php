@@ -6,35 +6,64 @@ namespace evenementBundle\Entity;
 use Doctrine\ORM\Mapping as ORM ;
 use Symfony\Component\Validator\Constraints as Assert ;
 /**
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="evenementBundle\Repository\EventRepository")
  *
  */
 class Event
 {
     /**
-     * @ORM\Column(type="integer")
+     * @var integer
+     *
+     * @ORM\Column( name="IdEvent",type="integer" )
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="AUTO")
      */
     private $id;
     /**
+     * @var string
+     *
      * @ORM\Column(type="string",length=255)
+     * @Assert\NotBlank(message="Champ ne doit pas être vide!")
+     *
      */
     private $description;
     /**
      * @ORM\Column(type="datetime")
+     * @Assert\NotBlank(message="Champ ne doit pas être vide!")
+     * @Assert\GreaterThan("today",message="Vous devez saisir une date superieur a date aujourd'hui")
+
      */
     private $date;
     /**
+     * @ORM\Column(name="date_fin", type="datetime")
+     * @Assert\NotBlank(message="Champ ne doit pas être vide!")
+     * @Assert\GreaterThan(propertyPath="date")
+     */
+    private $datefin;
+    /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Champ ne doit pas être vide!")
+     * @Assert\Range(
+     *      min = 1,
+     *      minMessage = "on peut pas accepter moins qu une place",
+     * )
      */
     private $nbpart;
     /**
+     * @var string
+     *
      * @ORM\Column(type="string",length=255)
+     * @Assert\NotBlank(message="Champ ne doit pas être vide!")
+     * @Assert\Regex(
+     *     pattern     = "/^[a-z]+$/i",
+     *     htmlPattern = "^[a-zA-Z]+$",message="interdit d utiliser les caracteres speciaux"
+     * )
+     *
      */
     private $nom;
     /**
      * @ORM\Column(type="string",length=255)
+     * @Assert\NotBlank(message="Champ ne doit pas être vide!")
      */
     private $local;
     /**
@@ -42,8 +71,25 @@ class Event
      *
      * @ORM\Column(name="image", type="string", length=500)
      * @Assert\File(maxSize="500k", mimeTypes={"image/jpeg", "image/jpg", "image/png", "image/GIF"})
+     * @Assert\NotBlank(message="Champ ne doit pas être vide!")
      */
     public $image;
+
+    /**
+     * @return mixed
+     */
+    public function getDatefin()
+    {
+        return $this->datefin;
+    }
+
+    /**
+     * @param mixed $datefin
+     */
+    public function setDatefin($datefin)
+    {
+        $this->datefin = $datefin;
+    }
 
     /**
      * @return mixed

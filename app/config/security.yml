@@ -25,7 +25,7 @@ security:
                 default_target_path: /login
             anonymous:    true
             logout:
-                target: /login
+                target: /index
 
     access_control:
         - { path: ^/main, role: IS_AUTHENTICATED_REMEMBERED }
@@ -33,3 +33,7 @@ security:
         - { path: ^/register, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/resetting, role: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/acceuilBack, role: ROLE_SUPER_ADMIN }
+        - { path: ^/ajouterevent, role: ROLE_SUPER_ADMIN }
+        - { path: ^/AfficherCours, role: ROLE_SUPER_ADMIN }
+        - { path: ^/ajouterCours, role: ROLE_SUPER_ADMIN }
+

@@ -22,12 +22,13 @@ class DefaultController extends Controller
         return $this->render('@enfant/Default/afficherBus.html.twig',array('buss'=>$buss));
     }
 
+
     public function ajouterBusAction(Request $request)
     {
         $bus = new Bus();
         $form = $this->createForm(BusType::class, $bus);
         $form->handleRequest($request);
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             $em->persist($bus);//persister les donner dans la base de donnee
             $em->flush();//tlansi kif el commit
@@ -51,7 +52,7 @@ class DefaultController extends Controller
         $bus=$em->getRepository(Bus::class)->find($id);
         $form=$this->createForm(BusType::class,$bus);
         $form->handleRequest($request);
-        if($form->isSubmitted()) {
+        if($form->isSubmitted() && $form->isValid()) {
             $em=$this->getDoctrine()->getManager();
             $em->flush();
             return $this->redirectToRoute('afficher_Bus');
@@ -62,16 +63,19 @@ class DefaultController extends Controller
 
     public function ajouterEnfantAction(Request $request)
     {
+        $buss=$this->getDoctrine()->getRepository(Bus::class)->findAll();
+        $user = $this->getUser();
         $enfant = new Enfant();
         $form = $this->createForm(EnfantType::class, $enfant);
         $form->handleRequest($request);
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
+            $enfant->setIdParent($user);
             $em->persist($enfant);//persister les donner dans la base de donnee
             $em->flush();//tlansi kif el commit
             return $this->redirectToRoute('ajouter_Enfant');
         }
-        return $this->render('@enfant/Default/ajouterEnfant.html.twig', array('form' => $form->createView()));
+        return $this->render('@enfant/Default/ajouterEnfant.html.twig', array('form' => $form->createView(),'listBus'=>$buss));
     }
     public function afficherEnfantAction()
     {
@@ -85,7 +89,10 @@ class DefaultController extends Controller
         $enf=$em->getRepository(Enfant::class)->find($id);
         $form=$this->createForm(EnfantType::class,$enf);
         $form->handleRequest($request);
-        if($form->isSubmitted()) {
+        if($form->isSubmitted() && $form->isValid()) {
+
+
+
             $em=$this->getDoctrine()->getManager();
             $em->flush();
             return $this->redirectToRoute('afficher_Enfant');
@@ -100,6 +107,12 @@ class DefaultController extends Controller
         $em->remove($enf);
         $em->flush();
         return $this->redirectToRoute("afficher_Enfant");
+    }
+
+    public function afficherEnfantBackAction()
+    {
+        $enf=$this->getDoctrine()->getRepository(Enfant::class)->findAll();
+        return $this->render('@enfant/Default/afficherEnfantBack.html.twig',array('enf'=>$enf));
     }
 
 }

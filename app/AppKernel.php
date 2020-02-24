@@ -25,9 +25,13 @@ class AppKernel extends Kernel
             new enfantBundle\enfantBundle(),
             new reclamationBundle\reclamationBundle(),
             new JardinBundle\JardinBundle(),
+<<<<<<< HEAD
             new Knp\Bundle\PaginatorBundle\KnpPaginatorBundle(),
             new Knp\Bundle\SnappyBundle\KnpSnappyBundle(),
 
+=======
+            new DocDocDoc\NexmoBundle\DocDocDocNexmoBundle(),
+>>>>>>> 9c216b0b00143a319616303a9538bae4b4f9d770
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {

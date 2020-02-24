@@ -390,7 +390,13 @@
                 <li><a href="#/"><i class="ti ti-stats-up"></i><span>Earnings</span></a></li>
                 <li><a href="#/"><i class="ti ti-money"></i><span>Withdrawals</span></a></li>
                 <li class="divider"></li>
+<<<<<<< HEAD
                 <li><a href="{{ logout_path('main') }}"><i class="ti ti-shift-right"></i><span>se deconnecter</span></a></li>
+=======
+                <li><a href="{{ path('fos_user_security_logout') }}"><i class="ti ti-shift-right"></i><span>Sign Out</span></a></li>
+                <li><a href="{{ logout_path('main') }}"><i class="ti ti-shift-right"></i><span>Se deconnecter</span></a></li>
+
+>>>>>>> 9c216b0b00143a319616303a9538bae4b4f9d770
             </ul>
         </li>
 
@@ -435,7 +441,7 @@
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion des enfants</span></a>
                                     <ul class="acc-menu">
 
-                                        <li><a href="{{ path('listeEnfant') }}">Liste Enfants</a></li>
+                                        <li><a href="{{ path('afficher_EnfantBack') }}">Liste Enfants</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion ligne transport</span></a>
@@ -489,12 +495,17 @@
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion restauration</span></a>
                                     <ul class="acc-menu">
                                         <li><a href="{{ path('ajoutPlat') }}">Ajouter Plat</a></li>
-                                        <li><a href="{{ path('AfficherPlat') }}">Afficher Plat</a></li>
+                                        <li><a href="{{ path('afficherPlat') }}">Afficher Plat</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion reclamation</span></a>
                                     <ul class="acc-menu">
+<<<<<<< HEAD
                                         <li><a href="{{ path('HistoriqueReclamation') }}">Historique Reclamation</a></li>
+=======
+                                        <li><a href="{{ path('rechercherReclamation') }}">Liste Reclamation</a></li>
+                                        <li><a href="{{ path('afficherListe') }}">Gerer Reclamation</a></li>
+>>>>>>> 9c216b0b00143a319616303a9538bae4b4f9d770
                                     </ul>
                                 </li>
                                 <li><a href="javascript:;"><i class="ti ti-layout-grid3"></i><span>Gestion Categorie reclamation</span></a>

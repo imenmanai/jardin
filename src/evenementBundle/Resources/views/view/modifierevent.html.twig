@@ -1,0 +1,19 @@
+{% extends'baseAdmin.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+
+    <h1 style="margin-left: 30%;">modifier evenement</h1>
+
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_row(form.nom,{'attr':{'placeholder':"nom de l evenement"}}) }}
+    {{ form_row(form.description,{'attr':{'placeholder':"description"}}) }}
+    {{ form_row(form.date,{'attr':{'placeholder':"date debut de l evenement"}}) }}
+    {{ form_row(form.datefin,{'attr':{'placeholder':"date fin de l evenement"}}) }}
+    {{ form_row(form.nbpart,{'attr':{'placeholder':"nombre de places disponible"}}) }}
+    {{ form_row(form.local,{'attr':{'placeholder':"emplacement de l evenement"}}) }}
+    {{ form_row(form.image)}}
+
+
+    <button type="submit" class="btn-primary btn"> modifier </button>
+    {{ form_end(form) }}
+{% endblock %}

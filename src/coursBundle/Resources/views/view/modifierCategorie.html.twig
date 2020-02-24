@@ -1,0 +1,13 @@
+{% extends'baseAdmin.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
+{% block body %}
+
+    <h1 style="margin-left: 30%;">modifier Matiere</h1>
+
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_row(form.coeff,{'attr':{'placeholder':"coefficient"}}) }}
+
+
+    <button type="submit" class="btn-primary btn"> modifier </button>
+    {{ form_end(form) }}
+{% endblock %}

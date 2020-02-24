@@ -2,10 +2,18 @@
 
 
 namespace JardinBundle\Controller;
+<<<<<<< HEAD
 use JardinBundle\Entity\Avis;
 use JardinBundle\Entity\Categorie;
 use JardinBundle\Entity\Score;
 use JardinBundle\Form\AvisType;
+=======
+
+
+
+
+
+>>>>>>> 9c216b0b00143a319616303a9538bae4b4f9d770
 use JardinBundle\Form\PersonnelType1;
 use JardinBundle\Entity\Personnel;
 use JardinBundle\Form\PersonnelType;
@@ -16,6 +24,11 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Component\HttpFoundation\Response;
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 9c216b0b00143a319616303a9538bae4b4f9d770
 class PersonnelController extends Controller
 {
     public function listAction(Request $request)
@@ -72,6 +85,11 @@ class PersonnelController extends Controller
             $this->get('knp_snappy.pdf')->getOutputFromHtml($html),
             'file.pdf'
         );
+    }
+    public function listFrontAction()
+    {
+        $formations=$this->getDoctrine()->getRepository(Personnel::class)->findAll();
+        return $this->render('@Jardin/Jardin/listFront.html.twig', array('formations' => $formations));
     }
     public function addAction(Request $request)
     {
@@ -183,4 +201,34 @@ class PersonnelController extends Controller
         }
     }
 
+<<<<<<< HEAD
+=======
+    private function generateUniqueFileName()
+    {
+        return md5(uniqid());
+    }
+    public function searchAction(Request $request){
+        $em=$this->getDoctrine()->getManager();
+        $requestString= $request->get('q');
+        $posts=$em->getRepository('JardinBundle:Personnel')->findEntitiesByString($requestString);
+        if(!$posts){
+        $result['posts']['error']='Post not found';
+
+        }
+        else {
+            $result['posts']=$this->getRealEntities($posts);
+    }
+
+
+
+return new Response(json_encode($result));
+}
+
+    public function getRealEntities($posts)
+    { foreach ($posts as $posts){
+        $realEntities[$posts->getId()]=[$posts->getNom(),$posts->getPrenom()];
+    }
+    return $realEntities;
+    }
+>>>>>>> 9c216b0b00143a319616303a9538bae4b4f9d770
 }

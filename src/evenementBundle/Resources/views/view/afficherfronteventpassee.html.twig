@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+
+    <div class="dcare__event__area bg--white section-padding--lg">
+        <div class="container">
+
+            <div class="row event-grid-page">
+                <!-- Start Single Event -->    {% for m in cours %}
+                    {% if m.date < date() %}
+                <div class="col-lg-4 col-md-6 col-sm-12">
+                    <div class="dcare__event">
+                        <div class="event__thumb">
+                            <a href="event-details.html">
+                                <img src="{{ asset('images/' ~ m.image) }} ">
+                            </a>
+                        </div>
+                        <div class="event__content">
+                            <div class="event__pub">
+                                <div class="event__date">
+                                    <span>{{m.nom}}</span>
+                                </div>
+                                <ul class="event__time">
+                                    <li><i class="fa fa-clock-o"></i>{{m.date |date}}</li>
+                                    <li>-><i class="fa fa-clock-o"></i>{{m.datefin |date}}</li>
+
+                                    <li><i class="fa fa-home"></i>{{m.local}}</li>
+                                </ul>
+                            </div>
+                            <div class="event__inner">
+                                <p><a href="event-details.html">{{m.description}}</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    {% endif %}
+                {% endfor %}
+                <!-- Start Single Event -->
+            </div></div></div>
+{% endblock %}
