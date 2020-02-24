@@ -1,19 +1,13 @@
 {% extends 'base.html.twig' %}
 {% block body %}
-    <br>
-    <br>
-    {% if is_granted("ROLE_USER")%}
-        <a class="dropdown__menu"  href="{{ path('UserAfficheParticipation')}}"> Mes participation </a>
-    {% endif %}
-    <br>
-    <br>
+
 
     <div class="dcare__event__area bg--white section-padding--lg">
         <div class="container">
 
             <div class="row event-grid-page">
                 <!-- Start Single Event -->    {% for m in cours %}
-                    {% if m.date > date() %}
+                    {% if m.date < date() %}
                 <div class="col-lg-4 col-md-6 col-sm-12">
                     <div class="dcare__event">
                         <div class="event__thumb">
@@ -36,13 +30,6 @@
                             <div class="event__inner">
                                 <p><a href="event-details.html">{{m.description}}</a></p>
                             </div>
-                            <ul class="event__btn">
-                                {% if m.nbpart>0 and is_granted("ROLE_USER")%}
-                                <li>  <a href="{{ path('event_ajoutParticipation',{'id':m.id })}}"> <button class="btn btn-dark"> Participer </button></a></li>
-
-                                {% endif %}
-                                <li><a href="event-details.html">j aime</a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>

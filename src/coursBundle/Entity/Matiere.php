@@ -4,6 +4,9 @@
 namespace coursBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM ;
+use Symfony\Component\Validator\Constraints as Assert;
+
+
 /**
  * @ORM\Entity
  *
@@ -17,11 +20,27 @@ class Matiere
      */
     private $id;
     /**
+     * @var string
+     *
      * @ORM\Column(type="string",length=255)
+     * @Assert\NotBlank(message="Champ ne doit pas être vide!")
+     * @Assert\Regex(
+     *     pattern     = "/^[a-z]+$/i",
+     *     htmlPattern = "^[a-zA-Z]+$",message="interdit d utiliser les caracteres speciaux"
+     * )
+     * 
      */
     private $nom;
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Champ ne doit pas être vide!")
+     * @Assert\Range(
+     *      min = 1,
+     *      max = 9,
+     *      minMessage = "on peut pas accepter un coefficient <1",
+     *      maxMessage = "You cannot be taller than {{ limit }}cm to enter"
+     * )
+     *
      */
     private $coeff;
 

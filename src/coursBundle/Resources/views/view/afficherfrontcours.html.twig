@@ -5,12 +5,14 @@
     <br>
 
     <!-- Start Single Service -->
+
     <div class="footer__wrapper poss-relative ftr__btm__image section-padding--lg bg--white">
     <div class="container">
     <div class="row">
-    {% for c in cours %}
 
-    <div class="col-lg-3 col-md-6 col-sm-6 col-12">
+        {% for c in cours %}
+
+    <div class="col-lg-3 col-md-6 col-sm-6 col-12" id="hou">
         <div class="service bg--white border__color wow fadeInUp">
             <div class="service__icon">
                 <img src="{{ asset('images/shape/sm-icon/2.png') }}" alt="icon images">
@@ -31,4 +33,5 @@
     <!-- End Single Service -->
     <br>
     <br>
+
 {% endblock %}

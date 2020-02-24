@@ -29,7 +29,7 @@ class DefaultController extends Controller
         $matiere= new Matiere();
         $form=$this->createForm(MatiereType::class,$matiere);
         $form->handleRequest($request);
-        if($form->isSubmitted())
+        if($form->isSubmitted()&& $form->isValid())
         {
             $em=$this->getDoctrine()->getManager();
             $em->persist($matiere);//persister les donner dans la base de donnee
@@ -43,7 +43,7 @@ class DefaultController extends Controller
         $cours= new Cours();
         $form=$this->createForm(CoursType::class,$cours);
         $form->handleRequest($request);
-        if($form->isSubmitted())
+        if($form->isSubmitted()&& $form->isValid())
         {
             $em=$this->getDoctrine()->getManager();
             $em->persist($cours);
@@ -79,7 +79,7 @@ class DefaultController extends Controller
         $cours=$em->getRepository(Cours::class)->find($id);
         $form=$this->createForm(CoursmodifType::class,$cours);
         $form->handleRequest($request);
-        if($form->isSubmitted()) {
+        if($form->isSubmitted()&& $form->isValid()) {
             $em=$this->getDoctrine()->getManager();
             $em->flush();
 
@@ -95,7 +95,7 @@ class DefaultController extends Controller
         $cours=$em->getRepository(Matiere::class)->find($id);
         $form=$this->createForm(MatieremodifierType::class,$cours);
         $form->handleRequest($request);
-        if($form->isSubmitted()) {
+        if($form->isSubmitted()&& $form->isValid()) {
             $em=$this->getDoctrine()->getManager();
             $em->flush();
 

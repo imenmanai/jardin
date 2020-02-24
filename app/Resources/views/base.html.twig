@@ -54,7 +54,6 @@
                                 <ul class="accounting d-flex justify-content-lg-end justify-content-md-end justify-content-start align-items-center">
                                     <li><a class="r" href="{{ path('fos_user_registration_register') }}">S'inscrire</a></li>
                                     <li><a class="r" href="{{ path('fos_user_security_login') }}">Se connecter</a></li>
-                                    <li><a class="r" href="{{ logout_path('main') }}">Se connecter</a></li>
                                 </ul>
                                 {%endif%}
                             </div>
@@ -90,8 +89,8 @@
                                         </li>
                                         <li class="drop"><a href="{{ path('eventafficherf') }}">évenement</a>
                                             <ul class="dropdown__menu">
-                                                <li><a href="{{ path('eventafficherf') }}">événement passé</a></li>
-                                                <li><a href="{{ path('eventdetail') }}">Prochain Evenement</a></li>
+                                                <li><a href="{{ path('eventafficherpassee') }}">événement passé</a></li>
+                                                <li><a href="{{ path('eventafficherf') }}">Prochain Evenement</a></li>
                                             </ul>
                                         </li>
                                         <li class="drop"><a href="{{ path('afficher_Enfant') }}">Enfant</a>

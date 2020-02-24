@@ -4,6 +4,9 @@ evenement_homepage:
 eventafficherf:
     path:      /event
     defaults:  { _controller: evenementBundle:Default:affichfront }
+eventafficherpassee:
+    path:      /eventpassee
+    defaults:  { _controller: evenementBundle:Default:affichfrontpassee }
 afficherevent:
     path:     /afficherevent
     defaults: { _controller: evenementBundle:Default:afficherevent }

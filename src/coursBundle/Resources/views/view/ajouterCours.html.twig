@@ -1,82 +1,17 @@
 {% extends'baseAdmin.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
 {% block body %}
-    {{ form_start(form) }}
-    <div class="container-fluid">
+
+    <h1 style="margin-left: 30%;">Ajouter un cours</h1>
+
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_row(form.matiere,{'attr':{'placeholder':"matiere"}}) }}
+    {{ form_row(form.description,{'attr':{'placeholder':"description"}}) }}
+    {{ form_row(form.duree,{'attr':{'placeholder':"duree"}}) }}
+    {{ form_row(form.seats,{'attr':{'placeholder':"nombre de places disponible"}}) }}
+    {{ form_row(form.age,{'attr':{'placeholder':"age"}}) }}
 
 
-        <div data-widget-group="group1">
-
-            <div class="panel panel-default" data-widget='{"draggable": "false"}'>
-                <div class="panel-heading">
-                    <h2>ajouter Cours </h2>
-                    <div class="panel-ctrls" data-actions-container="" data-action-collapse='{"target": ".panel-body"}'></div>
-                </div>
-                <div class="panel-editbox" data-widget-controls=""></div>
-                <div class="panel-body">
-                    <form action="#" class="form-horizontal row-border">
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">nom de la matiere</label>
-                            <div class="col-sm-8">
-                                {{ form_widget(form.matiere, {'attr': {'class': 'form-control','placeholder':'name of the monument ...'}}) }}
-                            </div>
-
-                        </div>
-
-                        <br>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">description</label>
-                            <div class="col-sm-8">
-
-                                {{ form_widget(form.description, {'attr': {'class': 'form-control','placeholder':'description...'}}) }}
-
-                            </div>
-                        </div><br>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">duree du cours (h)</label>
-                            <div class="col-sm-8">
-
-                                {{ form_widget(form.duree, {'attr': {'class': 'form-control','placeholder':'duree...'}}) }}
-
-                            </div><br>
-                        </div><br>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">nombres de places</label>
-                            <div class="col-sm-8">
-
-                                {{ form_widget(form.seats, {'attr': {'class': 'form-control','placeholder':'nombre de places...'}}) }}
-
-                            </div>
-                        </div>
-                </div><br>
-                <div class="form-group">
-                    <label class="col-sm-2 control-label">age pour cette cours</label>
-                    <div class="col-sm-8">
-
-                        {{ form_widget(form.age, {'attr': {'class': 'form-control','placeholder':'nombre de places...'}}) }}
-
-                    </div>
-                </div>
-
-
-                    </form>
-
-                </div>
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2">
-                            <button class="btn-primary btn">Ajouter Cours</button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-        </div>
-
-
-    </div>
+    <button type="submit" class="btn-primary btn"> Ajouter </button>
     {{ form_end(form) }}
 {% endblock %}

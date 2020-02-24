@@ -76,7 +76,6 @@
             "autoload": {
                 "psr-4": {
                     "Azine\\EmailBundle\\": ""
-                    "CMEN\\GoogleChartsBundle\\": ""
                 }
             },
             "notification-url": "https://packagist.org/downloads/",

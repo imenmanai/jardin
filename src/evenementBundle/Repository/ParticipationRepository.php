@@ -9,17 +9,17 @@ namespace evenementBundle\Repository;
 class ParticipationRepository extends \Doctrine\ORM\EntityRepository
 {
     public function findMyParticiaptions($id){
-        $query = $this->getEntityManager()->createQuery("SELECT c FROM evenementBundle:Participation c where c.User='$id'");
+        $query = $this->getEntityManager()->createQuery("SELECT c FROM evenementBundle:Participation c INNER JOIN evenementBundle:Event e where c.iduser='$id' and c.idevent=e.id ORDER BY e.date ");
         return $query->getResult();
     }
 
     public function findParticiaptionsEvent($event,$user){
-        $query = $this->getEntityManager()->createQuery("SELECT c FROM evenementBundle:Participation c where c.Event='$event' and c.User='$user'");
+        $query = $this->getEntityManager()->createQuery("SELECT c FROM evenementBundle:Participation c where c.idevent='$event' and c.iduser='$user'");
         return $query->getResult();
     }
 
     public function findLateParticipation($user){
-        $query = $this->getEntityManager()->createQuery("SELECT c FROM evenementBundle:Participation c INNER JOIN evenementBundle:Event e where c.Event=e.Event and e.dateevent < CURRENT_DATE() and c.iduser='$user'");
+        $query = $this->getEntityManager()->createQuery("SELECT c FROM evenementBundle:Participation c INNER JOIN evenementBundle:Event e where c.idevent=e.idevent and e.dateevent < CURRENT_DATE() and c.iduser='$user'");
         return $query->getResult();
     }
 

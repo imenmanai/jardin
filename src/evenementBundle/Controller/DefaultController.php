@@ -22,7 +22,7 @@ class DefaultController extends Controller
         $event = new Event();
         $form = $this->createForm(EventType::class, $event);
         $form->handleRequest($request);
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted()&& $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
             /** @var UploadedFile $file */
             $file = $event->getImage();
@@ -31,7 +31,7 @@ class DefaultController extends Controller
             $event->setImage($filename);
             $em->persist($event);
             $em->flush();
-            $message = new \DocDocDoc\NexmoBundle\Message\Simple("2", "21656346606", "nchlh yemchi");
+            $message = new \DocDocDoc\NexmoBundle\Message\Simple("Coccinelle", "21656346606", "Bonjour mdme/msr on a ajouter un nouveau evenement consulter notre site pour plus d information ");
             $nexmoResponse = $this->container->get('doc_doc_doc_nexmo')->send($message);
             return $this->redirectToRoute('afficherevent');
         }
@@ -51,7 +51,7 @@ class DefaultController extends Controller
         $event = $em->getRepository(Event::class)->find($id);
         $form = $this->createForm(EventType::class, $event);
         $form = $form->handleRequest($request);
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted()&& $form->isValid()) {
             $file = $event->getImage();
             $filename = $this->generateUniqueFileName().'.'.$file->guessExtension();
             $file->move($this->getParameter('photos_directory'), $filename);
@@ -72,9 +72,14 @@ class DefaultController extends Controller
     }
     public function affichfrontAction(){
 
-        $courss=$this->getDoctrine()->getRepository(Event::class)->findAll();
+        $courss=$this->getDoctrine()->getRepository(Event::class)->findEvent();
 
         return $this->render('@evenement/view/afficherfrontevent.html.twig',array('cours'=>$courss));
     }
+    public function affichfrontpasseeAction(){
 
+        $courss=$this->getDoctrine()->getRepository(Event::class)->findAll();
+
+        return $this->render('@evenement/view/afficherfronteventpassee.html.twig',array('cours'=>$courss));
+    }
 }

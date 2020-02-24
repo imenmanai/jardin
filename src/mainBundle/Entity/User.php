@@ -24,6 +24,28 @@ class User extends BaseUser
      * @ORM\JoinColumn(name="idEnfant",referencedColumnName="id")
      */
     private $idEnfant;
+    /**
+     * @ORM\ManyToOne(targetEntity="enfantBundle\Entity\Enfant")
+     * @ORM\JoinColumn(name="idEnfant",referencedColumnName="id")
+     */
+    private $numerro;
+
+
+    /**
+     * @return mixed
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param mixed $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
 
     public function __construct()
     {

@@ -1,100 +1,19 @@
 {% extends'baseAdmin.html.twig' %}
+{% form_theme form 'bootstrap_4_layout.html.twig' %}
 {% block body %}
-    {{ form_start(form) }}
-    <div class="container-fluid">
+
+    <h1 style="margin-left: 30%;">modifier evenement</h1>
+
+    {{ form_start(form,{'attr': {'novalidate': 'novalidate'}}) }}
+    {{ form_row(form.nom,{'attr':{'placeholder':"nom de l evenement"}}) }}
+    {{ form_row(form.description,{'attr':{'placeholder':"description"}}) }}
+    {{ form_row(form.date,{'attr':{'placeholder':"date debut de l evenement"}}) }}
+    {{ form_row(form.datefin,{'attr':{'placeholder':"date fin de l evenement"}}) }}
+    {{ form_row(form.nbpart,{'attr':{'placeholder':"nombre de places disponible"}}) }}
+    {{ form_row(form.local,{'attr':{'placeholder':"emplacement de l evenement"}}) }}
+    {{ form_row(form.image)}}
 
 
-        <div data-widget-group="group1">
-
-            <div class="panel panel-default" data-widget='{"draggable": "false"}'>
-                <div class="panel-heading">
-                    <h2>modifier Matiere </h2>
-                    <div class="panel-ctrls" data-actions-container="" data-action-collapse='{"target": ".panel-body"}'></div>
-                </div>
-                <div class="panel-editbox" data-widget-controls=""></div>
-                <div class="panel-body">
-                    <form action="#" class="form-horizontal row-border">
-                        <br>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">nom de l evenement </label>
-                            <div class="col-sm-8">
-
-                                {{ form_widget(form.nom, {'attr': {'class': 'form-control','placeholder':'nom...'}}) }}
-
-                            </div><br>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">lieu de l evenement </label>
-                            <div class="col-sm-8">
-
-                                {{ form_widget(form.local, {'attr': {'class': 'form-control','placeholder':'lieu...'}}) }}
-
-                            </div><br>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">description </label>
-                            <div class="col-sm-8">
-                                {{ form_widget(form.description, {'attr': {'class': 'form-control','placeholder':'description ...'}}) }}
-                            </div><br>
-
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">date de l event</label>
-                            <div class="col-sm-8">
-
-                                {{ form_widget(form.date, {'attr': {'class': 'form-control','placeholder':'date...'}}) }}
-
-                            </div>
-                        </div>
-                        <br><br>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">date fin de l event</label>
-                            <div class="col-sm-8">
-
-                                {{ form_widget(form.datefin, {'attr': {'class': 'form-control','placeholder':'date...'}}) }}
-
-                            </div>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <label class="col-sm-2 control-label">nombre max d participants</label>
-                            <div class="col-sm-8">
-
-                                {{ form_widget(form.nbpart, {'attr': {'class': 'form-control','placeholder':'...'}}) }}
-
-                            </div><br>
-                        </div>
-                        <br>
-                        <div class="form-group">
-                            <label for="exampleInputFile">{{ form_label(form.image, 'Choisir image :') }}</label>
-                            <div class="col-sm-8">
-                            {{ form_widget(form.image) }}
-                            </div><br>
-                        </div>
-
-
-
-                    </form>
-
-                </div>
-                <div class="panel-footer">
-                    <div class="row">
-                        <div class="col-sm-8 col-sm-offset-2">
-                            <button type="submit" class="btn-primary btn">modifier Evenement</button>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-        </div>
-
-
-    </div>
+    <button type="submit" class="btn-primary btn"> modifier </button>
     {{ form_end(form) }}
 {% endblock %}

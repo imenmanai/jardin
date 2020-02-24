@@ -13,17 +13,23 @@ use Doctrine\ORM\Mapping as ORM;
 class Participation
 {
     /**
-     * @ORM\Column(name="id", type="integer")
+     * @var integer
+     *
+     * @ORM\Column(name="IdParticipation", type="integer", nullable=false)
      * @ORM\Id
-     * @ORM\GeneratedValue(strategy="AUTO")
+     * @ORM\GeneratedValue(strategy="IDENTITY")
      */
-    private $id;
+    private $idparticipation;
 
     /**
-     * @ORM\ManyToOne(targetEntity="mainBundle\Entity\User")
-     * @ORM\JoinColumn(name="id_user",referencedColumnName="id", onDelete="CASCADE")
+     * @var \User
+     *
+     * @ORM\ManyToOne(targetEntity="mainBundle\Entity\User" )
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="IdUser", referencedColumnName="id" )
+     * })
      */
-    private $User;
+    private $iduser;
 
     /**
      * @var \Event
@@ -33,77 +39,60 @@ class Participation
      *   @ORM\JoinColumn(name="IdEvent", referencedColumnName="IdEvent" )
      * })
      */
-    private $Event;
+    private $idevent;
+
+
+
+
 
     /**
      * @return int
      */
-    public function getUser()
+    public function getIdparticipation()
     {
-        return $this->User;
+        return $this->idparticipation;
     }
 
     /**
-     * @param int $User
+     * @param int $idparticipation
      */
-    public function setUser($User)
+    public function setIdparticipation($idparticipation)
     {
-        $this->User = $User;
+        $this->idparticipation = $idparticipation;
     }
 
     /**
-     * @return int
+     * @return mainBundle\Entity\User
      */
-    public function getEvent()
+    public function getIduser()
     {
-        return $this->Event;
+        return $this->iduser;
     }
 
     /**
-     * @param int $Event
+     * @param mainBundle\Entity\User $iduser
+
      */
-    public function setEvent($Event)
+    public function setIduser( \mainBundle\Entity\User $iduser)
     {
-        $this->Event = $Event;
-    }
-
-
-
-
-
-
-    /**
-     * Get id
-     *
-     * @return int
-     */
-    public function getId()
-    {
-        return $this->id;
+        $this->iduser = $iduser;
     }
 
     /**
-     * Set nbPlace
-     *
-     * @param integer $nbPlace
-     *
-     * @return Participation
+     * @return \Event
      */
-    public function setNbPlace($nbPlace)
+    public function getIdevent()
     {
-        $this->nbPlace = $nbPlace;
-
-        return $this;
+        return $this->idevent;
     }
 
     /**
-     * Get nbPlace
-     *
-     * @return int
+     * @param \Event $idevent
      */
-    public function getNbPlace()
+    public function setIdevent($idevent)
     {
-        return $this->nbPlace;
+        $this->idevent = $idevent;
     }
+
 }
 

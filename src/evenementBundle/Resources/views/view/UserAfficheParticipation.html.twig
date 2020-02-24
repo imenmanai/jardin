@@ -22,18 +22,18 @@
                 <th scope="col">l heure de debut </th>
                 <th scope="col">l heure du fin d evenement</th>
                 <th scope="col">affiche de l evenement</th>
-                <th scope="col"></th>
-                <th scope="col"></th>
+                <th scope="col">action</th>
             </tr>
             </thead>
             {% for f in participations %}
                 <tr>
-                    <td> {{ f.Event.nom }} </td>
-                   <td> {{ f.Event.date | date}} </td>
-                    <td> {{ f.Event.datefin | date('l , Y-m-d ') }} </td>
-                    <td> <img src="{{ asset('images/' ~ f.Event.image) }} "height="50px" width="50px"/></td>
-                    <td> <a href="{{ path('UserDeleteParticipation',{'id':f.id}) }}" onclick="return confirm('Do you want to delete this participation !')"> <button class="btn btn-dark"> Supprimer</button></a></td>
-
+                    <td> {{ f.idevent.nom }} </td>
+                   <td> {{ f.idevent.date | date}} </td>
+                    <td> {{ f.idevent.datefin | date('l , Y-m-d ') }} </td>
+                    <td> <img src="{{ asset('images/' ~ f.idevent.image) }} "height="50px" width="50px"/></td>
+                    {% if f.idevent.date > date() %}
+                    <td> <a href="{{ path('UserDeleteParticipation',{'id':f.idparticipation}) }}" onclick="return confirm('Do you want to delete this participation !')"> annuler</a></td>
+                    {% endif %}
                     {% if(test=="late") %}
 
                     {% endif %}
